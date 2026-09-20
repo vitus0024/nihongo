@@ -1,6 +1,6 @@
 {
  "$schema": "https://json-schema.org/draft/2020-12/schema",
- "$id": "japanese-n5/lesson",
+ "$id": "nihongo/lesson",
  "title": "每日教材（依 meta.day_type 選 $defs 之一驗證；validate_structure.py 另做跨檔一致性檢查）",
  "$defs": {
   "new": {

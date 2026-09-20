@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """教材結構驗證（PLAN §4.2 第一層）：JSON schema ＋ 跟 curriculum.json 的一致性。
 
-  ~/.venvs/japanese-n5/bin/python validate_structure.py lessons/W01D1.json [更多檔]
+  ~/.venvs/nihongo/bin/python validate_structure.py lessons/W01D1.json [更多檔]
 任何問題列出全部、exit 1。Codex 生完教材自己跑這支，修到過為止。
 """
 from __future__ import annotations

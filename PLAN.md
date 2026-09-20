@@ -1,4 +1,4 @@
-# 日文 N5 學習 App — 實作計畫（PLAN v0.6 — 設計 v0.5 經 Codex 五輪 approved；v0.6 只改生成工具，2026-09-20）
+# nihongo — 日文學習 App（第一段：N5） — 實作計畫（PLAN v0.6 — 設計 v0.5 經 Codex 五輪 approved；v0.6 只改生成工具，2026-09-20）
 
 > 依據：`SPEC.md` v1.0（ChatGPT 專案匯出，2026-09-20）
 > 本文件回答 SPEC §10.2「主要交付方式」——SPEC 定義**學什麼、怎麼評**；本文件定義**在哪裡看、怎麼做、進度怎麼算**。
@@ -261,7 +261,7 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 ## 10. 前置條件
 
 - [x] ~~OpenAI／Anthropic API key~~ → 改用 Codex CLI（已登入）＋ Claude Code 本機，不需要
-- [ ] GitHub private repo `vitus0024/japanese-n5`（Pages 用；私有 repo 的 Pages 需 Pro 或改公開——**待確認**）
+- [ ] GitHub private repo `vitus0024/nihongo`（Pages 用；私有 repo 的 Pages 需 Pro 或改公開——**待確認**）
 - [ ] ChatGPT 專案 instructions 加入 §3.4 的回填格式
 - [x] `curriculum.json` 第 1 階段（2026-09-20，24 課／200 字／36 文法）
 

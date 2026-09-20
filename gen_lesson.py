@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """用 Codex CLI 生一課教材（PLAN §4.1）：展開課綱條目 → prompt → codex exec → validate_structure.py。
 
-  ~/.venvs/japanese-n5/bin/python gen_lesson.py W01D1 [W01D2 ...]
-  ~/.venvs/japanese-n5/bin/python gen_lesson.py W01D1 --prompt-only     # 只印 prompt 不跑
+  ~/.venvs/nihongo/bin/python gen_lesson.py W01D1 [W01D2 ...]
+  ~/.venvs/nihongo/bin/python gen_lesson.py W01D1 --prompt-only     # 只印 prompt 不跑
 Codex 在 workspace-write 沙箱裡寫 lessons/<id>.json，並被要求自己跑驗證修到過；本程式最後再驗一次。
 """
 from __future__ import annotations
@@ -21,7 +21,7 @@ G = {g["id"]: g for g in CUR["grammar"]}
 L = {l["id"]: l for l in CUR["lessons"]}
 ORDER = [l["id"] for l in sorted(CUR["lessons"], key=lambda l: (l["week"], l["day"]))]
 SPEC = (ROOT / "SPEC.md").read_text(encoding="utf-8")
-PY = Path.home() / ".venvs" / "japanese-n5" / "bin" / "python"
+PY = Path.home() / ".venvs" / "nihongo" / "bin" / "python"
 
 SPEAKING_BY_WEEK = {1: "朗讀 或 替換（擇一填 type）", 2: "短答", 3: "角色扮演", 4: "自由敘述"}          # SPEC §4.6 進程（每階段內循環）
 READING_LEN = {1: "1–3 個單句或一段 3 句以內的短對話（≤40 字）", 2: "一段短對話或菜單／價目表（40–70 字）",
