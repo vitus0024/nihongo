@@ -1,0 +1,1338 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "japanese-n5/lesson",
+ "title": "每日教材（依 meta.day_type 選 $defs 之一驗證；validate_structure.py 另做跨檔一致性檢查）",
+ "$defs": {
+  "new": {
+   "type": "object",
+   "properties": {
+    "meta": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string",
+       "pattern": "^W\\d{2}D[1-6]$"
+      },
+      "day_type": {
+       "enum": [
+        "new",
+        "review",
+        "stage_test"
+       ]
+      },
+      "curriculum_version": {
+       "type": "string",
+       "minLength": 1
+      },
+      "lesson_version": {
+       "type": "integer",
+       "minimum": 1
+      },
+      "generated_at": {
+       "type": "string",
+       "minLength": 1
+      },
+      "model": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [
+      "id",
+      "day_type",
+      "curriculum_version",
+      "lesson_version",
+      "generated_at",
+      "model"
+     ],
+     "additionalProperties": false
+    },
+    "warmup": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "q": {
+        "type": "string",
+        "minLength": 1
+       },
+       "options": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        },
+        "minItems": 3,
+        "maxItems": 4
+       },
+       "answer": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 3
+       },
+       "tests": {
+        "type": "string",
+        "pattern": "^(v\\d{4}|g\\d{3})$"
+       }
+      },
+      "required": [
+       "q",
+       "options",
+       "answer",
+       "tests"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 3,
+     "maxItems": 5
+    },
+    "vocab": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^v\\d{4}$"
+       },
+       "kanji": {
+        "type": "string",
+        "minLength": 1
+       },
+       "kana": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+       },
+       "zh": {
+        "type": "string",
+        "minLength": 1
+       },
+       "pos": {
+        "type": "string",
+        "minLength": 1
+       },
+       "example_ja": {
+        "type": "string",
+        "minLength": 1
+       },
+       "example_kana": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+       },
+       "example_zh": {
+        "type": "string",
+        "minLength": 1
+       },
+       "note": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "id",
+       "kanji",
+       "kana",
+       "zh",
+       "pos",
+       "example_ja",
+       "example_kana",
+       "example_zh"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 10,
+     "maxItems": 10
+    },
+    "grammar": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^g\\d{3}$"
+       },
+       "pattern": {
+        "type": "string",
+        "minLength": 1
+       },
+       "structure": {
+        "type": "string",
+        "minLength": 1
+       },
+       "meaning": {
+        "type": "string",
+        "minLength": 1
+       },
+       "usage": {
+        "type": "string",
+        "minLength": 1
+       },
+       "forms": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {
+          "label": {
+           "type": "string",
+           "minLength": 1
+          },
+          "ja": {
+           "type": "string",
+           "minLength": 1
+          },
+          "kana": {
+           "type": "string",
+           "minLength": 1,
+           "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+          },
+          "zh": {
+           "type": "string",
+           "minLength": 1
+          }
+         },
+         "required": [
+          "label",
+          "ja",
+          "kana",
+          "zh"
+         ],
+         "additionalProperties": false
+        },
+        "minItems": 2
+       },
+       "mistakes": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        },
+        "minItems": 1,
+        "maxItems": 4
+       },
+       "compare": {
+        "type": "string"
+       },
+       "examples": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {
+          "ja": {
+           "type": "string",
+           "minLength": 1
+          },
+          "kana": {
+           "type": "string",
+           "minLength": 1,
+           "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+          },
+          "zh": {
+           "type": "string",
+           "minLength": 1
+          },
+          "scene": {
+           "enum": [
+            "自我介紹",
+            "購物",
+            "餐廳",
+            "問路交通",
+            "住宿",
+            "日常",
+            "旅行"
+           ]
+          }
+         },
+         "required": [
+          "ja",
+          "kana",
+          "zh",
+          "scene"
+         ],
+         "additionalProperties": false
+        },
+        "minItems": 3,
+        "maxItems": 6
+       }
+      },
+      "required": [
+       "id",
+       "pattern",
+       "structure",
+       "meaning",
+       "usage",
+       "forms",
+       "mistakes",
+       "examples"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 1,
+     "maxItems": 2
+    },
+    "patterns": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "ja": {
+        "type": "string",
+        "minLength": 1
+       },
+       "kana": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+       },
+       "zh": {
+        "type": "string",
+        "minLength": 1
+       },
+       "swap_slots": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        },
+        "minItems": 1,
+        "maxItems": 4
+       }
+      },
+      "required": [
+       "ja",
+       "kana",
+       "zh",
+       "swap_slots"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 5,
+     "maxItems": 10
+    },
+    "reading": {
+     "type": "object",
+     "properties": {
+      "type": {
+       "enum": [
+        "單句",
+        "短對話",
+        "菜單",
+        "標示",
+        "簡訊",
+        "價目表",
+        "行程表",
+        "生活短文"
+       ]
+      },
+      "text_ja": {
+       "type": "string",
+       "minLength": 1
+      },
+      "text_kana": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+      },
+      "questions": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "q": {
+          "type": "string",
+          "minLength": 1
+         },
+         "options": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 4
+         },
+         "answer": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+         },
+         "evidence": {
+          "type": "string",
+          "minLength": 1
+         }
+        },
+        "required": [
+         "q",
+         "options",
+         "answer",
+         "evidence"
+        ],
+        "additionalProperties": false
+       },
+       "minItems": 2,
+       "maxItems": 5
+      }
+     },
+     "required": [
+      "type",
+      "text_ja",
+      "text_kana",
+      "questions"
+     ],
+     "additionalProperties": false
+    },
+    "listening": {
+     "type": "object",
+     "properties": {
+      "script_ja": {
+       "type": "string",
+       "minLength": 1
+      },
+      "script_kana": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+      },
+      "questions": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "q": {
+          "type": "string",
+          "minLength": 1
+         },
+         "options": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 4
+         },
+         "answer": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+         },
+         "evidence": {
+          "type": "string",
+          "minLength": 1
+         }
+        },
+        "required": [
+         "q",
+         "options",
+         "answer",
+         "evidence"
+        ],
+        "additionalProperties": false
+       },
+       "minItems": 2,
+       "maxItems": 4
+      }
+     },
+     "required": [
+      "script_ja",
+      "script_kana",
+      "questions"
+     ],
+     "additionalProperties": false
+    },
+    "speaking": {
+     "type": "object",
+     "properties": {
+      "type": {
+       "enum": [
+        "朗讀",
+        "替換",
+        "短答",
+        "角色扮演",
+        "自由敘述"
+       ]
+      },
+      "task_ja": {
+       "type": "string",
+       "minLength": 1
+      },
+      "task_zh": {
+       "type": "string",
+       "minLength": 1
+      },
+      "chatgpt_prompt": {
+       "type": "string",
+       "minLength": 40
+      }
+     },
+     "required": [
+      "type",
+      "task_ja",
+      "task_zh",
+      "chatgpt_prompt"
+     ],
+     "additionalProperties": false
+    },
+    "check": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "q": {
+        "type": "string",
+        "minLength": 1
+       },
+       "options": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        },
+        "minItems": 3,
+        "maxItems": 4
+       },
+       "answer": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 3
+       },
+       "explain": {
+        "type": "string",
+        "minLength": 1
+       },
+       "tests": {
+        "type": "string",
+        "pattern": "^(v\\d{4}|g\\d{3})$"
+       }
+      },
+      "required": [
+       "q",
+       "options",
+       "answer",
+       "explain",
+       "tests"
+      ],
+      "additionalProperties": false
+     },
+     "minItems": 3,
+     "maxItems": 5
+    },
+    "busy_mode": {
+     "type": "object",
+     "properties": {
+      "vocab_review_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^v\\d{4}$"
+       },
+       "minItems": 5,
+       "maxItems": 15
+      },
+      "speaking_short": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [
+      "vocab_review_ids",
+      "speaking_short"
+     ],
+     "additionalProperties": false
+    }
+   },
+   "required": [
+    "meta",
+    "warmup",
+    "vocab",
+    "grammar",
+    "patterns",
+    "reading",
+    "listening",
+    "speaking",
+    "check",
+    "busy_mode"
+   ],
+   "additionalProperties": false
+  },
+  "review": {
+   "type": "object",
+   "properties": {
+    "meta": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string",
+       "pattern": "^W\\d{2}D[1-6]$"
+      },
+      "day_type": {
+       "enum": [
+        "new",
+        "review",
+        "stage_test"
+       ]
+      },
+      "curriculum_version": {
+       "type": "string",
+       "minLength": 1
+      },
+      "lesson_version": {
+       "type": "integer",
+       "minimum": 1
+      },
+      "generated_at": {
+       "type": "string",
+       "minLength": 1
+      },
+      "model": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [
+      "id",
+      "day_type",
+      "curriculum_version",
+      "lesson_version",
+      "generated_at",
+      "model"
+     ],
+     "additionalProperties": false
+    },
+    "quiz": {
+     "type": "object",
+     "properties": {
+      "vocab": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "q": {
+          "type": "string",
+          "minLength": 1
+         },
+         "options": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 4
+         },
+         "answer": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+         },
+         "tests": {
+          "type": "string",
+          "pattern": "^(v\\d{4}|g\\d{3})$"
+         }
+        },
+        "required": [
+         "q",
+         "options",
+         "answer",
+         "tests"
+        ],
+        "additionalProperties": false
+       },
+       "minItems": 10,
+       "maxItems": 10
+      },
+      "grammar": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "q": {
+          "type": "string",
+          "minLength": 1
+         },
+         "options": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 4
+         },
+         "answer": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+         },
+         "tests": {
+          "type": "string",
+          "pattern": "^(v\\d{4}|g\\d{3})$"
+         }
+        },
+        "required": [
+         "q",
+         "options",
+         "answer",
+         "tests"
+        ],
+        "additionalProperties": false
+       },
+       "minItems": 10,
+       "maxItems": 10
+      },
+      "reading": {
+       "type": "object",
+       "properties": {
+        "text_ja": {
+         "type": "string",
+         "minLength": 1
+        },
+        "text_kana": {
+         "type": "string",
+         "minLength": 1,
+         "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+        },
+        "questions": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "q": {
+            "type": "string",
+            "minLength": 1
+           },
+           "options": {
+            "type": "array",
+            "items": {
+             "type": "string",
+             "minLength": 1
+            },
+            "minItems": 3,
+            "maxItems": 4
+           },
+           "answer": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+           },
+           "evidence": {
+            "type": "string",
+            "minLength": 1
+           }
+          },
+          "required": [
+           "q",
+           "options",
+           "answer",
+           "evidence"
+          ],
+          "additionalProperties": false
+         },
+         "minItems": 5,
+         "maxItems": 5
+        }
+       },
+       "required": [
+        "text_ja",
+        "text_kana",
+        "questions"
+       ],
+       "additionalProperties": false
+      },
+      "listening": {
+       "type": "object",
+       "properties": {
+        "script_ja": {
+         "type": "string",
+         "minLength": 1
+        },
+        "script_kana": {
+         "type": "string",
+         "minLength": 1,
+         "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+        },
+        "questions": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "q": {
+            "type": "string",
+            "minLength": 1
+           },
+           "options": {
+            "type": "array",
+            "items": {
+             "type": "string",
+             "minLength": 1
+            },
+            "minItems": 3,
+            "maxItems": 4
+           },
+           "answer": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+           },
+           "evidence": {
+            "type": "string",
+            "minLength": 1
+           }
+          },
+          "required": [
+           "q",
+           "options",
+           "answer",
+           "evidence"
+          ],
+          "additionalProperties": false
+         },
+         "minItems": 5,
+         "maxItems": 5
+        }
+       },
+       "required": [
+        "script_ja",
+        "script_kana",
+        "questions"
+       ],
+       "additionalProperties": false
+      },
+      "speaking": {
+       "type": "object",
+       "properties": {
+        "type": {
+         "enum": [
+          "朗讀",
+          "替換",
+          "短答",
+          "角色扮演",
+          "自由敘述"
+         ]
+        },
+        "task_ja": {
+         "type": "string",
+         "minLength": 1
+        },
+        "task_zh": {
+         "type": "string",
+         "minLength": 1
+        },
+        "chatgpt_prompt": {
+         "type": "string",
+         "minLength": 40
+        },
+        "rubric": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "name": {
+            "enum": [
+             "發音清晰度",
+             "文法正確度",
+             "詞彙使用",
+             "流暢度",
+             "互動應答"
+            ]
+           },
+           "criteria": {
+            "type": "string",
+            "minLength": 1
+           }
+          },
+          "required": [
+           "name",
+           "criteria"
+          ],
+          "additionalProperties": false
+         },
+         "minItems": 5,
+         "maxItems": 5
+        }
+       },
+       "required": [
+        "type",
+        "task_ja",
+        "task_zh",
+        "chatgpt_prompt",
+        "rubric"
+       ],
+       "additionalProperties": false
+      }
+     },
+     "required": [
+      "vocab",
+      "grammar",
+      "reading",
+      "listening",
+      "speaking"
+     ],
+     "additionalProperties": false
+    },
+    "review_pack": {
+     "type": "object",
+     "properties": {
+      "vocab_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^v\\d{4}$"
+       },
+       "minItems": 1
+      },
+      "grammar_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^g\\d{3}$"
+       },
+       "minItems": 1
+      }
+     },
+     "required": [
+      "vocab_ids",
+      "grammar_ids"
+     ],
+     "additionalProperties": false
+    },
+    "busy_mode": {
+     "type": "object",
+     "properties": {
+      "vocab_review_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^v\\d{4}$"
+       },
+       "minItems": 5,
+       "maxItems": 15
+      },
+      "speaking_short": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [
+      "vocab_review_ids",
+      "speaking_short"
+     ],
+     "additionalProperties": false
+    }
+   },
+   "required": [
+    "meta",
+    "quiz",
+    "review_pack",
+    "busy_mode"
+   ],
+   "additionalProperties": false
+  },
+  "stage_test": {
+   "type": "object",
+   "properties": {
+    "meta": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string",
+       "pattern": "^W\\d{2}D[1-6]$"
+      },
+      "day_type": {
+       "enum": [
+        "new",
+        "review",
+        "stage_test"
+       ]
+      },
+      "curriculum_version": {
+       "type": "string",
+       "minLength": 1
+      },
+      "lesson_version": {
+       "type": "integer",
+       "minimum": 1
+      },
+      "generated_at": {
+       "type": "string",
+       "minLength": 1
+      },
+      "model": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [
+      "id",
+      "day_type",
+      "curriculum_version",
+      "lesson_version",
+      "generated_at",
+      "model"
+     ],
+     "additionalProperties": false
+    },
+    "quiz": {
+     "type": "object",
+     "properties": {
+      "vocab": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "q": {
+          "type": "string",
+          "minLength": 1
+         },
+         "options": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 4
+         },
+         "answer": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+         },
+         "tests": {
+          "type": "string",
+          "pattern": "^(v\\d{4}|g\\d{3})$"
+         }
+        },
+        "required": [
+         "q",
+         "options",
+         "answer",
+         "tests"
+        ],
+        "additionalProperties": false
+       },
+       "minItems": 20,
+       "maxItems": 20
+      },
+      "grammar": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "q": {
+          "type": "string",
+          "minLength": 1
+         },
+         "options": {
+          "type": "array",
+          "items": {
+           "type": "string",
+           "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 4
+         },
+         "answer": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+         },
+         "tests": {
+          "type": "string",
+          "pattern": "^(v\\d{4}|g\\d{3})$"
+         }
+        },
+        "required": [
+         "q",
+         "options",
+         "answer",
+         "tests"
+        ],
+        "additionalProperties": false
+       },
+       "minItems": 20,
+       "maxItems": 20
+      },
+      "reading": {
+       "type": "object",
+       "properties": {
+        "passages": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "text_ja": {
+            "type": "string",
+            "minLength": 1
+           },
+           "text_kana": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+           },
+           "questions": {
+            "type": "array",
+            "items": {
+             "type": "object",
+             "properties": {
+              "q": {
+               "type": "string",
+               "minLength": 1
+              },
+              "options": {
+               "type": "array",
+               "items": {
+                "type": "string",
+                "minLength": 1
+               },
+               "minItems": 3,
+               "maxItems": 4
+              },
+              "answer": {
+               "type": "integer",
+               "minimum": 0,
+               "maximum": 3
+              },
+              "evidence": {
+               "type": "string",
+               "minLength": 1
+              }
+             },
+             "required": [
+              "q",
+              "options",
+              "answer",
+              "evidence"
+             ],
+             "additionalProperties": false
+            },
+            "minItems": 3,
+            "maxItems": 5
+           }
+          },
+          "required": [
+           "text_ja",
+           "text_kana",
+           "questions"
+          ],
+          "additionalProperties": false
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "required": [
+        "passages"
+       ],
+       "additionalProperties": false
+      },
+      "listening": {
+       "type": "object",
+       "properties": {
+        "scripts": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "script_ja": {
+            "type": "string",
+            "minLength": 1
+           },
+           "script_kana": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[ぁ-ゖァ-ヺーー〜、。！？「」『』・（）()\\s]+$"
+           },
+           "questions": {
+            "type": "array",
+            "items": {
+             "type": "object",
+             "properties": {
+              "q": {
+               "type": "string",
+               "minLength": 1
+              },
+              "options": {
+               "type": "array",
+               "items": {
+                "type": "string",
+                "minLength": 1
+               },
+               "minItems": 3,
+               "maxItems": 4
+              },
+              "answer": {
+               "type": "integer",
+               "minimum": 0,
+               "maximum": 3
+              },
+              "evidence": {
+               "type": "string",
+               "minLength": 1
+              }
+             },
+             "required": [
+              "q",
+              "options",
+              "answer",
+              "evidence"
+             ],
+             "additionalProperties": false
+            },
+            "minItems": 3,
+            "maxItems": 5
+           }
+          },
+          "required": [
+           "script_ja",
+           "script_kana",
+           "questions"
+          ],
+          "additionalProperties": false
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "required": [
+        "scripts"
+       ],
+       "additionalProperties": false
+      },
+      "speaking": {
+       "type": "object",
+       "properties": {
+        "type": {
+         "enum": [
+          "朗讀",
+          "替換",
+          "短答",
+          "角色扮演",
+          "自由敘述"
+         ]
+        },
+        "task_ja": {
+         "type": "string",
+         "minLength": 1
+        },
+        "task_zh": {
+         "type": "string",
+         "minLength": 1
+        },
+        "chatgpt_prompt": {
+         "type": "string",
+         "minLength": 40
+        },
+        "rubric": {
+         "type": "array",
+         "items": {
+          "type": "object",
+          "properties": {
+           "name": {
+            "enum": [
+             "發音清晰度",
+             "文法正確度",
+             "詞彙使用",
+             "流暢度",
+             "互動應答"
+            ]
+           },
+           "criteria": {
+            "type": "string",
+            "minLength": 1
+           }
+          },
+          "required": [
+           "name",
+           "criteria"
+          ],
+          "additionalProperties": false
+         },
+         "minItems": 5,
+         "maxItems": 5
+        }
+       },
+       "required": [
+        "type",
+        "task_ja",
+        "task_zh",
+        "chatgpt_prompt",
+        "rubric"
+       ],
+       "additionalProperties": false
+      }
+     },
+     "required": [
+      "vocab",
+      "grammar",
+      "reading",
+      "listening",
+      "speaking"
+     ],
+     "additionalProperties": false
+    },
+    "n5_mock": {
+     "type": "boolean"
+    },
+    "review_pack": {
+     "type": "object",
+     "properties": {
+      "vocab_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^v\\d{4}$"
+       },
+       "minItems": 1
+      },
+      "grammar_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^g\\d{3}$"
+       },
+       "minItems": 1
+      }
+     },
+     "required": [
+      "vocab_ids",
+      "grammar_ids"
+     ],
+     "additionalProperties": false
+    },
+    "busy_mode": {
+     "type": "object",
+     "properties": {
+      "vocab_review_ids": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^v\\d{4}$"
+       },
+       "minItems": 5,
+       "maxItems": 15
+      },
+      "speaking_short": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "required": [
+      "vocab_review_ids",
+      "speaking_short"
+     ],
+     "additionalProperties": false
+    }
+   },
+   "required": [
+    "meta",
+    "quiz",
+    "n5_mock",
+    "review_pack",
+    "busy_mode"
+   ],
+   "additionalProperties": false
+  }
+ }
+}
