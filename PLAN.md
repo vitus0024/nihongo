@@ -267,9 +267,10 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 ## 10. 前置條件
 
 - [x] ~~OpenAI／Anthropic API key~~ → 改用 Codex CLI（已登入）＋ Claude Code 本機，不需要
-- [ ] GitHub private repo `vitus0024/nihongo`（Pages 用；私有 repo 的 Pages 需 Pro 或改公開——**待確認**）
+- [x] GitHub **public** repo `vitus0024/nihongo`（Free 方案 Pages 只能 public）→ https://vitus0024.github.io/nihongo/
 - [ ] ChatGPT 專案 instructions 加入 §3.4 的回填格式
 - [x] `curriculum.json` 第 1 階段（2026-09-20，24 課／200 字／36 文法）
+- [x] 第 1 階段 24 課教材：兩層驗收通過、抽驗 3 課、真錯 4 處已修（verdicts/）；已上線
 
 ## 11. 請 Codex 第五輪特別挑的地方
 
