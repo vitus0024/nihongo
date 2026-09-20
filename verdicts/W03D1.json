@@ -1,0 +1,13 @@
+{
+ "lesson": "W03D1",
+ "by": "Claude Opus 5",
+ "date": "2026-09-20",
+ "verdicts": [
+  {
+   "path": "grammar[1].examples[1]",
+   "verdict": "LLM 錯（格式）",
+   "reason": "原文混用阿拉伯數字「九時10分」，假名 じゅっぷん 本身正確",
+   "action": "原文改「九時十分」，lesson_version 2"
+  }
+ ]
+}
