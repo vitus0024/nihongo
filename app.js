@@ -40,19 +40,25 @@ function voiceScore(v) {                                   // 越高越自然：
   return s;
 }
 function pickVoice() { const vs = jaVoices(); if (!vs.length) return null; if (TTS.voice) { const v = vs.find((v) => v.name === TTS.voice); if (v) return v; } return vs.sort((a, b) => voiceScore(b) - voiceScore(a))[0]; }
+let CURRENT_U = null;                                      // 留住 utterance 物件：iOS 被 GC 掉就不會唸
 function speak(text, rateKey) {
   if (!("speechSynthesis" in window)) return toast("這個瀏覽器不支援語音");
-  const go = () => {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "ja-JP"; u.rate = RATES[rateKey || TTS.rate] || RATES.normal; u.pitch = 1;
-    const v = pickVoice();                                   // 每次都從最新清單挑：iOS 用到舊的 voice 物件會退回系統預設（中文）
-    if (v && (v.lang || "").toLowerCase().startsWith("ja")) u.voice = v;
-    LAST_TTS = { voice: u.voice ? u.voice.name : "（無，僅 lang=ja-JP）", lang: u.voice ? u.voice.lang : "ja-JP", rate: u.rate, at: new Date().toLocaleTimeString() };
-    speechSynthesis.speak(u);
-  };
-  if (speechSynthesis.speaking || speechSynthesis.pending) { speechSynthesis.cancel(); setTimeout(go, 150); }   // iOS：cancel 後立刻 speak 會被吃掉或用錯聲音
-  else go();
+  // 一律在使用者手勢裡同步呼叫 speak()：iOS 若延遲（setTimeout）會失去手勢授權而靜音；
+  // 且 iOS 的 speaking／pending 旗標在 cancel 後可能卡住，不能拿來判斷
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "ja-JP"; u.rate = RATES[rateKey || TTS.rate] || RATES.normal; u.pitch = 1; u.volume = 1;
+  const v = pickVoice();                                     // 每次都從最新清單挑：iOS 用到舊的 voice 物件會退回系統預設（中文）
+  if (v && (v.lang || "").toLowerCase().startsWith("ja")) u.voice = v;
+  LAST_TTS = { voice: u.voice ? u.voice.name : "（無，僅 lang=ja-JP）", lang: u.voice ? u.voice.lang : "ja-JP", rate: u.rate, at: new Date().toLocaleTimeString(), state: "已送出" };
+  u.onstart = () => { LAST_TTS.state = "播放中"; updateTTSLine(); };
+  u.onend = () => { LAST_TTS.state = "播完"; updateTTSLine(); };
+  u.onerror = (e) => { LAST_TTS.state = `錯誤 ${e.error}`; updateTTSLine(); };
+  CURRENT_U = u;
+  speechSynthesis.speak(u);
+  updateTTSLine();
 }
+function updateTTSLine() { const el = $("#tts-last"); if (el && LAST_TTS) el.textContent = `上次播放：${LAST_TTS.voice}（${LAST_TTS.lang}）· 速度 ${LAST_TTS.rate} · ${LAST_TTS.state} · ${LAST_TTS.at}`; }
 
 // ---------- 狀態（PLAN §2.3） ----------
 const DEFAULT = () => ({ schema: 1, curriculum_version: null, started: null, round: 1, flow: null, todo: [], lessons: {}, practice: [],
@@ -194,7 +200,7 @@ function renderSchedule() {
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定</h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v3</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
@@ -211,7 +217,8 @@ function renderSettings() {
       <p class="small muted" style="margin-top:10px">聲音（機器感太重就換一個；名字有 Enhanced／Premium／拡張 的最自然，iOS 要先下載）</p>
       <select id="tts-voice" style="max-width:100%;font:inherit;padding:6px;border-radius:8px;border:1px solid var(--border)"><option value="">自動挑最自然的</option>${jaVoices().map((v) => `<option value="${esc(v.name)}" ${TTS.voice === v.name ? "selected" : ""}>${esc(v.name)}${voiceScore(v) >= 10 ? "（加強版）" : ""}</option>`).join("")}</select>
       <p><button class="btn tts" data-act="tts-test">▶ 試聽</button> <span class="faint">會用：${esc(pickVoice()?.name || "（找不到日文聲音）")}</span></p>
-      <p class="faint" id="tts-last">上次播放：${LAST_TTS ? `${esc(LAST_TTS.voice)}（${esc(LAST_TTS.lang)}）· 速度 ${LAST_TTS.rate} · ${LAST_TTS.at}` : "—"}</p>
+      <p class="faint" id="tts-last">上次播放：${LAST_TTS ? `${esc(LAST_TTS.voice)}（${esc(LAST_TTS.lang)}）· 速度 ${LAST_TTS.rate} · ${esc(LAST_TTS.state)} · ${LAST_TTS.at}` : "—"}</p>
+      <p><button class="btn small" data-act="tts-diag">診斷</button> <span class="faint">沒聲音時按：會顯示引擎狀態，並解除卡住的暫停</span></p>
       <p class="faint">裝置日文聲音 ${jaVoices().length} 個／全部 ${refreshVoices().length} 個。若播出來是中文：先按「▶ 試聽」看上面這行用了哪個聲音，再回報。</p>
       <p class="faint">iOS 下載加強版聲音：設定 → 輔助使用 → 朗讀內容 → 聲音 → 日文 → Kyoko／Otoya／O-Ren／Hattori 旁的下載，選「加強」或「進階」</p></div>`;
   $("#tts-voice")?.addEventListener("change", (e) => ACT["tts-voice"](e.target));
@@ -365,7 +372,8 @@ const ACT = {
   "go-today": () => { tab = "today"; render(); },
   "open-lesson": async (a) => { const id = a.dataset.id; tab = "today"; document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === "today")); runner = {}; await renderLesson(id); },
   say: (a) => speak(a.dataset.text, a.dataset.rate),
-  "tts-test": () => { speak("こんにちは。私は台湾人です。日本語を勉強しています。"); setTimeout(() => { const el = $("#tts-last"); if (el && LAST_TTS) el.textContent = `上次播放：${LAST_TTS.voice}（${LAST_TTS.lang}）· 速度 ${LAST_TTS.rate} · ${LAST_TTS.at}`; }, 300); },
+  "tts-test": () => speak("こんにちは。私は台湾人です。日本語を勉強しています。"),
+  "tts-diag": () => { const ss = speechSynthesis; toast(`speaking=${ss.speaking} pending=${ss.pending} paused=${ss.paused} 日文聲音=${jaVoices().length}／${refreshVoices().length}`); if (ss.paused) ss.resume(); },
   "tts-rate": (a) => { TTS.rate = a.dataset.rate; saveTTS(); renderSettings(); speak("こんにちは。私は台湾人です。"); },
   "tts-voice": (a) => { TTS.voice = a.value || null; saveTTS(); speak("こんにちは。私は台湾人です。"); },
   copy: async (a) => { try { await navigator.clipboard.writeText(a.dataset.text); toast("已複製，去 ChatGPT 貼上"); } catch { prompt("手動複製：", a.dataset.text); } },
