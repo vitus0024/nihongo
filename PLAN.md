@@ -1,7 +1,8 @@
-# 日文 N5 學習 App — 實作計畫（PLAN v0.2，待 Codex 第二輪審）
+# 日文 N5 學習 App — 實作計畫（PLAN v0.3，待 Codex 第三輪審）
 
 > 依據：`SPEC.md` v1.0（ChatGPT 專案匯出，2026-09-20）
 > 本文件回答 SPEC §10.2「主要交付方式」——SPEC 定義**學什麼、怎麼評**；本文件定義**在哪裡看、怎麼做、進度怎麼算**。
+> v0.3 變更（回應 `reviews-round2.md` 七項）：①階段入場改為「前一階段通過」②補強完成轉 done；當日先結算待辦清單再選課 ③schema 依 day_type 分支 ④備份 v1 只做整份取代 ⑤回歸測驗只用已學項目、零資料回首課；「重來」定義 ⑥§7.3 做成可追蹤的人工任務（Bryant 決定：不修 SPEC）⑦讀音警示逐筆裁決才可發布、涵蓋所有假名欄位、先量誤報率
 > v0.2 變更（回應 `reviews-round1.md` 六項發現）：①§7.2／§8.2 規則改由 PWA 本機執行，ChatGPT 決策有回填路徑 ②課次改為狀態機，不再用「完成課數」推算 ③教材改為**分階段預生成**，取消每日 cron ④完整 JSON 備份與週報分開，且為開學前置條件 ⑤課綱帶有 ID 的單字／文法清冊 ⑥內容驗收分三層（斷詞器讀音核對、跨模型答案核對、人工抽驗）
 
 ## 0. 一句話
@@ -40,11 +41,13 @@
 - 生成 prompt 拿到的是**指定要教的單字項目**（含漢字／假名／中文），模型不自己選詞、不會重複教
 
 ### 2.2 `lessons/W03D2.json`（每階段預生成）
-對應 SPEC §4.1 九模組，schema 固定（`schema/lesson.schema.json`，Structured Outputs 綁定）：
+schema 依 `day_type` 分支（`schema/lesson-new.schema.json`、`lesson-review.schema.json`、`lesson-stage_test.schema.json`，Structured Outputs 各自綁定）：
+
+**`new`（Day1–5）**——SPEC §4.1 九模組：
 ```
-meta          {id, curriculum_version, lesson_version, generated_at, model}
+meta          {id, day_type, curriculum_version, lesson_version, generated_at, model}
 warmup[3–5]   從 review_vocab／前課 grammar 出題（v1 固定，不看錯題；補強由 PWA 用本課資料另組）
-vocab[10]     {id, kanji, kana, zh, pos, example_ja, example_kana, example_zh, note}   id 必須 ∈ new_vocab
+vocab[10]     {id, kanji, kana, zh, pos, example_ja, example_kana, example_zh, note}   id 集合必須 ＝ new_vocab（不多不少、不重複）
 grammar[1–2]  {id, pattern, structure, meaning, usage, forms, mistakes, compare, examples[≥3]{ja,kana,zh,scene}}
 patterns[5–10]{ja, kana, zh, swap_slots[]}
 reading       {type, text_ja, text_kana, questions[]{q, options[], answer, evidence}}   evidence = 原文中支持答案的片段
@@ -53,6 +56,15 @@ speaking      {type, task_ja, task_zh, chatgpt_prompt}
 check[3–5]    {q, options[], answer, explain, tests: "v0123"|"g012"}   每題標記考的是哪個項目 → 錯題自動進弱點
 busy_mode     {vocab_review_ids[], listening: 同上, speaking_short}
 ```
+**`review`（Day6 週測，SPEC §8.1）**——沒有新詞、沒有新文法：
+```
+meta, quiz{vocab[10]{q,options,answer,tests}, grammar[10]{…}, reading{text_ja,text_kana,questions[5]}, listening{script_ja,script_kana,questions[5]},
+      speaking{task_ja, task_zh, chatgpt_prompt, rubric: 五面向各 4 分}}   tests 只能引用本週 new_vocab／new_grammar
+review_pack   {vocab_ids: 本週 50 詞, grammar_ids}                          給 PWA 做錯題訂正頁
+busy_mode     同 new
+```
+**`stage_test`（第 4／8／12／16／20 週 Day6，SPEC §8.2）**——同 review 結構，但 `tests` 可引用整個階段的項目，題數 vocab 20／grammar 20／reading 2 篇／listening 2 段，另附 `n5_mock: true`（第 20 週）。
+- 結構驗證以 W01D6、W04D6 各生一課確認有合法輸出，才算 schema 完成
 - 生成模型：OpenAI API（gpt-5 系列，`generate.py` 可換）；驗收另用 Claude（§4）
 - 每課 in ≈ 8k（SPEC §4 ＋ 該課 curriculum 條目 ＋ 指定單字 ＋ 前一課 grammar）、out ≈ 5k；120 課總量約 1.6M tokens，一次性成本 < NT$500
 
@@ -66,24 +78,44 @@ busy_mode     {vocab_review_ids[], listening: 同上, speaking_short}
  "stage":{"2":{"test":{"total":74,"parts":{...}},"passed":true,"remedial_week":false}},
  "weak":[{"id":"v0123","source":"check","count":2,"first":"2026-10-06"},{"id":"g012","source":"chatgpt","note":"を/が 混用"}],
  "diagnostic":{"exempt_vocab":["v0001",...],"exempt_grammar":["g001"],"skip_kana_review":true},
+ "todo":[{"kind":"remedial","lesson":"W03D2","created":"2026-10-06"},{"kind":"return_test","created":"2026-10-20"}],   當日待辦，做完才刪
+ "adjust_tasks":[{"id":"a03","rule":"7.3-low","part":"listening","week":"W05","task":"本週加一次針對性聽力練習（NHK Easy 一篇＋跟讀）","done":false}],
+ "feedback_log":[{"week":"W03","received":"2026-10-11","hash":"…"}],   §3.4 重貼防重
  "last_activity":"2026-10-07"}
 ```
 
 ## 3. 進度機（PWA 本機規則，取代 v0.1 的「完成課數」）
 
 ### 3.1 課次狀態
-`locked` → `available` → `partial`（有模組打勾）→ `done`（九模組全勾＋小檢核有分數）；另有 `exempt`（診斷豁免，§7.1）、`remedial`（小檢核 <70%，次日要先補強）。
+`locked` → `available` → `partial`（有模組打勾）→ `done`（九模組全勾＋小檢核有分數）；另有 `exempt`（診斷豁免，§7.1）、`remedial`（九模組全勾但小檢核 <70%：課本身算學過，但欠一次補強）。
 
-### 3.2 選「下一課」
-1. 若上一次完成的課 `status=remedial` 且 `remedial_done=false` → 先出**補強區塊**（該課 check 錯題 ＋ 錯題對應的 vocab／grammar ＋ 5 題重出），完成才解鎖下一課（§7.2）
-2. 若 `today − last_activity ≥ 7 天` → 先出**回歸測驗**（最近一個 `review` 課的 warmup ＋ 最近 20 個 done 單字抽 10），依結果建議「從 W0xD1 重來」或「續」，由使用者選（§7.2 中斷 >7 天）
-3. 若 `1–3 天` → 先出 5 題短複習，不補課（§7.2 中斷 1–3 天）
-4. 否則 → 課綱順序第一個非 `done/exempt` 的課；但若它屬於下一階段且該階段 `passed≠true` → 顯示「階段測驗未通過／未填分數」，鎖住（§8.2）
+**補強完成 → 該課轉 `done`，`remedial_done=true`**（回應第二輪 #2：不再只記 practice）。
+
+### 3.2 選「下一課」——兩段式：先結算待辦，再選課
+
+**A. 開啟當日流程時，一次結算 `todo`**（用開啟那一刻的 `last_activity`，之後做任何事都不重算，回應第二輪 #2）：
+- 有 `status=remedial` 且 `remedial_done=false` 的課 → 加 `todo{remedial}`
+- `today − last_activity ≥ 7` → 加 `todo{return_test}`；`1–3` → 加 `todo{short_review}`；`4–6` 視同 `1–3`
+- 兩者可同時存在：**先回歸測驗、再補強**（先知道還記得多少，再補上次的洞）
+- 待辦全部完成才進 B；未完成就關 app，下次開啟沿用同一份 `todo`，不重算
+
+**B. 選課**：課綱順序第一個 `status ∉ {done, exempt, remedial}` 的課。若它是階段 S 的第一課（S ≥ 2）且 `stage[S−1].passed ≠ true` → 鎖住並顯示「第 S−1 階段測驗未通過／未填分數」（§8.2；回應第二輪 #1：**入場條件是前一階段**）。第 1 階段入場條件 ＝ 診斷完成（或明確跳過診斷）。
+
+**回歸測驗的內容**（回應第二輪 #5）：只從 `status ∈ {done, remedial}` 的課取——單字抽 min(10, 已學數)，文法抽 min(3, 已學數)，加最近一個已完成 `review` 課的 5 題（若無則略）。零已學 → 不出測驗，直接回首課。結果 <50% → 建議「重來」；「重來」＝ 使用者選一個課次 X，X 之後（含 X）所有 `done/remedial` 改回 `available`、`weekly/stage` 中屬於這些週的紀錄標 `superseded` 保留不刪、`weak` 不動；選「續」則什麼都不改。
 - **忙碌版**：任何一課都能開「忙碌版」，做完記進 `practice`，**不改課次狀態、不推進**（SPEC §5.2「未完成的新內容移到下一個正常學習日」）
 - **診斷**：第 0 週在 PWA 做（假名、單字、文法、閱讀；聽力與口說在 ChatGPT），結果標 `exempt`，被豁免的單字仍算進度分母但直接計入「已學」
 
 ### 3.3 階段門檻（§8.2）
 `stage_test` 課完成 ＝ 填入五分項分數（口說分數來自 ChatGPT）。總分 ≥70 且各項 ≥60 → `passed`；否則 `remedial_week=true`：該階段所有課保持可開，PWA 顯示「補強週：弱項 ＝ 聽力、口說」，一週後可重填弱項分數重測（只填弱項，§8.2）。N4 判定（§8.3）同法，六條件做成 checklist。
+
+### 3.3b §7.3 難度調整 → 可追蹤的人工任務（Bryant 決定：不修 SPEC，做成 B 方案）
+每週填完 `weekly` 分數時自動評估，符合就產生 `adjust_tasks`，出現在首頁「本週必做」，要打勾才消失；連續未完成會在週報標紅：
+| 觸發（SPEC §7.3） | 產生的任務 |
+|---|---|
+| 連續兩週總分 ≥85 | 「本週閱讀改讀 NHK Easy 一篇完整文章＋口說任務改自由敘述 3 分鐘」（加自然度，不加背誦量） |
+| 任一分項連續兩週 <70 | 「本週該分項加一次針對性練習」，內容依分項：聽力＝NHK Easy 一篇盲聽→跟讀；口說＝ChatGPT 角色扮演一次；閱讀＝重讀本週兩篇＋問題；單字／文法＝錯題訂正頁重做 |
+| 聽力或口說落後（<70）而筆試 ≥85 | 階段測驗即使總分過，`passed` 仍要等聽力／口說重測 ≥60（§7.3 第三條「不因筆試高分直接加速」） |
+教材本身不改（v1 不做適應式生成）；任務完成紀錄進週報，ChatGPT 據此再給下週建議。
 
 ### 3.4 ChatGPT → PWA 回填契約
 ChatGPT 專案的固定指令（寫進它的 project instructions）：每次週測批改或弱點分析結尾，輸出一段：
@@ -92,7 +124,8 @@ ChatGPT 專案的固定指令（寫進它的 project instructions）：每次週
 {"week":"W03","speaking":12,"weak_add":[{"id":"g012","note":"を/が 混用"},{"text":"数字 600 的讀音","note":"ろっぴゃく"}],"weak_remove":["v0088"],"suggest":"下週聽力加一次針對性練習"}
 ```
 ```
-PWA「從 ChatGPT 貼回」貼上整段 → 驗證 → 合併：`speaking` 填進 weekly、`weak_add` 依 id 合併（無 id 的以 text 存）、`suggest` 顯示在首頁一週。**PWA 不自動執行 §7.3 難度調整**（那是教材層的事，v1 不做），只顯示建議。
+PWA「從 ChatGPT 貼回」貼上整段 → **嚴格驗證**（回應第二輪：格式不放寬）：必須是 ```n5-feedback 圍欄內的合法 JSON；`week` 必須是已存在或本週的週次；`speaking` 0–20 整數；`weak_add[].id` 若有必須存在於課綱；不合法就整段拒絕並指出第幾個欄位。通過後：`speaking` 填進 weekly（已有值則問「覆蓋？」）、`weak_add` 依 id 合併（無 id 的以 text 存）、`suggest` 顯示在首頁一週。**重貼防重**：整段內容 hash 記進 `feedback_log`，同 hash 第二次貼直接忽略；同週不同內容視為修正，以新的為準並提示。
+若 ChatGPT 沒輸出這段：PWA 提供「產生索取指令」按鈕，複製一句「請以 n5-feedback 格式輸出本週回饋」貼回 ChatGPT。§7.3 的調整不靠這段，由 PWA 自己依分數產生（§3.3b）。
 
 ### 3.5 PWA → ChatGPT 週報
 週報頁產生純文字（SPEC §11 欄位）：本週完成課次與日期、新增／複習單字範圍、文法、小測五分項、弱點清單、聽力錯誤類型、上週 `suggest` 有無執行。貼給 ChatGPT 做週檢討。**週報不是備份**（見 §5）。
@@ -106,9 +139,11 @@ PWA「從 ChatGPT 貼回」貼上整段 → 驗證 → 合併：`speaking` 填�
 | 層 | 工具 | 檢查 | 不過怎麼辦 |
 |---|---|---|---|
 | 結構 | JSON schema | 數量、必填、`vocab.id ⊆ new_vocab`、`check.tests` 都是合法 ID、假名欄只含 ひらがな／カタカナ／ー／標點空白 | 自動重生該課（最多 2 次） |
-| 內容-機械 | `fugashi`＋`unidic-lite` | 每個 vocab 的 kana 與斷詞器讀音一致；例句 `example_kana` 與 `example_ja` 逐詞讀音比對，不一致率 >10% 標記 | 列出不一致清單給下一層 |
-| 內容-跨模型 | Claude（`validate_content.py` 呼叫 Claude API） | 每題 `answer` 是否被 `evidence` 支持、`evidence` 是否真的在原文、文法 `forms` 變化是否正確、`mistakes` 是否成立、情境是否符合 §2.3 | 回報 fail 項目；自動把回報餵回 `generate.py --fix W03D2` 重生一次；仍 fail → `needs_fix` 人工看 |
+| 內容-機械 | `fugashi`＋`unidic-lite` | **所有給學習者看的假名欄位**（vocab.kana、example_kana、grammar.examples[].kana、patterns[].kana、reading.text_kana、listening.script_kana）逐詞與斷詞器讀音比對；數字、助數詞、外來語先經正規化表（ろっぴゃく／さんびゃく等連濁與促音、長音「ー」、片假名）再比 | 每筆不一致產生一則 `reading_warning{field, ja, kana_llm, kana_mecab}` |
+| 內容-跨模型 | Claude（`validate_content.py` 呼叫 Claude API） | (a) **裁決每一筆 `reading_warning`**：LLM 對／斷詞器對／兩者皆錯，附理由；(b) 每題 `answer` 是否被 `evidence` 支持、`evidence` 是否真的在原文；(c) 文法 `forms` 變化正確、`mistakes` 成立、情境符合 §2.3 | 任何一筆 warning 未裁決、或裁決為「LLM 錯」但未修正 → **不得發布**（回應第二輪 #7）；fail 項目餵回 `generate.py --fix` 重生一次；仍 fail → `needs_fix` 人工看 |
 | 人工 | Bryant | 每階段抽 3 課（各 day_type 一課）通讀 | 改 prompt 後重生整階段 |
+
+**誤報率先量再定門檻**（回應第二輪 #7，不用猜的）：建 `tests/readings.jsonl` 人工標註 100 筆（30 外來語、30 數字／助數詞、40 例句），跑機械層算誤報／漏報；誤報 >20% 就加正規化規則，仍高就改用 `pykakasi` 或雙工具交叉，門檻依實測結果寫進 `validate_content.py` 註解。
 
 ### 4.3 錯誤教材的處置
 PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`，進週報；修正後 `lesson_version+1`，PWA 依 `meta.lesson_version` 提示「本課已更新」。
@@ -116,7 +151,7 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 ## 5. 備份與還原（開學前置條件）
 
 - **完整匯出**：整份 §2.3 狀態 JSON（含 schema、curriculum_version、started）→ 複製到剪貼簿／iOS 分享表 → 存 iCloud 備忘錄或檔案。首頁提醒：每週日匯出一次；連續 7 天未匯出顯示黃色提示
-- **匯入**：檢查 `schema` 與 `curriculum_version`；版本不同→提示可能對不上；二選一：**取代**（整份覆蓋）或 **合併**（每課取 `done_at` 較晚者、practice 聯集、weak 依 id 聯集、weekly 取有值者）
+- **匯入（v1 只做整份取代，回應第二輪 #4）**：驗證 `schema` 相同、`curriculum_version` 相同（不同 → 拒絕，提示「請先更新課綱或用對應版本」）、JSON 結構合法；通過後顯示「將以 X 月 X 日的備份（N 課完成）取代目前狀態（M 課完成），確定？」→ 取代前先把目前狀態自動匯出一份到剪貼簿當退路。**不做合併**；備份之後那幾天的學習用 `practice` 手動補記或重做。
 - **驗收條件**：Day 1 前做一次「匯出 → 清站台資料 → 匯入 → 進度一致」的測試，通過才算可用
 - 週報只作溝通摘要，不承擔還原
 
@@ -154,11 +189,18 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 | 手機資料清空 | 匯入上週日的完整 JSON → 進度回到那時；中間幾天用 `practice` 補記 |
 | 教材答案錯誤 | 「回報錯誤」→ 週報；修正重生 → `lesson_version+1` → PWA 提示更新 |
 | 三週沒學 | ≥7 天 → 回歸測驗 → 使用者選重來點；`practice` 空白期不影響狀態 |
+| 第一階段做完 | W04D6 填分 ≥70／各項 ≥60 → `stage[1].passed` → W05D1 解鎖（第二輪 #1 的死結不再發生） |
+| 補強＋中斷 >7 天同時發生 | `todo` 同時有 return_test 與 remedial，先回歸測驗再補強，兩者都完成才選新課；途中關 app 不重算 |
+| 只學一課就中斷 10 天 | 回歸測驗只抽該課 10 詞＋1 文法（無 review 課可抽）；一課都沒完成 → 不測，回 W01D1 |
+| 補強做完再匯入補強前的備份 | 整份取代 → 該課回到 `remedial`、`remedial_done=false`，下次開啟重做補強（行為正確，因為使用者明確選擇取代，且取代前已自動匯出退路） |
+| 連續兩週聽力 <70 | 產生 `adjust_tasks{7.3-low, listening}`，首頁「本週必做」，未打勾週報標紅 |
+| 貼回同一段 feedback 兩次 | 第二次 hash 相同直接忽略；改過內容再貼 → 覆蓋並提示 |
 
 ## 9. 建置順序
 
 1. `curriculum.json`：ChatGPT 生第 1 階段（清冊＋24 課）→ Bryant 校對 → repo
-2. `generate.py`＋schema＋`validate_structure.py`；本機生 W01D1–D3 看品質、調 prompt
+2. `generate.py`＋三種 schema＋`validate_structure.py`；本機生 W01D1–D3 ＋ **W01D6、W04D6** 看品質、確認每種 day_type 都有合法輸出、調 prompt
+2b. `tests/readings.jsonl` 100 筆 → 量機械層誤報率 → 定門檻
 3. `validate_content.py`（fugashi ＋ Claude 核對）；生完整第 1 階段，人工抽 3 課
 4. PWA：**首頁進度 ＋ 今日（含 §3.2 選課規則）＋ 單字 ＋ 聽力 TTS ＋ 匯出／匯入**（開學最小集合）
 5. 備份還原驗收（§5）→ 第 0 週診斷 → Day 1
@@ -172,11 +214,10 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 - [ ] ChatGPT 專案 instructions 加入 §3.4 的回填格式
 - [ ] `curriculum.json` 第 1 階段
 
-## 11. 請 Codex 第二輪特別挑的地方
+## 11. 請 Codex 第三輪特別挑的地方
 
-1. §3.2 選課規則的優先順序有沒有互相打架的情況（例如既 remedial 又中斷 >7 天）
-2. §3.4 回填契約：ChatGPT 會不會不穩定地輸出這段？格式要不要更寬鬆？
-3. 分階段預生成後，§7.3「連續兩週 85% 以上加難度」在 v1 只剩建議——這樣的取捨 SPEC 能不能接受，還是要明寫修訂 SPEC
-4. 三層驗收裡 fugashi 讀音核對對片假名外來語、數字讀音（ろっぴゃく）的誤報率
-5. §5 合併規則會不會造成 remedial 狀態被較舊備份蓋掉
-6. 還有什麼是「開學第一週就會撞到」而這裡沒寫的
+1. 逐項確認第二輪七項是否真的解決（尤其 #1 死結、#2 待辦結算、#3 review schema）
+2. §3.2 兩段式流程：`todo` 在「開啟當日」結算——「當日」怎麼定義？跨午夜、同一天開兩次、時區
+3. §3.3b 的三條 §7.3 任務規則，跟 §3.3 的 `remedial_week` 疊在一起時會不會產生互相矛盾的指示
+4. 「重來」的狀態重設規則有沒有遺漏（`todo`、`adjust_tasks`、`stage.remedial_week`）
+5. 還有什麼是「開學第一週就會撞到」而這裡沒寫的
