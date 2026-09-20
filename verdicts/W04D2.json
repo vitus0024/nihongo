@@ -1,0 +1,13 @@
+{
+ "lesson": "W04D2",
+ "by": "Claude Opus 5",
+ "date": "2026-09-20",
+ "verdicts": [
+  {
+   "path": "grammar[*].forms[*].kana",
+   "verdict": "LLM 錯",
+   "reason": "行きます 的假名漏了き（でんしゃでいます）",
+   "action": "已修正，lesson_version 2"
+  }
+ ]
+}

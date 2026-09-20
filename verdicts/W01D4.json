@@ -1,0 +1,13 @@
+{
+ "lesson": "W01D4",
+ "by": "Claude Opus 5",
+ "date": "2026-09-20",
+ "verdicts": [
+  {
+   "path": "grammar[0].examples[3].kana, patterns[3].kana",
+   "verdict": "斷詞器錯",
+   "reason": "八歳 讀 はっさい（促音），UniDic 給 はちさい",
+   "action": "readings.txt 加助數詞促音表"
+  }
+ ]
+}
