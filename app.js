@@ -234,7 +234,7 @@ function renderSchedule() {
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定 <span class="badge">app v5</span></h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v6</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
@@ -319,7 +319,7 @@ function moduleHTML(k, d, cl, x) {
       const list = S.busy ? d.busy_mode.vocab_review_ids.map((i) => V[i]).filter(Boolean).map((v) => ({ ...v, example_ja: "", example_kana: "", example_zh: "" })) : d.vocab;
       const i = Math.min(runner.card, list.length - 1); const v = list[i]; const flip = runner.cards[i] || 0;
       return `<div class="dots">${list.map((_, j) => `<i class="${j === i ? "on" : runner.know?.[j] === true ? "know" : runner.know?.[j] === false ? "dunno" : ""}"></i>`).join("")}</div>
-        <div class="flash" data-act="flip"><div class="kanji ja">${rubyHTML(v.kanji, v.kana)}</div>${(flip >= 1 || SHOW_RUBY) && v.kanji !== v.kana ? `<div class="kana ja">${esc(v.kana)}</div>` : ""}${flip >= 2 ? `<div>${esc(v.zh)} <span class="pos">${esc(v.pos)}</span></div>${v.example_ja ? `<div class="ex ja">${rubyHTML(v.example_ja, v.example_kana)}<br><span class="muted small">${esc(v.example_zh)}</span></div>` : ""}${v.note ? `<p class="faint">${esc(v.note)}</p>` : ""}` : `<p class="faint">${SHOW_RUBY ? "點一下看意思" : "讀音？點一下"}</p>`}</div>
+        <div class="flash" data-act="flip"><div class="kanji ja">${esc(v.kanji)}</div>${(flip >= 1 || SHOW_RUBY) && v.kanji !== v.kana ? `<div class="kana ja">${esc(v.kana)}</div>` : ""}${flip >= 2 ? `<div>${esc(v.zh)} <span class="pos">${esc(v.pos)}</span></div>${v.example_ja ? `<div class="ex ja">${rubyHTML(v.example_ja, v.example_kana)}<br><span class="muted small">${esc(v.example_zh)}</span></div>` : ""}${v.note ? `<p class="faint">${esc(v.note)}</p>` : ""}` : `<p class="faint">${SHOW_RUBY ? "點一下看意思" : "讀音？點一下"}</p>`}</div>
         <div class="row" style="margin-top:8px"><button class="btn tts" data-act="say" data-text="${esc(v.kana)}">▶ 讀音</button>${v.example_ja ? `<button class="btn tts" data-act="say" data-text="${esc(v.example_ja)}">▶ 例句</button>` : ""}<span class="grow"></span><button class="btn small" data-act="card-mark" data-v="0">不會</button><button class="btn small primary" data-act="card-mark" data-v="1">會了 ✓</button></div>
         <div class="row between" style="margin-top:8px"><button class="btn ghost small" data-act="card-prev">‹ 上一個</button><span class="faint">${i + 1}／${list.length}</span><button class="btn ghost small" data-act="card-next">下一個 ›</button></div><p>${doneBtn()}</p>`;
     }
