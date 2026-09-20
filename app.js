@@ -19,12 +19,29 @@ const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 const sample = (arr, n) => [...arr].sort(() => Math.random() - .5).slice(0, n);
 let toastTimer;
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => (t.hidden = true), 2200); }
-function speak(text, rate = 0.85) {
+
+// ---------- 語音（每台裝置各自設定，不進備份） ----------
+const TTS_KEY = "nihongo.tts";
+const RATES = { slow: 0.7, normal: 0.9, fast: 1.1 };
+const RATE_LABEL = { slow: "慢", normal: "正常", fast: "快" };
+let TTS = { rate: "normal", voice: null };
+try { TTS = { ...TTS, ...JSON.parse(localStorage.getItem(TTS_KEY) || "{}") }; } catch {}
+const saveTTS = () => { try { localStorage.setItem(TTS_KEY, JSON.stringify(TTS)); } catch {} };
+function jaVoices() { return speechSynthesis.getVoices().filter((v) => v.lang.replace("_", "-").toLowerCase().startsWith("ja")); }
+function voiceScore(v) {                                   // 越高越自然：iOS／macOS 的加強版聲音名字帶 Enhanced／Premium／拡張
+  const n = v.name.toLowerCase(); let s = 0;
+  if (/enhanced|premium|拡張|neural|natural/.test(n)) s += 10;
+  if (/siri/.test(n)) s += 8;
+  if (/o-ren|hattori|otoya|kyoko/.test(n)) s += 2;
+  if (!v.localService) s += 1;
+  return s;
+}
+function pickVoice() { const vs = jaVoices(); if (!vs.length) return null; if (TTS.voice) { const v = vs.find((v) => v.name === TTS.voice); if (v) return v; } return vs.sort((a, b) => voiceScore(b) - voiceScore(a))[0]; }
+function speak(text, rateKey) {
   if (!("speechSynthesis" in window)) return toast("這個瀏覽器不支援語音");
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text); u.lang = "ja-JP"; u.rate = rate;
-  const v = speechSynthesis.getVoices().find((v) => v.lang.startsWith("ja"));
-  if (v) u.voice = v;
+  const u = new SpeechSynthesisUtterance(text); u.lang = "ja-JP"; u.rate = RATES[rateKey || TTS.rate] || RATES.normal; u.pitch = 1;
+  const v = pickVoice(); if (v) u.voice = v;
   speechSynthesis.speak(u);
 }
 
@@ -179,7 +196,14 @@ function renderSettings() {
     <div class="card"><h3>狀態</h3><p class="small">課綱版本 ${esc(CUR.version)}（狀態記錄 ${esc(S.curriculum_version)}）· 輪次 ${S.round} · 最後學習 ${S.last_activity || "–"}</p>
       <div class="row"><label class="sw">開始日 <input type="date" id="started" value="${S.started || ""}" data-act="set-started"></label></div>
       <p class="faint">弱點清單 ${S.weak.length} 項 · 回報教材錯誤 ${S.lesson_issues.length} 件</p></div>
-    <div class="card"><h3>語音</h3><button class="btn tts" data-act="tts-test">▶ 測試日文語音</button><p class="faint">iOS：設定 → 輔助使用 → 語音內容 → 聲音 → 日文，可下載較好的聲音</p></div>`;
+    <div class="card"><h3>語音</h3>
+      <p class="small muted">語速（單字、例句、句型的 ▶ 用這個；聽力另有三段）</p>
+      <div class="row">${Object.keys(RATES).map((k) => `<button class="btn ${TTS.rate === k ? "primary" : ""}" data-act="tts-rate" data-rate="${k}">${RATE_LABEL[k]}</button>`).join("")}</div>
+      <p class="small muted" style="margin-top:10px">聲音（機器感太重就換一個；名字有 Enhanced／Premium／拡張 的最自然，iOS 要先下載）</p>
+      <select id="tts-voice" data-act="tts-voice" style="max-width:100%;font:inherit;padding:6px;border-radius:8px;border:1px solid var(--border)"><option value="">自動挑最自然的</option>${jaVoices().map((v) => `<option value="${esc(v.name)}" ${TTS.voice === v.name ? "selected" : ""}>${esc(v.name)}${voiceScore(v) >= 10 ? "（加強版）" : ""}</option>`).join("")}</select>
+      <p><button class="btn tts" data-act="tts-test">▶ 試聽</button> <span class="faint">目前：${esc(pickVoice()?.name || "（無日文聲音）")}</span></p>
+      <p class="faint">iOS 下載加強版聲音：設定 → 輔助使用 → 朗讀內容 → 聲音 → 日文 → Kyoko／Otoya／O-Ren／Hattori 旁的下載，選「加強」或「進階」</p></div>`;
+  $("#tts-voice")?.addEventListener("change", (e) => ACT["tts-voice"](e.target));
   $("#started")?.addEventListener("change", (e) => { S.started = e.target.value || null; save(); toast("已更新開始日"); });
 }
 
@@ -255,7 +279,7 @@ function moduleHTML(k, d, cl, x) {
     case "listening": {
       const src = S.busy ? d.busy_mode : d;  // 忙碌版聽力同上
       return `<p class="small muted">SPEC §4.5 流程：盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>
-        <div class="row"><button class="btn tts" data-act="say" data-text="${esc(d.listening.script_ja)}" data-rate="0.8">▶ 播放（慢）</button><button class="btn tts" data-act="say" data-text="${esc(d.listening.script_ja)}" data-rate="1">▶ 正常速</button></div>
+        <div class="row">${Object.keys(RATES).map((k) => `<button class="btn tts" data-act="say" data-text="${esc(d.listening.script_ja)}" data-rate="${k}">▶ ${RATE_LABEL[k]}</button>`).join("")}</div>
         ${quizHTML(d.listening.questions, "listening")}
         ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3>${d.listening.script_ja.split(/(?<=[。？！」])/).filter((s) => s.trim()).map((s) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(s)}">▶</button><span class="ja">${esc(s)}</span></div>`).join("")}<div class="script kana">${esc(d.listening.script_kana)}</div>` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
         <p>${doneBtn()}</p>`;
@@ -329,8 +353,10 @@ async function renderRemedial(t) {
 const ACT = {
   "go-today": () => { tab = "today"; render(); },
   "open-lesson": async (a) => { const id = a.dataset.id; tab = "today"; document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === "today")); runner = {}; await renderLesson(id); },
-  say: (a) => speak(a.dataset.text, +(a.dataset.rate || 0.85)),
-  "tts-test": () => speak("こんにちは。私は日本語を勉強しています。"),
+  say: (a) => speak(a.dataset.text, a.dataset.rate),
+  "tts-test": () => speak("こんにちは。私は台湾人です。日本語を勉強しています。"),
+  "tts-rate": (a) => { TTS.rate = a.dataset.rate; saveTTS(); renderSettings(); speak("こんにちは。私は台湾人です。"); },
+  "tts-voice": (a) => { TTS.voice = a.value || null; saveTTS(); speak("こんにちは。私は台湾人です。"); },
   copy: async (a) => { try { await navigator.clipboard.writeText(a.dataset.text); toast("已複製，去 ChatGPT 貼上"); } catch { prompt("手動複製：", a.dataset.text); } },
   flip: () => { runner.cards[runner.card] = ((runner.cards[runner.card] || 0) + 1) % 3; renderLesson(runner.id); },
   "card-prev": () => { runner.card = Math.max(0, runner.card - 1); renderLesson(runner.id); },
@@ -437,4 +463,5 @@ function weeklyReport() {
   render();
   if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   speechSynthesis?.getVoices();
+  speechSynthesis?.addEventListener?.("voiceschanged", () => { if (tab === "settings") renderSettings(); });
 })();
