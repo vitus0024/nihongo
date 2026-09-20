@@ -1,0 +1,13 @@
+{
+ "lesson": "W04D6",
+ "by": "Claude Opus 5",
+ "date": "2026-09-20",
+ "verdicts": [
+  {
+   "path": "quiz.speaking.task_zh",
+   "verdict": "LLM 錯（內容）",
+   "reason": "口說任務欄寫成整份測驗的說明文；task_ja 本身是正確的對話提問",
+   "action": "改寫為三分鐘對話任務，lesson_version 2；另因 g001 改為不教常體，整課重生一次（常體題 0）"
+  }
+ ]
+}
