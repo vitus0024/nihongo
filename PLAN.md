@@ -1,7 +1,8 @@
-# 日文 N5 學習 App — 實作計畫（PLAN v0.3，待 Codex 第三輪審）
+# 日文 N5 學習 App — 實作計畫（PLAN v0.4，待 Codex 第四輪審）
 
 > 依據：`SPEC.md` v1.0（ChatGPT 專案匯出，2026-09-20）
 > 本文件回答 SPEC §10.2「主要交付方式」——SPEC 定義**學什麼、怎麼評**；本文件定義**在哪裡看、怎麼做、進度怎麼算**。
+> v0.4 變更（回應 `reviews-round3.md` 四項）：①三種 day_type 各自的完成條件與狀態轉移表 ②「重來」改為原子的**學習輪次**切換，todo／adjust_tasks／stage 資格全部帶輪次 ③todo 帶流程日期與結算時的 last_activity，跨日重新評估中斷長度 ④階段通過判定統一成一個函式，聽說門檻併入 remedial_parts
 > v0.3 變更（回應 `reviews-round2.md` 七項）：①階段入場改為「前一階段通過」②補強完成轉 done；當日先結算待辦清單再選課 ③schema 依 day_type 分支 ④備份 v1 只做整份取代 ⑤回歸測驗只用已學項目、零資料回首課；「重來」定義 ⑥§7.3 做成可追蹤的人工任務（Bryant 決定：不修 SPEC）⑦讀音警示逐筆裁決才可發布、涵蓋所有假名欄位、先量誤報率
 > v0.2 變更（回應 `reviews-round1.md` 六項發現）：①§7.2／§8.2 規則改由 PWA 本機執行，ChatGPT 決策有回填路徑 ②課次改為狀態機，不再用「完成課數」推算 ③教材改為**分階段預生成**，取消每日 cron ④完整 JSON 備份與週報分開，且為開學前置條件 ⑤課綱帶有 ID 的單字／文法清冊 ⑥內容驗收分三層（斷詞器讀音核對、跨模型答案核對、人工抽驗）
 
@@ -75,38 +76,69 @@ busy_mode     同 new
                      "done_at":"2026-10-06","remedial_done":true}},
  "practice":[{"date":"2026-10-07","kind":"busy","lesson":"W03D2","minutes":20}],     忙碌版、休息日輕量、補強都記這裡，不動課次狀態
  "weekly":{"W03":{"quiz":{"vocab":16,"grammar":18,"reading":15,"listening":14,"speaking":12},"entered_at":"..."}},
- "stage":{"2":{"test":{"total":74,"parts":{...}},"passed":true,"remedial_week":false}},
+ "stage":{"2":{"round":1,"test":{"total":74,"parts":{...},"taken":"2026-10-25"},"passed":true,"remedial_parts":[],"retest_after":null}},   只讀目前 round 的紀錄
  "weak":[{"id":"v0123","source":"check","count":2,"first":"2026-10-06"},{"id":"g012","source":"chatgpt","note":"を/が 混用"}],
  "diagnostic":{"exempt_vocab":["v0001",...],"exempt_grammar":["g001"],"skip_kana_review":true},
- "todo":[{"kind":"remedial","lesson":"W03D2","created":"2026-10-06"},{"kind":"return_test","created":"2026-10-20"}],   當日待辦，做完才刪
- "adjust_tasks":[{"id":"a03","rule":"7.3-low","part":"listening","week":"W05","task":"本週加一次針對性聽力練習（NHK Easy 一篇＋跟讀）","done":false}],
+ "round":1,                                                                          學習輪次；「重來」+1（§3.6）
+ "flow":{"date":"2026-10-07","settled_last_activity":"2026-10-04","round":1},         本次待辦結算的日期（Asia/Taipei，固定）與依據
+ "todo":[{"kind":"remedial","lesson":"W03D2","round":1},{"kind":"return_test","round":1}],   做完才刪；完成時檢查 round 與課次狀態仍有效
+ "adjust_tasks":[{"id":"a03","rule":"7.3-low","part":"listening","week":"W05","round":1,"task":"本週加一次針對性聽力練習（NHK Easy 一篇＋跟讀）","done":false}],
  "feedback_log":[{"week":"W03","received":"2026-10-11","hash":"…"}],   §3.4 重貼防重
  "last_activity":"2026-10-07"}
 ```
 
 ## 3. 進度機（PWA 本機規則，取代 v0.1 的「完成課數」）
 
-### 3.1 課次狀態
-`locked` → `available` → `partial`（有模組打勾）→ `done`（九模組全勾＋小檢核有分數）；另有 `exempt`（診斷豁免，§7.1）、`remedial`（九模組全勾但小檢核 <70%：課本身算學過，但欠一次補強）。
+### 3.1 課次狀態與轉移（依 day_type，回應第三輪 #1）
+共同狀態：`locked` → `available` → `partial` → `done`；另有 `exempt`（診斷豁免）、`remedial`（欠一次補強）。
 
-**補強完成 → 該課轉 `done`，`remedial_done=true`**（回應第二輪 #2：不再只記 practice）。
+| day_type | `partial` | `done` 條件 | 失敗轉移 |
+|---|---|---|---|
+| `new` | 任一模組打勾 | 九模組全勾 ＋ 小檢核有分數 | 小檢核 <70% → `remedial`（課算學過，欠補強）；補強完成 → `done`、`remedial_done=true` |
+| `review` | 任一 quiz 分項作答 | quiz 四個自動分項（單字／文法／閱讀／聽力）作答完 ＋ **錯題訂正頁**做完；`weekly[W].quiz` 四項在**同一次提交**寫入 | 沒有 remedial（SPEC §8.1 週測不擋進度）；口說分數可後補：`weekly[W].quiz.speaking=null` 時首頁提示「口說分數待填」，3 天後標黃，不鎖課 |
+| `stage_test` | 同 review | 同 review ＋ `stage[S].test` 在同一次提交寫入；口說分數**必填**（§8.2 五分項都要） | 由 §3.3 通過函式決定 `passed`／`remedial_parts`；不通過不改課次狀態，只鎖下一階段 |
+
+**同一次狀態提交**：`lesson.status`、`weekly`、`stage`、`todo` 的變更在一個函式內一起寫回 localStorage，不分兩步，避免寫到一半關 app。
 
 ### 3.2 選「下一課」——兩段式：先結算待辦，再選課
 
-**A. 開啟當日流程時，一次結算 `todo`**（用開啟那一刻的 `last_activity`，之後做任何事都不重算，回應第二輪 #2）：
-- 有 `status=remedial` 且 `remedial_done=false` 的課 → 加 `todo{remedial}`
-- `today − last_activity ≥ 7` → 加 `todo{return_test}`；`1–3` → 加 `todo{short_review}`；`4–6` 視同 `1–3`
-- 兩者可同時存在：**先回歸測驗、再補強**（先知道還記得多少，再補上次的洞）
-- 待辦全部完成才進 B；未完成就關 app，下次開啟沿用同一份 `todo`，不重算
+**A. 開啟流程時結算 `todo`**（回應第三輪 #3，冪等且跨日會重評）。「今天」＝ Asia/Taipei 固定時區的日曆日（不隨手機時區變）：
+- `flow.date == today` 且 `todo` 非空 → **同日重開：沿用**，不重算
+- 否則（首次、或 `flow.date < today`）→ 重新結算：
+  - 保留既有 `todo{remedial}`（義務不消失）；補加目前所有 `status=remedial && !remedial_done` 的課
+  - 用 **`last_activity`**（只在實際學習完成時更新：模組打勾、quiz 提交、練習記錄、補強完成；開 app、看課表不算）算 gap：`≥7` → `return_test`；`1–6` → `short_review`；若舊 todo 有 `short_review` 而 gap 已 ≥7 → **升級**為 `return_test`（擱置十天的情境）
+  - 寫入 `flow{date: today, settled_last_activity, round}`
+- 順序：**先回歸測驗、再補強、再短複習**；全部完成才進 B
+- 每個 todo 完成時檢查 `todo.round == state.round` 且目標課仍是 `remedial`；不符 → 丟棄該 todo（回應第三輪 #2）
 
 **B. 選課**：課綱順序第一個 `status ∉ {done, exempt, remedial}` 的課。若它是階段 S 的第一課（S ≥ 2）且 `stage[S−1].passed ≠ true` → 鎖住並顯示「第 S−1 階段測驗未通過／未填分數」（§8.2；回應第二輪 #1：**入場條件是前一階段**）。第 1 階段入場條件 ＝ 診斷完成（或明確跳過診斷）。
 
-**回歸測驗的內容**（回應第二輪 #5）：只從 `status ∈ {done, remedial}` 的課取——單字抽 min(10, 已學數)，文法抽 min(3, 已學數)，加最近一個已完成 `review` 課的 5 題（若無則略）。零已學 → 不出測驗，直接回首課。結果 <50% → 建議「重來」；「重來」＝ 使用者選一個課次 X，X 之後（含 X）所有 `done/remedial` 改回 `available`、`weekly/stage` 中屬於這些週的紀錄標 `superseded` 保留不刪、`weak` 不動；選「續」則什麼都不改。
+**回歸測驗的內容**（回應第二輪 #5）：只從 `status ∈ {done, remedial}` 的課取——單字抽 min(10, 已學數)，文法抽 min(3, 已學數)，加最近一個已完成 `review` 課的 5 題（若無則略）。零已學 → 不出測驗，直接回首課。結果 <50% → 建議「重來」（§3.6）；選「續」則什麼都不改。
+
+### 3.6 「重來」＝ 原子的學習輪次切換（回應第三輪 #2）
+使用者選一個課次 X 後，**一次提交**做完以下全部：
+1. `round += 1`
+2. X 起（含）所有課：`status=available`，清空 `modules`、`check`、`remedial_done`、`done_at`
+3. `todo` 清空（正在做的 return_test 視為已完成）；`flow` 重寫為今天＋新 round
+4. `adjust_tasks` 中 `week ≥ week(X)` 者標 `superseded`
+5. `weekly` 中 `week ≥ week(X)`、`stage` 中 `stage ≥ stage(X)` 的紀錄搬進 `history[]`（保留可看），目前欄位清空 → 該階段 `passed` 隨之失效，下一階段重新鎖住
+6. `weak`、`practice`、`diagnostic`、`lesson_issues` 不動
+所有門檻（§3.2 B、§3.3）只讀 `round == state.round` 的紀錄；舊 round 的 todo／任務／資格一律無效。
 - **忙碌版**：任何一課都能開「忙碌版」，做完記進 `practice`，**不改課次狀態、不推進**（SPEC §5.2「未完成的新內容移到下一個正常學習日」）
 - **診斷**：第 0 週在 PWA 做（假名、單字、文法、閱讀；聽力與口說在 ChatGPT），結果標 `exempt`，被豁免的單字仍算進度分母但直接計入「已學」
 
 ### 3.3 階段門檻（§8.2）
-`stage_test` 課完成 ＝ 填入五分項分數（口說分數來自 ChatGPT）。總分 ≥70 且各項 ≥60 → `passed`；否則 `remedial_week=true`：該階段所有課保持可開，PWA 顯示「補強週：弱項 ＝ 聽力、口說」，一週後可重填弱項分數重測（只填弱項，§8.2）。N4 判定（§8.3）同法，六條件做成 checklist。
+**統一的通過判定函式**（回應第三輪 #4），輸入五分項各 0–20、總分 0–100，輸出 `passed` 與 `remedial_parts`：
+```
+written = avg(vocab, grammar, reading) 換算成百分比
+remedial_parts = { p | p < 60% }                                       ← §8.2
+               ∪ { p ∈ {listening, speaking} | p < 70% and written ≥ 85% }   ← §7.3「不因筆試高分直接加速」
+passed = total ≥ 70% and remedial_parts 為空
+```
+- 不通過 → `stage[S] = {passed:false, remedial_parts, retest_after: taken + 7 天}`；該階段所有課保持可開，首頁顯示「補強週：弱項 ＝ 聽力」；`retest_after` 之後可**只重填 remedial_parts 的分數**，其餘沿用，再跑同一個函式（§8.2 只重測弱項）
+- 通過 → `passed:true`，下一階段第一課解鎖
+- 判定只讀 `stage[S].round == state.round` 的紀錄
+- N4 判定（§8.3）：六條件 checklist，兩次模擬測驗各自跑上述函式
 
 ### 3.3b §7.3 難度調整 → 可追蹤的人工任務（Bryant 決定：不修 SPEC，做成 B 方案）
 每週填完 `weekly` 分數時自動評估，符合就產生 `adjust_tasks`，出現在首頁「本週必做」，要打勾才消失；連續未完成會在週報標紅：
@@ -114,7 +146,7 @@ busy_mode     同 new
 |---|---|
 | 連續兩週總分 ≥85 | 「本週閱讀改讀 NHK Easy 一篇完整文章＋口說任務改自由敘述 3 分鐘」（加自然度，不加背誦量） |
 | 任一分項連續兩週 <70 | 「本週該分項加一次針對性練習」，內容依分項：聽力＝NHK Easy 一篇盲聽→跟讀；口說＝ChatGPT 角色扮演一次；閱讀＝重讀本週兩篇＋問題；單字／文法＝錯題訂正頁重做 |
-| 聽力或口說落後（<70）而筆試 ≥85 | 階段測驗即使總分過，`passed` 仍要等聽力／口說重測 ≥60（§7.3 第三條「不因筆試高分直接加速」） |
+| 聽力或口說落後而筆試高分 | 不另設任務——已併入 §3.3 通過函式的 `remedial_parts`，走補強週＋只重測該項 |
 教材本身不改（v1 不做適應式生成）；任務完成紀錄進週報，ChatGPT 據此再給下週建議。
 
 ### 3.4 ChatGPT → PWA 回填契約
@@ -195,6 +227,12 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 | 補強做完再匯入補強前的備份 | 整份取代 → 該課回到 `remedial`、`remedial_done=false`，下次開啟重做補強（行為正確，因為使用者明確選擇取代，且取代前已自動匯出退路） |
 | 連續兩週聽力 <70 | 產生 `adjust_tasks{7.3-low, listening}`，首頁「本週必做」，未打勾週報標紅 |
 | 貼回同一段 feedback 兩次 | 第二次 hash 相同直接忽略；改過內容再貼 → 覆蓋並提示 |
+| W01D6 週測做完 | quiz 四項作答＋訂正 → `done`、`weekly.W01` 同次寫入；口說分數空 → 首頁提示待填但 W02D1 照常解鎖 |
+| remedial 的 W03D2，中斷十天，回歸測驗選從 W03D1 重來 | round=2，W03D1–W03D2 回 available 且清空，舊 remedial todo 被清；重學 W03D1 → 正常選到 W03D2，不會被跳過 |
+| 中斷 2 天開 app 產生 short_review 沒做就關，再過 10 天 | 跨日重評：gap 以 last_activity 算 ≥7 → short_review 升級為 return_test |
+| 同一天開三次 app | `flow.date == today` → 沿用同一份 todo，做到一半的進度保留 |
+| 筆試各 90%、聽力 65%、口說 75% | written ≥85 且 listening <70 → `remedial_parts=[listening]`、`passed=false`；7 天後只重填聽力，≥70 → passed |
+| 補強週後只重填弱項 | 其餘分項沿用原分數，函式重跑；重填的分數覆蓋 `stage[S].test.parts[p]`，`taken` 更新 |
 
 ## 9. 建置順序
 
@@ -214,10 +252,10 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 - [ ] ChatGPT 專案 instructions 加入 §3.4 的回填格式
 - [ ] `curriculum.json` 第 1 階段
 
-## 11. 請 Codex 第三輪特別挑的地方
+## 11. 請 Codex 第四輪特別挑的地方
 
-1. 逐項確認第二輪七項是否真的解決（尤其 #1 死結、#2 待辦結算、#3 review schema）
-2. §3.2 兩段式流程：`todo` 在「開啟當日」結算——「當日」怎麼定義？跨午夜、同一天開兩次、時區
-3. §3.3b 的三條 §7.3 任務規則，跟 §3.3 的 `remedial_week` 疊在一起時會不會產生互相矛盾的指示
-4. 「重來」的狀態重設規則有沒有遺漏（`todo`、`adjust_tasks`、`stage.remedial_week`）
-5. 還有什麼是「開學第一週就會撞到」而這裡沒寫的
+1. 逐項確認第三輪四項是否真的解決
+2. §3.1 轉移表 × §3.2 兩段式 × §3.6 輪次：還有沒有走得到的死結或跳課
+3. §3.3 通過函式：`written ≥ 85%` 用三項平均是否合理；60–69% 的聽說在筆試 <85% 時直接通過，SPEC 能否接受
+4. 還有什麼是「開學第一週就會撞到」而這裡沒寫的
+若已無 high，請給 approved 或 approved-with-notes，notes 留給實作階段處理。
