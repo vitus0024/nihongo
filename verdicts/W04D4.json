@@ -1,0 +1,19 @@
+{
+ "lesson": "W04D4",
+ "by": "Claude Opus 5",
+ "date": "2026-09-20",
+ "verdicts": [
+  {
+   "path": "patterns[0].kana",
+   "verdict": "LLM 錯",
+   "reason": "林さん 全專案讀 りん（台灣姓），此處寫 はやし",
+   "action": "改 りんさん，lesson_version 2"
+  },
+  {
+   "path": "reading.text_kana",
+   "verdict": "斷詞器錯",
+   "reason": "三日 讀 みっか，UniDic 給 さんにち",
+   "action": "readings.txt 加日期讀音表"
+  }
+ ]
+}
