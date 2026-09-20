@@ -10,9 +10,16 @@ import json
 import sys
 from pathlib import Path
 
+import fugashi
 import jsonschema
 
 ROOT = Path(__file__).parent
+TAGGER = fugashi.Tagger()
+ALLOW = {ln.strip() for ln in (ROOT / "schema" / "allow_words.txt").read_text(encoding="utf-8").splitlines()
+         if ln.strip() and not ln.startswith("#")}
+CONTENT_POS = ("名詞", "動詞", "形容詞", "形状詞", "副詞", "連体詞", "接続詞", "代名詞")
+SKIP_POS = ("固有名詞", "数詞", "非自立可能", "助数詞可能")
+JA_KEYS = ("ja", "example_ja", "text_ja", "script_ja", "task_ja")
 SCHEMA = json.loads((ROOT / "schema" / "lesson.schema.json").read_text(encoding="utf-8"))
 CUR = json.loads((ROOT / "curriculum.json").read_text(encoding="utf-8"))
 VOCAB = {v["id"]: v for v in CUR["vocab"]}
@@ -31,6 +38,51 @@ def qs_in(node, path=""):
     elif isinstance(node, list):
         for i, v in enumerate(node):
             yield from qs_in(v, f"{path}[{i}]")
+
+
+def ja_strings(node, path=""):
+    """所有給學習者看的日文句子（不含 options：選項裡的錯誤讀音是故意的）。"""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if k in JA_KEYS and isinstance(v, str):
+                yield f"{path}.{k}", v
+            elif k != "options":
+                yield from ja_strings(v, f"{path}.{k}")
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            yield from ja_strings(v, f"{path}[{i}]")
+
+
+def untaught_words(taught: set[str], d: dict) -> dict[str, list[str]]:
+    """斷詞後，每個實詞必須是教過的字（連續 token 拼起來、或 lemma 命中都算）、允許清單、或人名／數詞／助數詞。"""
+    found: dict[str, list[str]] = {}
+    for path, s in ja_strings(d):
+        toks = list(TAGGER(s))
+        i = 0
+        while i < len(toks):
+            hit = 0
+            for j in range(min(len(toks), i + 4), i, -1):
+                if "".join(t.surface for t in toks[i:j]) in taught:
+                    hit = j
+                    break
+            if hit:
+                i = hit
+                continue
+            w = toks[i]
+            f = w.feature
+            content = f.pos1 in CONTENT_POS and not any(x in SKIP_POS for x in (f.pos2, f.pos3))
+            known = w.surface in taught or w.surface in ALLOW or (f.lemma or "") in taught or (f.lemma or "") in ALLOW
+            if content and not known:
+                found.setdefault(w.surface, []).append(path)
+            i += 1
+    return found
+
+
+def uses_word(sentence: str, kanji: str, kana: str) -> bool:
+    """例句有沒有用到這個字：直接包含，或斷詞後 lemma 命中（起きる → 起きます）。"""
+    if kanji in sentence or kana in sentence:
+        return True
+    return any((w.feature.lemma or "") in (kanji, kana) for w in TAGGER(sentence))
 
 
 def validate(p: Path) -> list[str]:
@@ -95,7 +147,7 @@ def validate(p: Path) -> list[str]:
             c = VOCAB.get(x["id"])
             if c and (x["kanji"], x["kana"]) != (c["kanji"], c["kana"]):
                 errs.append(f"vocab {x['id']}：寫法「{x['kanji']}／{x['kana']}」跟課綱「{c['kanji']}／{c['kana']}」不符")
-            if x["example_ja"].find(x["kanji"]) < 0 and x["example_ja"].find(x["kana"]) < 0:
+            if not uses_word(x["example_ja"], x["kanji"], x["kana"]):
                 errs.append(f"vocab {x['id']}：例句沒用到「{x['kanji']}」")
         got_g = {x["id"] for x in d["grammar"]}
         if got_g != new_g:
@@ -133,6 +185,16 @@ def validate(p: Path) -> list[str]:
         if bad:
             errs.append(f"busy_mode.vocab_review_ids 含範圍外的字：{sorted(bad)}")
         # 測驗題只能用已教過的字（含本週）
+    # 未學詞：到本課為止教過的字 ＋ 允許清單以外的實詞不准出現（PLAN §4.2 機械層之一，先擋在結構層讓 Codex 自修）
+    taught = {sf for x in ORDER[: idx + 1] for vid in LESSONS[x]["new_vocab"] for sf in (VOCAB[vid]["kanji"], VOCAB[vid]["kana"])}
+    for x in ORDER[: idx + 1]:                       # 教過的文法句型裡的詞也算教過（これ／この／行きます／いくら…）
+        for gid in LESSONS[x]["new_grammar"]:
+            for w in TAGGER(GRAMMAR[gid]["pattern"]):
+                taught.add(w.surface)
+                if w.feature.lemma:
+                    taught.add(w.feature.lemma)
+    for word, paths in untaught_words(taught, d).items():
+        errs.append(f"未學詞「{word}」出現在 {paths[0]}" + (f" 等 {len(paths)} 處" if len(paths) > 1 else "") + "（改用已教的字，或真的必要就加進 schema/allow_words.txt）")
     # 所有 tests 引用必須存在
     for path, q in qs_in(d):
         t = q.get("tests")

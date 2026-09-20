@@ -61,8 +61,9 @@ def main() -> None:
     gdoc = load(args.grammar)
     for g in gdoc.get("grammar", []):
         pat = g["pattern"].strip()
-        if pat in grammar_by_pat:
-            continue                                   # 已有 → 沿用舊 ID
+        if pat in grammar_by_pat:                      # 已有 → 沿用舊 ID，但說明／出處／情境以這次輸入為準
+            grammar_by_pat[pat].update(meaning_zh=g.get("meaning_zh", ""), minna=g.get("minna"), scene=g.get("scene", ""))
+            continue
         grammar_by_pat[pat] = {"id": f"g{next_g:03d}", "pattern": pat, "meaning_zh": g.get("meaning_zh", ""),
                                "minna": g.get("minna"), "scene": g.get("scene", ""), "stage": args.stage}
         next_g += 1
@@ -172,7 +173,8 @@ def main() -> None:
             review += [vid for x in wk for vid in x["new_vocab"]]
         l["review_vocab"] = list(dict.fromkeys(review))   # 去重、保序
 
-    vocab = sorted(vocab_by_key.values(), key=lambda v: v["id"])
+    used = {vid for l in lessons for vid in l["new_vocab"]}
+    vocab = sorted((v for v in vocab_by_key.values() if v["id"] in used), key=lambda v: v["id"])   # 被換掉的字不留在分母裡
     grammar = sorted(grammar_by_pat.values(), key=lambda g: g["id"])
     today = date.today().isoformat()
     n_same_day = int(prev["version"].split(".")[-1]) + 1 if prev.get("version", "").startswith(today) else 1
