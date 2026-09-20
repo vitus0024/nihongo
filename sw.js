@@ -1,5 +1,5 @@
 /** 離線快取：先連網、失敗退回快取。教材 JSON 抓過就留著，當前階段離線可用。 */
-const CACHE = "nihongo-v4";
+const CACHE = "nihongo-v5";
 const CORE = ["./", "./index.html", "./style.css", "./app.js", "./manifest.json", "./icon.svg", "./curriculum.json"];
 
 self.addEventListener("install", (e) => {
