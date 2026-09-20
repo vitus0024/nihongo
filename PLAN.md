@@ -212,6 +212,10 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 - TTS：`speechSynthesis` `ja-JP`（iOS Kyoko／Otoya）；不做 MP3（SPEC §4.5）
 - 骨架複用料理靈感工具：單檔 HTML ＋ Service Worker ＋ GitHub Pages；`lessons/*.json` 全部靜態，SW 快取當前階段 24 課
 
+## 6b. 已知問題（2026-09-20，Bryant 決定先暫停）
+
+- **iOS 語音（TTS）不穩**：手機實測先講日文、後變中文，修兩版後變成沒聲音。已知因素：iOS `getVoices()` 延遲載入、用到舊 voice 物件會退回系統預設聲音、`speak()` 必須在手勢內同步呼叫、`speaking／pending` 旗標會卡住。v3 已加「上次播放」狀態行與「診斷」鈕但未再驗證。**先擱置**，其他功能照做；之後要處理時先裝 Xcode 用模擬器測，或考慮改用預錄音檔／雲端 TTS（違反 SPEC §4.5「不保證 MP3」的精神但可靠）。
+
 ## 7. 明確不做（v1）
 
 - 適應式教材生成（看成績改教材）——§7.3 的調整由 ChatGPT 給建議、Bryant 決定要不要改課綱重生
