@@ -1,7 +1,8 @@
-# 日文 N5 學習 App — 實作計畫（PLAN v0.5 — Codex 第五輪 **approved**，2026-09-20）
+# 日文 N5 學習 App — 實作計畫（PLAN v0.6 — 設計 v0.5 經 Codex 五輪 approved；v0.6 只改生成工具，2026-09-20）
 
 > 依據：`SPEC.md` v1.0（ChatGPT 專案匯出，2026-09-20）
 > 本文件回答 SPEC §10.2「主要交付方式」——SPEC 定義**學什麼、怎麼評**；本文件定義**在哪裡看、怎麼做、進度怎麼算**。
+> v0.6 變更（實作階段調整，不動設計）：教材與課綱改用 **Codex CLI（`codex exec`，ChatGPT 訂閱登入）** 生成，不用 OpenAI API；內容驗收由 Claude Code 本機做，不用 Anthropic API。前置條件少掉兩把 key。課綱第 1 階段已用此法生成並通過 `build_curriculum.py`
 > v0.5 變更（回應 `reviews-round4.md` 三項＋一則備註）：①輪次切換時，X 之前的階段資格**承接**到新輪次 ②總分不足時重測集合＝所有 <70% 的分項，保證非空 ③todo 完成檢查依 kind 分別驗證 ④「失衡」明訂為相對差距，並明寫接受其非單調性
 > v0.4 變更（回應 `reviews-round3.md` 四項）：①三種 day_type 各自的完成條件與狀態轉移表 ②「重來」改為原子的**學習輪次**切換，todo／adjust_tasks／stage 資格全部帶輪次 ③todo 帶流程日期與結算時的 last_activity，跨日重新評估中斷長度 ④階段通過判定統一成一個函式，聽說門檻併入 remedial_parts
 > v0.3 變更（回應 `reviews-round2.md` 七項）：①階段入場改為「前一階段通過」②補強完成轉 done；當日先結算待辦清單再選課 ③schema 依 day_type 分支 ④備份 v1 只做整份取代 ⑤回歸測驗只用已學項目、零資料回首課；「重來」定義 ⑥§7.3 做成可追蹤的人工任務（Bryant 決定：不修 SPEC）⑦讀音警示逐筆裁決才可發布、涵蓋所有假名欄位、先量誤報率
@@ -15,7 +16,7 @@
 
 | 層 | 執行者 | 負責 | 明確不負責 |
 |---|---|---|---|
-| 教材庫 | `generate.py`（OpenAI API）＋ 三層驗收，每階段跑一次 | 依 `curriculum.json` 生該階段 24 課 `lessons/W03D2.json`，commit 進 repo | 不看使用者成績；不每天跑 |
+| 教材庫 | `codex exec`（ChatGPT 訂閱登入，不用 API key）＋ 三層驗收，每階段跑一次 | 依 `curriculum.json` 生該階段 24 課 `lessons/W03D2.json`，自跑結構驗證修到過，commit 進 repo | 不看使用者成績；不每天跑 |
 | 閱讀器＋進度機 | PWA（GitHub Pages，iOS 加到主畫面） | 選下一課、九模組打勾、TTS、小檢核、**§7.2 次日補強、§7.2 中斷規則、§8.2 階段門檻**、進度％、完整備份、週報 | 不批改、不對話、不生內容 |
 | 家教 | ChatGPT App（本專案＋語音模式） | 口說角色扮演與評分、作業批改、週測口說分項、弱點分析、§7.3 難度調整建議 | 不當每日教材的主要閱讀介面；不持有進度真相 |
 | 提醒 | GitHub Actions cron ＋ LINE（進修雷達現成管道） | 每天 07:00 推「今天的日文 → 連結」；週六 20:00 推「週測」 | 不知道你在第幾課（連結進 PWA 由它選） |
@@ -67,8 +68,9 @@ busy_mode     同 new
 ```
 **`stage_test`（第 4／8／12／16／20 週 Day6，SPEC §8.2）**——同 review 結構，但 `tests` 可引用整個階段的項目，題數 vocab 20／grammar 20／reading 2 篇／listening 2 段，另附 `n5_mock: true`（第 20 週）。
 - 結構驗證以 W01D6、W04D6 各生一課確認有合法輸出，才算 schema 完成
-- 生成模型：OpenAI API（gpt-5 系列，`generate.py` 可換）；驗收另用 Claude（§4）
-- 每課 in ≈ 8k（SPEC §4 ＋ 該課 curriculum 條目 ＋ 指定單字 ＋ 前一課 grammar）、out ≈ 5k；120 課總量約 1.6M tokens，一次性成本 < NT$500
+- 生成：`codex exec --sandbox workspace-write`，prompt ＝ `prompts/lesson.md`（含 SPEC §4 摘要、該課 curriculum 條目展開成實際單字／文法、前一課的 grammar、schema 路徑）；Codex 寫檔後自跑 `validate_structure.py`，不過就自己修（課綱那步已驗證此流程可行）
+- 沒有 Structured Outputs 綁定，靠 schema 驗證＋自修；一課一個 `codex exec`，可平行
+- 成本：ChatGPT 訂閱額度，不另計費；課綱兩段共用了 ≈ 55k tokens
 
 ### 2.3 手機端狀態（localStorage，`schema` 帶版本）
 ```
@@ -172,14 +174,14 @@ PWA「從 ChatGPT 貼回」貼上整段 → **嚴格驗證**（回應第二輪�
 ## 4. 教材庫：生成與三層驗收
 
 ### 4.1 流程（每階段一次，本機跑）
-`generate.py --stage 2` → 24 課 → `validate_structure.py` → `validate_content.py` → 人工抽驗 → commit。任何一層失敗的課標 `needs_fix`，不進 PWA。
+`gen_stage.sh 2`（對 24 課各跑一次 `codex exec`）→ 每課 `validate_structure.py`（Codex 自修到過）→ `validate_content.py`（機械層）→ Claude 裁決 → 人工抽驗 → commit。任何一層失敗的課標 `needs_fix`，不進 PWA。
 
 ### 4.2 三層驗收
 | 層 | 工具 | 檢查 | 不過怎麼辦 |
 |---|---|---|---|
 | 結構 | JSON schema | 數量、必填、`vocab.id ⊆ new_vocab`、`check.tests` 都是合法 ID、假名欄只含 ひらがな／カタカナ／ー／標點空白 | 自動重生該課（最多 2 次） |
 | 內容-機械 | `fugashi`＋`unidic-lite` | **所有給學習者看的假名欄位**（vocab.kana、example_kana、grammar.examples[].kana、patterns[].kana、reading.text_kana、listening.script_kana）逐詞與斷詞器讀音比對；數字、助數詞、外來語先經正規化表（ろっぴゃく／さんびゃく等連濁與促音、長音「ー」、片假名）再比 | 每筆不一致產生一則 `reading_warning{field, ja, kana_llm, kana_mecab}` |
-| 內容-跨模型 | Claude（`validate_content.py` 呼叫 Claude API） | (a) **裁決每一筆 `reading_warning`**：LLM 對／斷詞器對／兩者皆錯，附理由；(b) 每題 `answer` 是否被 `evidence` 支持、`evidence` 是否真的在原文；(c) 文法 `forms` 變化正確、`mistakes` 成立、情境符合 §2.3 | 任何一筆 warning 未裁決、或裁決為「LLM 錯」但未修正 → **不得發布**（回應第二輪 #7）；fail 項目餵回 `generate.py --fix` 重生一次；仍 fail → `needs_fix` 人工看 |
+| 內容-跨模型 | Claude Code 本機（`validate_content.py` 產生待裁決清單，由 Claude 在 session 內逐筆裁決並寫回 `verdicts/W03D2.json`） | (a) **裁決每一筆 `reading_warning`**：LLM 對／斷詞器對／兩者皆錯，附理由；(b) 每題 `answer` 是否被 `evidence` 支持、`evidence` 是否真的在原文；(c) 文法 `forms` 變化正確、`mistakes` 成立、情境符合 §2.3 | 任何一筆 warning 未裁決、或裁決為「LLM 錯」但未修正 → **不得發布**（回應第二輪 #7）；fail 項目餵回 `generate.py --fix` 重生一次；仍 fail → `needs_fix` 人工看 |
 | 人工 | Bryant | 每階段抽 3 課（各 day_type 一課）通讀 | 改 prompt 後重生整階段 |
 
 **誤報率先量再定門檻**（回應第二輪 #7，不用猜的）：建 `tests/readings.jsonl` 人工標註 100 筆（30 外來語、30 數字／助數詞、40 例句），跑機械層算誤報／漏報；誤報 >20% 就加正規化規則，仍高就改用 `pykakasi` 或雙工具交叉，門檻依實測結果寫進 `validate_content.py` 註解。
@@ -248,7 +250,7 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 ## 9. 建置順序
 
 1. `curriculum.json`：ChatGPT 生第 1 階段（清冊＋24 課）→ Bryant 校對 → repo
-2. `generate.py`＋三種 schema＋`validate_structure.py`；本機生 W01D1–D3 ＋ **W01D6、W04D6** 看品質、確認每種 day_type 都有合法輸出、調 prompt
+2. 三種 schema＋`validate_structure.py`＋`prompts/lesson.md`；Codex 生 W01D1–D3 ＋ **W01D6、W04D6** 看品質、確認每種 day_type 都有合法輸出、調 prompt
 2b. `tests/readings.jsonl` 100 筆 → 量機械層誤報率 → 定門檻
 3. `validate_content.py`（fugashi ＋ Claude 核對）；生完整第 1 階段，人工抽 3 課
 4. PWA：**首頁進度 ＋ 今日（含 §3.2 選課規則）＋ 單字 ＋ 聽力 TTS ＋ 匯出／匯入**（開學最小集合）
@@ -258,10 +260,10 @@ PWA 每課有「回報錯誤」按鈕 → 存進 `weak` 旁的 `lesson_issues[]`
 
 ## 10. 前置條件
 
-- [ ] OpenAI API key（生成）＋ Anthropic API key（驗收；或改用本機 Claude Code 跑驗收，免 key）
+- [x] ~~OpenAI／Anthropic API key~~ → 改用 Codex CLI（已登入）＋ Claude Code 本機，不需要
 - [ ] GitHub private repo `vitus0024/japanese-n5`（Pages 用；私有 repo 的 Pages 需 Pro 或改公開——**待確認**）
 - [ ] ChatGPT 專案 instructions 加入 §3.4 的回填格式
-- [ ] `curriculum.json` 第 1 階段
+- [x] `curriculum.json` 第 1 階段（2026-09-20，24 課／200 字／36 文法）
 
 ## 11. 請 Codex 第五輪特別挑的地方
 
