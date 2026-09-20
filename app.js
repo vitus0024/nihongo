@@ -17,6 +17,40 @@ const daysBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / 86400000)
 const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x.toISOString().slice(0, 10); };
 const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 const sample = (arr, n) => [...arr].sort(() => Math.random() - .5).slice(0, n);
+// ---------- 注音（漢字上方的假名） ----------
+// 把 ja 切成「漢字段／非漢字段」，非漢字段在整句假名裡逐段定位，夾在中間的假名就是前一個漢字段的讀音。
+// 對不上就整句退回純文字（不會顯示錯的注音）。
+const isKanji = (c) => /[一-鿿〇々〆ヶ]/.test(c);
+function rubyHTML(ja, kana) {
+  if (!ja) return "";
+  if (!kana || ![...ja].some(isKanji) || !SHOW_RUBY) return esc(ja).replace(/\n/g, "<br>");
+  if (ja.includes("\n")) {                                  // 多行：行數對得上就逐行對齊
+    const a = ja.split("\n"), b = kana.split("\n");
+    if (a.length === b.length) return a.map((l, i) => rubyHTML(l, b[i])).join("<br>");
+    return rubyHTML(ja.replace(/\s+/g, ""), kana.replace(/\s+/g, ""));
+  }
+  const runs = []; let cur = "", curK = null;
+  for (const c of ja) { const k = isKanji(c); if (curK === null || k === curK) { cur += c; curK = k; } else { runs.push([cur, curK]); cur = c; curK = k; } }
+  if (cur) runs.push([cur, curK]);
+  // 回溯對齊：非漢字段在假名裡可能出現多次（電車で行きます 的「で」也在「でんしゃ」裡），逐一嘗試直到整句對得上
+  const solve = (i, pos) => {
+    if (i === runs.length) return pos === kana.length ? [] : null;
+    const [text, k] = runs[i];
+    if (k) {                                                 // 漢字段：讀音長度 1..剩餘，交給下一段決定
+      if (i + 1 === runs.length) { const r = kana.slice(pos); return r ? [[text, r]] : null; }
+      const [next] = runs[i + 1]; let from = pos + 1;
+      while (true) { const idx = kana.indexOf(next, from); if (idx < 0) return null; const rest = solve(i + 1, idx); if (rest) return [[text, kana.slice(pos, idx)], ...rest]; from = idx + 1; }
+    }
+    if (kana.startsWith(text, pos)) { const rest = solve(i + 1, pos + text.length); return rest ? [[text, null], ...rest] : null; }
+    return null;
+  };
+  const segs = solve(0, 0);
+  if (!segs) return esc(ja);
+  return segs.map(([t, r]) => (r ? `<ruby>${esc(t)}<rt>${esc(r)}</rt></ruby>` : esc(t))).join("");
+}
+let SHOW_RUBY = true;
+try { SHOW_RUBY = localStorage.getItem("nihongo.ruby") !== "off"; } catch {}
+
 let toastTimer;
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => (t.hidden = true), 2200); }
 
@@ -200,7 +234,7 @@ function renderSchedule() {
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定 <span class="badge">app v3</span></h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v4</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
@@ -211,6 +245,7 @@ function renderSettings() {
     <div class="card"><h3>狀態</h3><p class="small">課綱版本 ${esc(CUR.version)}（狀態記錄 ${esc(S.curriculum_version)}）· 輪次 ${S.round} · 最後學習 ${S.last_activity || "–"}</p>
       <div class="row"><label class="sw">開始日 <input type="date" id="started" value="${S.started || ""}" data-act="set-started"></label></div>
       <p class="faint">弱點清單 ${S.weak.length} 項 · 回報教材錯誤 ${S.lesson_issues.length} 件</p></div>
+    <div class="card"><h3>顯示</h3>${rubyToggleHTML()}</div>
     <div class="card"><h3>語音</h3>
       <p class="small muted">語速（單字、例句、句型的 ▶ 用這個；聽力另有三段）</p>
       <div class="row">${Object.keys(RATES).map((k) => `<button class="btn ${TTS.rate === k ? "primary" : ""}" data-act="tts-rate" data-rate="${k}">${RATE_LABEL[k]}</button>`).join("")}</div>
@@ -246,6 +281,7 @@ function renderDiagnostic() {
     <div class="card soft"><p class="small muted">給 ChatGPT 的診斷指令：</p><pre class="prompt">請依我們的日文學習計畫規格書 §7.1 幫我做 N5 入學診斷，約 20–25 分鐘：假名辨讀 10 題、單字 10 題、文法 10 題、一段閱讀＋3 題、一段聽力（你唸）＋3 題、簡短口說 1 分鐘。做完給我各項百分比，以及「可以跳過的內容」清單。</pre><button class="btn small" data-act="copy" data-text="請依我們的日文學習計畫規格書 §7.1 幫我做 N5 入學診斷，約 20–25 分鐘：假名辨讀 10 題、單字 10 題、文法 10 題、一段閱讀＋3 題、一段聽力（你唸）＋3 題、簡短口說 1 分鐘。做完給我各項百分比，以及「可以跳過的內容」清單。">複製</button></div>`;
 }
 
+function rubyToggleHTML() { return `<label class="sw small"><input type="checkbox" data-act="ruby-toggle" ${SHOW_RUBY ? "checked" : ""}> 顯示注音（熟了就關掉，SPEC §4.4）</label>`; }
 function quizHTML(qs, key, opts = {}) {                    // 一組題目；runner.answers[key] 記作答
   const ans = (runner.answers ??= {})[key] ??= {};
   const graded = runner.graded?.[key];
@@ -283,23 +319,23 @@ function moduleHTML(k, d, cl, x) {
       const list = S.busy ? d.busy_mode.vocab_review_ids.map((i) => V[i]).filter(Boolean).map((v) => ({ ...v, example_ja: "", example_kana: "", example_zh: "" })) : d.vocab;
       const i = Math.min(runner.card, list.length - 1); const v = list[i]; const flip = runner.cards[i] || 0;
       return `<div class="dots">${list.map((_, j) => `<i class="${j === i ? "on" : runner.know?.[j] === true ? "know" : runner.know?.[j] === false ? "dunno" : ""}"></i>`).join("")}</div>
-        <div class="flash" data-act="flip"><div class="kanji ja">${esc(v.kanji)}</div>${flip >= 1 ? `<div class="kana ja">${esc(v.kana)}</div>` : ""}${flip >= 2 ? `<div>${esc(v.zh)} <span class="pos">${esc(v.pos)}</span></div>${v.example_ja ? `<div class="ex ja">${esc(v.example_ja)}<br><span class="kana">${esc(v.example_kana)}</span><br><span class="muted small">${esc(v.example_zh)}</span></div>` : ""}${v.note ? `<p class="faint">${esc(v.note)}</p>` : ""}` : `<p class="faint">點一下翻卡</p>`}</div>
+        <div class="flash" data-act="flip"><div class="kanji ja">${flip >= 1 ? rubyHTML(v.kanji, v.kana) : esc(v.kanji)}</div>${flip >= 1 && v.kanji === v.kana ? "" : flip >= 1 ? `<div class="kana ja">${esc(v.kana)}</div>` : ""}${flip >= 2 ? `<div>${esc(v.zh)} <span class="pos">${esc(v.pos)}</span></div>${v.example_ja ? `<div class="ex ja">${rubyHTML(v.example_ja, v.example_kana)}<br><span class="muted small">${esc(v.example_zh)}</span></div>` : ""}${v.note ? `<p class="faint">${esc(v.note)}</p>` : ""}` : `<p class="faint">點一下翻卡</p>`}</div>
         <div class="row" style="margin-top:8px"><button class="btn tts" data-act="say" data-text="${esc(v.kana)}">▶ 讀音</button>${v.example_ja ? `<button class="btn tts" data-act="say" data-text="${esc(v.example_ja)}">▶ 例句</button>` : ""}<span class="grow"></span><button class="btn small" data-act="card-mark" data-v="0">不會</button><button class="btn small primary" data-act="card-mark" data-v="1">會了 ✓</button></div>
         <div class="row between" style="margin-top:8px"><button class="btn ghost small" data-act="card-prev">‹ 上一個</button><span class="faint">${i + 1}／${list.length}</span><button class="btn ghost small" data-act="card-next">下一個 ›</button></div><p>${doneBtn()}</p>`;
     }
     case "grammar": return d.grammar.map((g) => `<div class="gram"><h3 class="ja">${esc(g.pattern)}</h3><dl><dt>接續</dt><dd>${esc(g.structure)}</dd><dt>意思</dt><dd>${esc(g.meaning)}</dd><dt>用法</dt><dd>${esc(g.usage)}</dd>
-      <dt>變化</dt><dd>${g.forms.map((f) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(f.ja)}">▶</button><div><span class="faint">${esc(f.label)}</span><br><span class="ja">${esc(f.ja)}</span> <span class="kana">${esc(f.kana)}</span><br><span class="small muted">${esc(f.zh)}</span></div></div>`).join("")}</dd>
-      <dt>例句</dt><dd>${g.examples.map((e) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(e.ja)}">▶</button><div><span class="ja">${esc(e.ja)}</span> <span class="kana">${esc(e.kana)}</span><br><span class="small muted">${esc(e.zh)}</span> <span class="badge">${esc(e.scene)}</span></div></div>`).join("")}</dd>
+      <dt>變化</dt><dd>${g.forms.map((f) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(f.ja)}">▶</button><div><span class="faint">${esc(f.label)}</span><br><span class="ja">${rubyHTML(f.ja, f.kana)}</span><br><span class="small muted">${esc(f.zh)}</span></div></div>`).join("")}</dd>
+      <dt>例句</dt><dd>${g.examples.map((e) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(e.ja)}">▶</button><div><span class="ja">${rubyHTML(e.ja, e.kana)}</span><br><span class="small muted">${esc(e.zh)}</span> <span class="badge">${esc(e.scene)}</span></div></div>`).join("")}</dd>
       <dt>常見錯誤</dt><dd><ul>${g.mistakes.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></dd>${g.compare ? `<dt>比較</dt><dd>${esc(g.compare)}</dd>` : ""}</dl></div>`).join("<hr>") + `<p>${doneBtn()}</p>`;
-    case "patterns": return d.patterns.map((p) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(p.ja)}">▶</button><div><span class="ja">${esc(p.ja)}</span> <span class="kana">${esc(p.kana)}</span><br><span class="small muted">${esc(p.zh)}</span> <span class="faint">可換：${p.swap_slots.map(esc).join("、")}</span></div></div>`).join("") + `<p class="faint">照 SPEC §4.4：每句用自己的資訊換一次。</p><p>${doneBtn()}</p>`;
-    case "reading": return `<span class="badge">${esc(d.reading.type)}</span><div class="script ja">${esc(d.reading.text_ja)}</div>${runner.reveal_r ? `<div class="script kana">${esc(d.reading.text_kana)}</div>` : `<button class="btn small" data-act="reveal-r">顯示假名</button>`}
+    case "patterns": return d.patterns.map((p) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(p.ja)}">▶</button><div><span class="ja">${rubyHTML(p.ja, p.kana)}</span><br><span class="small muted">${esc(p.zh)}</span> <span class="faint">可換：${p.swap_slots.map(esc).join("、")}</span></div></div>`).join("") + `<p class="faint">照 SPEC §4.4：每句用自己的資訊換一次。</p><p>${doneBtn()}</p>`;
+    case "reading": return `<span class="badge">${esc(d.reading.type)}</span><div class="script ja">${rubyHTML(d.reading.text_ja, d.reading.text_kana)}</div>${rubyToggleHTML()}
       <button class="btn tts small" data-act="say" data-text="${esc(d.reading.text_ja)}">▶ 朗讀</button>${quizHTML(d.reading.questions, "reading")}<p>${doneBtn()}</p>`;
     case "listening": {
       const src = S.busy ? d.busy_mode : d;  // 忙碌版聽力同上
       return `<p class="small muted">SPEC §4.5 流程：盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>
         <div class="row">${Object.keys(RATES).map((k) => `<button class="btn tts" data-act="say" data-text="${esc(d.listening.script_ja)}" data-rate="${k}">▶ ${RATE_LABEL[k]}</button>`).join("")}</div>
         ${quizHTML(d.listening.questions, "listening")}
-        ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3>${d.listening.script_ja.split(/(?<=[。？！」])/).filter((s) => s.trim()).map((s) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(s)}">▶</button><span class="ja">${esc(s)}</span></div>`).join("")}<div class="script kana">${esc(d.listening.script_kana)}</div>` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
+        ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3><div class="script ja">${rubyHTML(d.listening.script_ja, d.listening.script_kana)}</div>${rubyToggleHTML()}${d.listening.script_ja.split(/(?<=[。？！」])/).filter((s) => s.trim()).map((s) => `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(s)}">▶</button><span class="ja">${esc(s)}</span></div>`).join("")}` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
         <p>${doneBtn()}</p>`;
     }
     case "speaking": { const sp = S.busy ? { task_zh: d.busy_mode.speaking_short, chatgpt_prompt: d.speaking.chatgpt_prompt, type: "忙碌版" } : d.speaking;
@@ -313,7 +349,7 @@ function renderQuizLesson(id, d, x) {                    // review／stage_test�
   const cl = L[id]; const isStage = cl.day_type === "stage_test"; const q = d.quiz;
   const readingQs = isStage ? q.reading.passages.flatMap((p) => p.questions) : q.reading.questions;
   const listeningQs = isStage ? q.listening.scripts.flatMap((s) => s.questions) : q.listening.questions;
-  const readingHTML = isStage ? q.reading.passages.map((p, i) => `<h3>閱讀 ${i + 1}</h3><div class="script ja">${esc(p.text_ja)}</div>`).join("") : `<div class="script ja">${esc(q.reading.text_ja)}</div>`;
+  const readingHTML = (isStage ? q.reading.passages.map((p, i) => `<h3>閱讀 ${i + 1}</h3><div class="script ja">${rubyHTML(p.text_ja, p.text_kana)}</div>`).join("") : `<div class="script ja">${rubyHTML(q.reading.text_ja, q.reading.text_kana)}</div>`) + rubyToggleHTML();
   const listenHTML = isStage ? q.listening.scripts.map((s, i) => `<div class="row"><button class="btn tts" data-act="say" data-text="${esc(s.script_ja)}">▶ 聽力 ${i + 1}</button></div>`).join("") : `<div class="row"><button class="btn tts" data-act="say" data-text="${esc(q.listening.script_ja)}">▶ 播放</button></div>`;
   const allGraded = ["qv", "qg", "qr", "ql"].every((k) => runner.graded?.[k]);
   const scores = allGraded ? { vocab: Math.round(runner.graded.qv.score / q.vocab.length * 20), grammar: Math.round(runner.graded.qg.score / q.grammar.length * 20), reading: Math.round(runner.graded.qr.score / readingQs.length * 20), listening: Math.round(runner.graded.ql.score / listeningQs.length * 20) } : null;
@@ -322,11 +358,11 @@ function renderQuizLesson(id, d, x) {                    // review／stage_test�
     <details class="module" open><summary><span class="num">1</span>單字 ${q.vocab.length} 題</summary><div class="body">${quizHTML(q.vocab, "qv")}</div></details>
     <details class="module"><summary><span class="num">2</span>文法句型 ${q.grammar.length} 題</summary><div class="body">${quizHTML(q.grammar, "qg")}</div></details>
     <details class="module"><summary><span class="num">3</span>閱讀</summary><div class="body">${readingHTML}${quizHTML(readingQs, "qr")}</div></details>
-    <details class="module"><summary><span class="num">4</span>聽力</summary><div class="body">${listenHTML}${quizHTML(listeningQs, "ql")}${runner.graded?.ql ? `<div class="script kana">${esc(isStage ? q.listening.scripts.map((s) => s.script_kana).join("\n\n") : q.listening.script_kana)}</div>` : ""}</div></details>
+    <details class="module"><summary><span class="num">4</span>聽力</summary><div class="body">${listenHTML}${quizHTML(listeningQs, "ql")}${runner.graded?.ql ? (isStage ? q.listening.scripts.map((s) => `<div class="script ja">${rubyHTML(s.script_ja, s.script_kana)}</div>`).join("") : `<div class="script ja">${rubyHTML(q.listening.script_ja, q.listening.script_kana)}</div>`) : ""}</div></details>
     <details class="module"><summary><span class="num">5</span>口說（ChatGPT 評分）</summary><div class="body"><p>${esc(q.speaking.task_zh)}</p><ul class="small">${q.speaking.rubric.map((r) => `<li><b>${esc(r.name)}</b>：${esc(r.criteria)}</li>`).join("")}</ul>
       <button class="btn primary" data-act="copy" data-text="${esc(q.speaking.chatgpt_prompt)}">複製給 ChatGPT</button><p class="row">口說分數（0–20）<input type="number" id="sp-score" min="0" max="20" value="${runner.sp ?? ""}"> <span class="faint">${isStage ? "階段測驗必填" : "可之後在設定貼回"}</span></p></div></details>
     ${allGraded ? `<div class="card"><h3>成績</h3>${PARTS.map(([k, n]) => `<div class="score-row"><span>${n}</span><b>${k === "speaking" ? (runner.sp ?? "–") : scores[k]}／20</b></div>`).join("")}
-      ${wrongIds.length ? `<h3 style="margin-top:12px">錯題訂正</h3>${wrongIds.map((t) => V[t] ? `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(V[t].kana)}">▶</button><span class="ja">${esc(V[t].kanji)}</span> <span class="kana">${esc(V[t].kana)}</span> ${esc(V[t].zh)}</div>` : `<div class="line"><span class="ja">${esc(G[t].pattern)}</span> <span class="muted small">${esc(G[t].meaning_zh)}</span></div>`).join("")}<label class="sw" style="margin-top:8px"><input type="checkbox" id="corrected"> 錯題都看過訂正了</label>` : `<p class="green">全對，不用訂正。</p>`}
+      ${wrongIds.length ? `<h3 style="margin-top:12px">錯題訂正</h3>${wrongIds.map((t) => V[t] ? `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(V[t].kana)}">▶</button><span class="ja">${rubyHTML(V[t].kanji, V[t].kana)}</span> ${esc(V[t].zh)}</div>` : `<div class="line"><span class="ja">${esc(G[t].pattern)}</span> <span class="muted small">${esc(G[t].meaning_zh)}</span></div>`).join("")}<label class="sw" style="margin-top:8px"><input type="checkbox" id="corrected"> 錯題都看過訂正了</label>` : `<p class="green">全對，不用訂正。</p>`}
       <button class="btn primary block" data-act="finish-quiz" style="margin-top:10px">提交${isStage ? "階段測驗" : "週測"}</button></div>` : `<p class="faint">四項都送出作答後出現成績與提交。</p>`}`;
   $("#sp-score")?.addEventListener("change", (e) => { runner.sp = e.target.value === "" ? null : Math.max(0, Math.min(20, +e.target.value)); });
 }
@@ -363,7 +399,7 @@ async function renderRemedial(t) {
   if (!d) { view.innerHTML = `<div class="notice red">找不到 ${t.lesson} 的教材</div>`; return; }
   const wrong = x.check?.wrong || [];
   view.innerHTML = `<h1>補強 ${t.lesson} <span class="badge amber">小檢核 ${x.check?.score}／${x.check?.total}</span></h1><p class="muted">SPEC §7.2：未達 70%，先補強 5–10 分鐘再開新課。</p>
-    <div class="card"><h3>上次錯的</h3>${wrong.length ? wrong.map((w) => V[w] ? `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(V[w].kana)}">▶</button><span class="ja">${esc(V[w].kanji)}</span> <span class="kana">${esc(V[w].kana)}</span> ${esc(V[w].zh)}</div>` : G[w] ? `<div class="line"><span class="ja">${esc(G[w].pattern)}</span> <span class="muted small">${esc(G[w].meaning_zh)}</span></div>` : "").join("") : "<p class='muted'>（沒有記錄到錯題項目）</p>"}</div>
+    <div class="card"><h3>上次錯的</h3>${wrong.length ? wrong.map((w) => V[w] ? `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(V[w].kana)}">▶</button><span class="ja">${rubyHTML(V[w].kanji, V[w].kana)}</span> ${esc(V[w].zh)}</div>` : G[w] ? `<div class="line"><span class="ja">${esc(G[w].pattern)}</span> <span class="muted small">${esc(G[w].meaning_zh)}</span></div>` : "").join("") : "<p class='muted'>（沒有記錄到錯題項目）</p>"}</div>
     <div class="card"><h3>重做小檢核</h3>${quizHTML(d.check, "rem")}${runner.graded?.rem ? `<button class="btn primary block" data-act="rem-done">補強完成</button>` : ""}</div>`;
 }
 
@@ -384,7 +420,7 @@ const ACT = {
   pick: (a) => { runner.answers[a.dataset.key][a.dataset.q] = +a.dataset.o; tab === "today" && (runner.id ? renderLesson(runner.id) : renderToday()); },
   grade: (a) => { const key = a.dataset.key; const qs = quizByKey(key); const g = gradeQuiz(qs, key); if (key === "check") { g.wrong.forEach((w) => addWeak(w, "check")); } if (key === "sr" || key === "rem") return renderToday(); renderLesson(runner.id); },
   reveal: () => { runner.reveal = true; renderLesson(runner.id); },
-  "reveal-r": () => { runner.reveal_r = true; renderLesson(runner.id); },
+  "ruby-toggle": (a) => { SHOW_RUBY = a.checked; try { localStorage.setItem("nihongo.ruby", SHOW_RUBY ? "on" : "off"); } catch {} runner.id ? renderLesson(runner.id) : render(); },
   "mod-done": (a) => { const x = lessonState(runner.id); x.modules[a.dataset.mod] = true; if (x.status === "available") x.status = "partial"; runner.openMod = null; touch(); save(); renderLesson(runner.id); },
   "busy-toggle": (a) => { S.busy = a.checked; save(); renderLesson(runner.id); },
   "busy-done": () => { S.practice.push({ date: today(), kind: "busy", lesson: runner.id, minutes: 20 }); S.busy = false; touch(); save(); toast("已記錄忙碌版練習，課次不推進"); tab = "home"; render(); },
