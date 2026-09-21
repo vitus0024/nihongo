@@ -1,0 +1,14 @@
+{
+ "version": 1,
+ "backend": "openai",
+ "backends": {
+  "openai": {
+   "model": "gpt-4o-mini-tts",
+   "voice": "sage",
+   "instructions": "Read like an NHK Japanese-lesson narrator (NHK やさしい日本語 / Easy Japanese): standard Tokyo Japanese with textbook pitch accent; a calm, neutral, professional broadcast tone; even pacing, slightly slower than natural conversation; every mora articulated clearly, long vowels and doubled consonants held fully; gentle, not sing-song, no dramatic intonation; short pauses at commas and full stops."
+  },
+  "voicevox": { "speaker": 30, "speedScale": 0.9, "intonationScale": 1.0 },
+  "elevenlabs": { "model": "eleven_multilingual_v2", "voice_id": "21m00Tcm4TlvDq8ikWAM", "voice_settings": { "stability": 0.6, "similarity_boost": 0.75 } }
+ },
+ "_note": "改聲音／指令請 version +1；app 三段速用 playbackRate 0.8/1.0/1.2，不生三份"
+}

@@ -1,3 +1,6 @@
 lessons/*.codex.log
 __pycache__/
 .claude/
+audio/_test/
+audio/_compare/
+audio/_preview/
