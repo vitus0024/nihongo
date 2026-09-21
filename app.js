@@ -11,7 +11,8 @@ const BUSY_MODULES = ["vocab", "listening", "speaking"];        // SPEC §5.2：
 const PARTS = [["vocab", "單字"], ["grammar", "文法句型"], ["reading", "閱讀"], ["listening", "聽力"], ["speaking", "口說"]];
 
 const $ = (s, r = document) => r.querySelector(s);
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const esc = (s) => humanize(String(s ?? "")).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const humanize = (s) => s.replace(/(?<![A-Za-z0-9])([gv]\d{3,4})(?![A-Za-z0-9])/g, (m, id) => (typeof G !== "undefined" && G[id]) ? `「${G[id].pattern}」` : (typeof V !== "undefined" && V[id]) ? `「${V[id].kanji}」` : m);   // 教材散文裡殘留的內部 ID → 句型／單字
 const today = () => new Intl.DateTimeFormat("sv-SE", { timeZone: TZ }).format(new Date());
 const daysBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / 86400000);
 const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x.toISOString().slice(0, 10); };
