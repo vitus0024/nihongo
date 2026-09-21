@@ -6,7 +6,7 @@
   "backend": "openai"
  },
  "vocab.v0011.ex": {
-  "file": "3277914477bc.mp3",
+  "file": "3e10e4d942fe.mp3",
   "text": "日本の会社です。",
   "profile": 1,
   "backend": "openai"
@@ -36,13 +36,13 @@
   "backend": "openai"
  },
  "vocab.v0014": {
-  "file": "d6383e70ef31.mp3",
+  "file": "b47b98f48d92.mp3",
   "text": "日本語",
   "profile": 1,
   "backend": "openai"
  },
  "vocab.v0014.ex": {
-  "file": "eb5cbae5082b.mp3",
+  "file": "a0cbfca4b776.mp3",
   "text": "私は日本語の教師です。",
   "profile": 1,
   "backend": "openai"
@@ -114,7 +114,7 @@
   "backend": "openai"
  },
  "vocab.v0020.ex": {
-  "file": "a000e2e9e018.mp3",
+  "file": "0f8be000e74f.mp3",
   "text": "あの人は日本の会社のエンジニアです。",
   "profile": 1,
   "backend": "openai"
@@ -186,7 +186,7 @@
   "backend": "openai"
  },
  "grammar.g004.ex.0": {
-  "file": "3277914477bc.mp3",
+  "file": "3e10e4d942fe.mp3",
   "text": "日本の会社です。",
   "profile": 1,
   "backend": "openai"
@@ -204,7 +204,7 @@
   "backend": "openai"
  },
  "patterns.0": {
-  "file": "3a23bc54d0b2.mp3",
+  "file": "2e9763d3e2f1.mp3",
   "text": "私は日本の会社のエンジニアです。",
   "profile": 1,
   "backend": "openai"
@@ -216,7 +216,7 @@
   "backend": "openai"
  },
  "patterns.2": {
-  "file": "eb5cbae5082b.mp3",
+  "file": "a0cbfca4b776.mp3",
   "text": "私は日本語の教師です。",
   "profile": 1,
   "backend": "openai"
@@ -246,7 +246,7 @@
   "backend": "openai"
  },
  "listening": {
-  "file": "b80d7eba26e5.mp3",
+  "file": "e60e647a98c2.mp3",
   "text": "私は林です。台湾の大学の研究者です。田中さんも台湾の大学の研究者です。あの人は日本語の教師です。英語の教師ではありません。",
   "profile": 1,
   "backend": "openai"
@@ -270,7 +270,7 @@
   "backend": "openai"
  },
  "listening.line.3": {
-  "file": "5d2fd3f8b328.mp3",
+  "file": "af3c37f19ba0.mp3",
   "text": "あの人は日本語の教師です。",
   "profile": 1,
   "backend": "openai"
@@ -282,7 +282,7 @@
   "backend": "openai"
  },
  "speaking": {
-  "file": "9f04b9b61b86.mp3",
+  "file": "f524ad7263af.mp3",
   "text": "私は日本の会社のエンジニアです。林さんも日本の会社のエンジニアです。私は台湾の大学の研究者です。田中さんも台湾の大学の研究者です。私は日本語の教師です。林さんも日本語の教師です。",
   "profile": 1,
   "backend": "openai"

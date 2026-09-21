@@ -72,13 +72,13 @@
   "backend": "openai"
  },
  "vocab.v0201": {
-  "file": "6efcdceb79de.mp3",
+  "file": "d630be441232.mp3",
   "text": "日本人",
   "profile": 1,
   "backend": "openai"
  },
  "vocab.v0201.ex": {
-  "file": "f3a1c25c3f1f.mp3",
+  "file": "1ba6483401f7.mp3",
   "text": "私は日本人です。",
   "profile": 1,
   "backend": "openai"
@@ -270,7 +270,7 @@
   "backend": "openai"
  },
  "listening": {
-  "file": "b44f73a6a407.mp3",
+  "file": "d507eae96e70.mp3",
   "text": "「私は陳です。私は台湾人です。私は会社員です。田中さんは学生ですか。」\n「いいえ、私は学生ではありません。私は日本人です。私は医者です。」",
   "profile": 1,
   "backend": "openai"
@@ -300,32 +300,20 @@
   "backend": "openai"
  },
  "listening.line.4": {
-  "file": "5e904bf3f799.mp3",
-  "text": "」",
-  "profile": 1,
-  "backend": "openai"
- },
- "listening.line.5": {
   "file": "56c6a9944d0c.mp3",
   "text": "「いいえ、私は学生ではありません。",
   "profile": 1,
   "backend": "openai"
  },
- "listening.line.6": {
-  "file": "f3a1c25c3f1f.mp3",
+ "listening.line.5": {
+  "file": "1ba6483401f7.mp3",
   "text": "私は日本人です。",
   "profile": 1,
   "backend": "openai"
  },
- "listening.line.7": {
+ "listening.line.6": {
   "file": "c8cfad1a71fe.mp3",
   "text": "私は医者です。",
-  "profile": 1,
-  "backend": "openai"
- },
- "listening.line.8": {
-  "file": "5e904bf3f799.mp3",
-  "text": "」",
   "profile": 1,
   "backend": "openai"
  },

@@ -1,0 +1,487 @@
+{
+ "lesson": "W01D2",
+ "clips": 48,
+ "flagged": 1,
+ "rows": [
+  {
+   "key": "vocab.v0011",
+   "file": "bf17c0c42113.mp3",
+   "text": "会社",
+   "expected": "かいしゃ",
+   "heard": "かいしゃ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0011.ex",
+   "file": "3e10e4d942fe.mp3",
+   "text": "日本の会社です。",
+   "expected": "にほんのかいしゃです",
+   "heard": "にほんのかいしゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0012",
+   "file": "ef08c5458ad4.mp3",
+   "text": "大学",
+   "expected": "だいがく",
+   "heard": "だいなく",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0012.ex",
+   "file": "39590345129e.mp3",
+   "text": "私は台湾の大学の学生です。",
+   "expected": "わたしはたいわんのだいがくのがくせいです",
+   "heard": "わたしはたいわんのだいがくのがくせいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0013",
+   "file": "25275af7a3d3.mp3",
+   "text": "病院",
+   "expected": "びょういん",
+   "heard": "でおいん",
+   "sim": 0.444,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0013.ex",
+   "file": "7632642d1944.mp3",
+   "text": "私は台湾の病院の医者です。",
+   "expected": "わたしはたいわんのびょういんのいしゃです",
+   "heard": "わたしはたいわんのびょういんのいしゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0014",
+   "file": "b47b98f48d92.mp3",
+   "text": "日本語",
+   "expected": "にほんご",
+   "heard": "にほんご",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0014.ex",
+   "file": "a0cbfca4b776.mp3",
+   "text": "私は日本語の教師です。",
+   "expected": "わたしはにほんごのきょうしです",
+   "heard": "わたしはにほんごのきょうしです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0015",
+   "file": "0f6c30bd19e1.mp3",
+   "text": "英語",
+   "expected": "えいご",
+   "heard": "えいご",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0015.ex",
+   "file": "23236ab86276.mp3",
+   "text": "田中さんは英語の教師です。",
+   "expected": "たなかさんはえいごのきょうしです",
+   "heard": "たなかさんはえいごのちょうしです",
+   "sim": 0.938,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0016",
+   "file": "5819d3e7c4bd.mp3",
+   "text": "あの人",
+   "expected": "あのひと",
+   "heard": "あのひと",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0016.ex",
+   "file": "e64979709f46.mp3",
+   "text": "あの人も学生です。",
+   "expected": "あのひともがくせいです",
+   "heard": "あのひともがくせいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0017",
+   "file": "240b85659750.mp3",
+   "text": "教師",
+   "expected": "きょうし",
+   "heard": "ひょうし",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0017.ex",
+   "file": "aec8e88b91f6.mp3",
+   "text": "私は教師です。",
+   "expected": "わたしはきょうしです",
+   "heard": "わたしはきょうしです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0018",
+   "file": "f0a64906fb4d.mp3",
+   "text": "銀行員",
+   "expected": "ぎんこういん",
+   "heard": "ぎんこういん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0018.ex",
+   "file": "417cc3c832d0.mp3",
+   "text": "林さんも銀行員です。",
+   "expected": "りんさんもぎんこういんです",
+   "heard": "りんさんもぎんこういんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0019",
+   "file": "5f9848d0514a.mp3",
+   "text": "研究者",
+   "expected": "けんきゅうしゃ",
+   "heard": "けんきゅうしゃ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0019.ex",
+   "file": "6eb943e8b9c9.mp3",
+   "text": "私は大学の研究者です。",
+   "expected": "わたしはだいがくのけんきゅうしゃです",
+   "heard": "わたしはだいがくのけんきゅうしゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0020",
+   "file": "614162f9308d.mp3",
+   "text": "エンジニア",
+   "expected": "えんじにあ",
+   "heard": "えんじにあ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0020.ex",
+   "file": "0f8be000e74f.mp3",
+   "text": "あの人は日本の会社のエンジニアです。",
+   "expected": "あのひとはにほんのかいしゃのえんじにあです",
+   "heard": "あのひとはにほんのかいしゃのえんじにあです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.form.0",
+   "file": "bac6ffc57122.mp3",
+   "text": "私も学生です。",
+   "expected": "わたしもがくせいです",
+   "heard": "わたしもがくせいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.form.1",
+   "file": "3ce19350777f.mp3",
+   "text": "私も学生ではありません。",
+   "expected": "わたしもがくせいではありません",
+   "heard": "わたしもがくせいではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.form.2",
+   "file": "3f7713b84a12.mp3",
+   "text": "私も学生でした。",
+   "expected": "わたしもがくせいでした",
+   "heard": "わたしもがくせいでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.form.3",
+   "file": "292b9dd5cc83.mp3",
+   "text": "私も学生ではありませんでした。",
+   "expected": "わたしもがくせいではありませんでした",
+   "heard": "わたしもがくせいではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.ex.0",
+   "file": "9a8caaf8cd93.mp3",
+   "text": "私は銀行員です。林さんも銀行員です。",
+   "expected": "わたしはぎんこういんですりんさんもぎんこういんです",
+   "heard": "わたしはぎんこういんですりんさんもぎんこういんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.ex.1",
+   "file": "29cb632f57b0.mp3",
+   "text": "田中さんは学生です。あの人も学生です。",
+   "expected": "たなかさんはがくせいですあのひともがくせいです",
+   "heard": "かなかさんはがくせいですあのひともがくせいです",
+   "sim": 0.957,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g003.ex.2",
+   "file": "d0feee25c18c.mp3",
+   "text": "私は医者ではありません。林さんも医者ではありません。",
+   "expected": "わたしはいしゃではありませんりんさんもいしゃではありません",
+   "heard": "わたしはいしゃではありませんりんさんもいしゃではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.form.0",
+   "file": "6eb943e8b9c9.mp3",
+   "text": "私は大学の研究者です。",
+   "expected": "わたしはだいがくのけんきゅうしゃです",
+   "heard": "わたしはだいがくのけんきゅうしゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.form.1",
+   "file": "a651418662dc.mp3",
+   "text": "私は大学の研究者ではありません。",
+   "expected": "わたしはだいがくのけんきゅうしゃではありません",
+   "heard": "わたしはだいがくのけんきゅうしゃではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.form.2",
+   "file": "86b1c8fd2abb.mp3",
+   "text": "私は大学の研究者でした。",
+   "expected": "わたしはだいがくのけんきゅうしゃでした",
+   "heard": "わたしはだいがくのけんきゅうしゃでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.form.3",
+   "file": "d4b887f64576.mp3",
+   "text": "私は大学の研究者ではありませんでした。",
+   "expected": "わたしはだいがくのけんきゅうしゃではありませんでした",
+   "heard": "わたしはだいなくのけんきゅうしゃではありませんでした",
+   "sim": 0.962,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.ex.0",
+   "file": "3e10e4d942fe.mp3",
+   "text": "日本の会社です。",
+   "expected": "にほんのかいしゃです",
+   "heard": "にほんのかいしゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.ex.1",
+   "file": "39590345129e.mp3",
+   "text": "私は台湾の大学の学生です。",
+   "expected": "わたしはたいわんのだいがくのがくせいです",
+   "heard": "わたしはたいわんのだいがくのがくせいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g004.ex.2",
+   "file": "da177eae399b.mp3",
+   "text": "あの人は英語の教師です。",
+   "expected": "あのひとはえいごのきょうしです",
+   "heard": "あのひとはえいごのきょうしです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "2e9763d3e2f1.mp3",
+   "text": "私は日本の会社のエンジニアです。",
+   "expected": "わたしはにほんのかいしゃのえんじにあです",
+   "heard": "わたしはにほんのかいしゃのえんじにあです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "39590345129e.mp3",
+   "text": "私は台湾の大学の学生です。",
+   "expected": "わたしはたいわんのだいがくのがくせいです",
+   "heard": "わたしはたいわんのだいがくのがくせいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "a0cbfca4b776.mp3",
+   "text": "私は日本語の教師です。",
+   "expected": "わたしはにほんごのきょうしです",
+   "heard": "わたしはにほんごのきょうしです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "9a8caaf8cd93.mp3",
+   "text": "私は銀行員です。林さんも銀行員です。",
+   "expected": "わたしはぎんこういんですりんさんもぎんこういんです",
+   "heard": "わたしはぎんこういんですりんさんもぎんこういんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "c1fd246d442f.mp3",
+   "text": "あの人は病院の医者ですか。",
+   "expected": "あのひとはびょういんのいしゃですか",
+   "heard": "あのひとはびょういんのいしゃですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "b9aa94a06d45.mp3",
+   "text": "私は大学の研究者です。林さんも大学の研究者です。",
+   "expected": "わたしはだいがくのけんきゅうしゃですりんさんもだいがくのけんきゅうしゃです",
+   "heard": "わたしはだいなくのけんきゅうしゃですりんさんもだいなくのけんきゅうしゃです",
+   "sim": 0.946,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "b9aa94a06d45.mp3",
+   "text": "私は大学の研究者です。林さんも大学の研究者です。",
+   "expected": "わたしはだいがくのけんきゅうしゃですりんさんもだいがくのけんきゅうしゃです",
+   "heard": "わたしはだいなくのけんきゅうしゃですりんさんもだいなくのけんきゅうしゃです",
+   "sim": 0.946,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "e60e647a98c2.mp3",
+   "text": "私は林です。台湾の大学の研究者です。田中さんも台湾の大学の研究者です。あの人は日本語の教師です。英語の教師ではありません。",
+   "expected": "わたしはりんですたいわんのだいがくのけんきゅうしゃですたなかさんもたいわんのだいがくのけんきゅうしゃですあのひとはにほんごのきょうしですえいごのきょうしではありません",
+   "heard": "わたしはりんですたいわんのだいがくのけんきゅうしゃですたなかさんもたいわんのだいがくのけんきゅうしゃですあのひとはにほんごのきょうしですえいごのきょうしではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "2f71ad0ae075.mp3",
+   "text": "私は林です。",
+   "expected": "わたしはりんです",
+   "heard": "わたしはりんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "2e2abb9f402f.mp3",
+   "text": "台湾の大学の研究者です。",
+   "expected": "たいわんのだいがくのけんきゅうしゃです",
+   "heard": "たいわんのだいがくのけんきゅうしゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "413cdc343e0a.mp3",
+   "text": "田中さんも台湾の大学の研究者です。",
+   "expected": "たなかさんもたいわんのだいがくのけんきゅうしゃです",
+   "heard": "たなかさんもたいわんのだいなくのけんきゅうしゃです",
+   "sim": 0.96,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "af3c37f19ba0.mp3",
+   "text": "あの人は日本語の教師です。",
+   "expected": "あのひとはにほんごのきょうしです",
+   "heard": "あのひとはにほんごのきょうしです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "4b5c3b02a6c6.mp3",
+   "text": "英語の教師ではありません。",
+   "expected": "えいごのきょうしではありません",
+   "heard": "えいごのきょうしではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "f524ad7263af.mp3",
+   "text": "私は日本の会社のエンジニアです。林さんも日本の会社のエンジニアです。私は台湾の大学の研究者です。田中さんも台湾の大学の研究者です。私は日本語の教師です。林さんも日本語の教師です。",
+   "expected": "わたしはにほんのかいしゃのえんじにあですりんさんもにほんのかいしゃのえんじにあですわたしはたいわんのだいがくのけんきゅうしゃですたなかさんもたいわんのだいがくのけんきゅうしゃですわたしはにほんごのきょうしですりんさんもにほんごのきょうしです",
+   "heard": "わたしはにほんのかいしゃのえんじにあですりんさんもにほんのかいしゃのえんじにあですわたしはたいわんのだいがくのけんきゅうしゃですたなかさんもたいわんのだいがくのけんきゅうしゃですわたしはにほんごのきょうしですりんさんもにほんごのきょうしです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

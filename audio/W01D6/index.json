@@ -1,18 +1,18 @@
 {
  "reading": {
-  "file": "eac17e628459.mp3",
+  "file": "b629558f5fdd.mp3",
   "text": "これは日本語の辞書です。それは英語の本です。あれは雑誌です。",
   "profile": 1,
   "backend": "openai"
  },
  "listening": {
-  "file": "9c8d1b870208.mp3",
+  "file": "573ca9e41329.mp3",
   "text": "「これは日本語の辞書ですか。」\n「いいえ、英語の辞書です。」\n「それも英語の辞書ですか。」\n「はい、英語の辞書です。あれは日本語の雑誌です。」",
   "profile": 1,
   "backend": "openai"
  },
  "speaking": {
-  "file": "899651db0524.mp3",
+  "file": "143a0f56a7f2.mp3",
   "text": "私は林です。台湾の学生です。私は二十歳です。これは私の本です。この本は日本語の本です。それはノートです。あれは辞書です。",
   "profile": 1,
   "backend": "openai"

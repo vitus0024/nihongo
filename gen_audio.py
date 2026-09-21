@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """語音檔生成（PLAN §6b 的解法：預先生成音檔，app 用 <audio> 播放）。後端：OpenAI gpt-4o-mini-tts／VOICEVOX（本地）／ElevenLabs。
 
-  python3 gen_audio.py --lesson W01D1 [W01D2 ...]        # 一課的單字、例句、文法、句型、閱讀、聽力 → audio/W01D1/<hash>.mp3 ＋ index.json
+  ~/.venvs/nihongo/bin/python gen_audio.py --lesson W01D1 [W01D2 ...]   # 用 venv（有 fugashi）        # 一課的單字、例句、文法、句型、閱讀、聽力 → audio/W01D1/<hash>.mp3 ＋ index.json
   python3 gen_audio.py --csv words.csv --out audio/misc  # CSV 欄位 text[,name]；依 name（沒有就用 text）命名
   python3 gen_audio.py --text "こんにちは" --out audio/misc
   python3 gen_audio.py --compare "三百円です。"          # 三個後端各出一檔到 audio/_compare/，A/B 用
@@ -125,24 +125,48 @@ def tts_elevenlabs(text: str, prof: dict) -> bytes:
 BACKENDS = {"openai": tts_openai, "voicevox": tts_voicevox, "elevenlabs": tts_elevenlabs}
 
 
-def name_readings() -> dict[str, str]:
-    """schema/readings.txt「# 人名」段落：TTS 會把 林 唸成 はやし，送出前先換成假名。"""
-    out, on = {}, False
+def readings_table() -> tuple[dict[str, str], dict[str, str]]:
+    """schema/readings.txt：全部條目（人名、にほん、時刻、助數詞、日期、〇）。TTS 跟斷詞器一樣會把這些唸錯，送出前先換成假名。
+    回傳 (全部, 人名)。人名另外要求後面接 さん／です 等，避免誤傷（森林）。"""
+    allr, names, section = {}, {}, ""
     for ln in (ROOT / "schema" / "readings.txt").read_text(encoding="utf-8").splitlines():
         if ln.startswith("#"):
-            on = "人名" in ln
+            section = ln
             continue
-        if on and "\t" in ln:
-            k, v = ln.split("\t", 1); out[k.strip()] = v.strip()
-    return out
+        if "\t" in ln:
+            k, v = (x.strip() for x in ln.split("\t", 1)); allr[k] = v
+            if "人名" in section:
+                names[k] = v
+    return allr, names
 
 
-NAMES = name_readings()
-_NAME_RE = re.compile(r"(?<![\u4e00-\u9fff])(" + "|".join(sorted(map(re.escape, NAMES), key=len, reverse=True)) + r")(?=さん|です|は|の|と|も|が|、|。|」|$)") if NAMES else None   # 前面不能是漢字（森林≠森＋林）
+READINGS, NAMES = readings_table()
+try:
+    import fugashi
+    _TAGGER = fugashi.Tagger()
+except ImportError:                                        # 用系統 python 跑時退回逐字比對（較粗）
+    _TAGGER = None
 
 
 def for_tts(text: str) -> str:
-    return _NAME_RE.sub(lambda m: NAMES[m.group(1)], text) if _NAME_RE else text
+    """斷詞後，連續 token 拼起來命中 readings.txt 就換成假名（林→りん、二十歳→はたち、九時→くじ、〇→れい）。
+    跟 validate_content.mecab_kana 同一套最長優先匹配，所以驗收的期待讀音與送 TTS 的文字一致。"""
+    if not _TAGGER:
+        out = text
+        for k in sorted(READINGS, key=len, reverse=True):
+            out = out.replace(k, READINGS[k])
+        return out
+    toks = [t.surface for t in _TAGGER(text)]
+    out, i = [], 0
+    while i < len(toks):
+        hit = 0
+        for j in range(min(len(toks), i + 5), i, -1):
+            if "".join(toks[i:j]) in READINGS:
+                out.append(READINGS["".join(toks[i:j])]); hit = j; break
+        if hit:
+            i = hit; continue
+        out.append(toks[i]); i += 1
+    return "".join(out)
 
 
 def synth(text: str, prof: dict) -> bytes:
@@ -179,7 +203,8 @@ def lesson_items(lid: str) -> list[tuple[str, str]]:
 
 def split_lines(s: str) -> list[str]:
     import re
-    return [x.strip() for x in re.split(r"(?<=[。？！」])\s*", s) if x.strip()]
+    parts = [x.strip() for x in re.split(r"(?<=[。？！」])\s*", s)]
+    return [x for x in parts if re.search(r"[\u3040-\u30ff\u4e00-\u9fff]", x)]   # 只留有假名或漢字的片段（「」單獨一段不要）
 
 
 def csv_items(p: Path) -> list[tuple[str, str]]:
@@ -230,8 +255,14 @@ def generate(items: list[tuple[str, str]], out_dir: Path, prof: dict, by_name: b
         index[key] = {"file": f, "text": text, "profile": prof["version"], "backend": prof["backend"]}
         made += 1
         print(f"  ✓ {key} → {f} ({len(data) // 1024} KB)")
+    wanted = {k for k, _ in items}
+    stale = [k for k in index if k not in wanted]                 # 教材改了、句子沒了：索引與檔案一起移除（丟垃圾桶）
+    for k in stale:
+        f = out_dir / index.pop(k)["file"]
+        if f.exists() and not any(v["file"] == f.name for v in index.values()):
+            subprocess.run(["trash", str(f)], check=False)
     idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{out_dir.name}: 新生 {made}、沿用 {skipped}、失敗 {failed}")
+    print(f"{out_dir.name}: 新生 {made}、沿用 {skipped}、失敗 {failed}" + (f"、移除 {len(stale)}" if stale else ""))
     return index
 
 

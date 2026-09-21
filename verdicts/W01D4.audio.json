@@ -1,0 +1,477 @@
+{
+ "lesson": "W01D4",
+ "clips": 47,
+ "flagged": 6,
+ "rows": [
+  {
+   "key": "vocab.v0031",
+   "file": "a8d5cf8e7c86.mp3",
+   "text": "何歳",
+   "expected": "なんさい",
+   "heard": "だんさい",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0031.ex",
+   "file": "5aa0a70d81bd.mp3",
+   "text": "林さんは何歳ですか。",
+   "expected": "りんさんはなんさいですか",
+   "heard": "りんさんはなうさいですか",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0032",
+   "file": "a0c8870cec8b.mp3",
+   "text": "おいくつ",
+   "expected": "おいくつ",
+   "heard": "おいくつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0032.ex",
+   "file": "bbde5b4ce7ca.mp3",
+   "text": "田中さんはおいくつですか。",
+   "expected": "たなかさんはおいくつですか",
+   "heard": "かなかさんはおいくつでした",
+   "sim": 0.769,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0033",
+   "file": "c93faf5593b6.mp3",
+   "text": "二十歳",
+   "expected": "はたち",
+   "heard": "はたち",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0033.ex",
+   "file": "6e9b2a46ce8b.mp3",
+   "text": "私は二十歳です。",
+   "expected": "わたしははたちです",
+   "heard": "わたしははたちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0034",
+   "file": "4c96f11b3d38.mp3",
+   "text": "人",
+   "expected": "ひと",
+   "heard": "ひと",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0034.ex",
+   "file": "b06383df820c.mp3",
+   "text": "あの人は日本語の先生です。",
+   "expected": "あのひとはにほんごのせんせいです",
+   "heard": "あのひとはにほんぼのせんせいです",
+   "sim": 0.938,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0035",
+   "file": "8fd715866d0e.mp3",
+   "text": "誰",
+   "expected": "だれ",
+   "heard": "だれ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0035.ex",
+   "file": "5fd674ffd057.mp3",
+   "text": "あの人は誰ですか。",
+   "expected": "あのひとはだれですか",
+   "heard": "あのひとはだれでした",
+   "sim": 0.8,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0036",
+   "file": "02dace287503.mp3",
+   "text": "七",
+   "expected": "なな",
+   "heard": "なな",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0036.ex",
+   "file": "1d2b1752e2b8.mp3",
+   "text": "番号は七です。",
+   "expected": "ばんごうはななです",
+   "heard": "ばんごうはななです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0037",
+   "file": "6001093d1c32.mp3",
+   "text": "八",
+   "expected": "はち",
+   "heard": "はち",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0037.ex",
+   "file": "733136bad336.mp3",
+   "text": "番号は八です。",
+   "expected": "ばんごうははちです",
+   "heard": "ばんごうははちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0038",
+   "file": "41c87072f53a.mp3",
+   "text": "九",
+   "expected": "きゅう",
+   "heard": "しゅう",
+   "sim": 0.667,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0038.ex",
+   "file": "f5018b23d9a3.mp3",
+   "text": "番号は九です。",
+   "expected": "ばんごうはきゅうです",
+   "heard": "ばんごうはきゅうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0039",
+   "file": "da332cee93e8.mp3",
+   "text": "十",
+   "expected": "じゅう",
+   "heard": "しゅう",
+   "sim": 0.667,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0039.ex",
+   "file": "38f82b425a99.mp3",
+   "text": "番号は十です。",
+   "expected": "ばんごうはじゅうです",
+   "heard": "ばんぼうはじゅうです",
+   "sim": 0.9,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0040",
+   "file": "51e5951cb237.mp3",
+   "text": "二十",
+   "expected": "にじゅう",
+   "heard": "みじゅう",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0040.ex",
+   "file": "33ec2003a875.mp3",
+   "text": "番号は二十です。",
+   "expected": "ばんごうはにじゅうです",
+   "heard": "ばんごうはにじゅうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.form.0",
+   "file": "6e9b2a46ce8b.mp3",
+   "text": "私は二十歳です。",
+   "expected": "わたしははたちです",
+   "heard": "わたしははたちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.form.1",
+   "file": "20bcb09a40fa.mp3",
+   "text": "私は二十歳ではありません。",
+   "expected": "わたしははたちではありません",
+   "heard": "わたしははたちではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.form.2",
+   "file": "5f4c74d1cd07.mp3",
+   "text": "私は二十歳でした。",
+   "expected": "わたしははたちでした",
+   "heard": "わたしははたちでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.form.3",
+   "file": "be44d23d46cd.mp3",
+   "text": "私は二十歳ではありませんでした。",
+   "expected": "わたしははたちではありませんでした",
+   "heard": "わたしははたちではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.form.4",
+   "file": "5aa0a70d81bd.mp3",
+   "text": "林さんは何歳ですか。",
+   "expected": "りんさんはなんさいですか",
+   "heard": "りんさんはなうさいですか",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.form.5",
+   "file": "bbde5b4ce7ca.mp3",
+   "text": "田中さんはおいくつですか。",
+   "expected": "たなかさんはおいくつですか",
+   "heard": "かなかさんはおいくつでした",
+   "sim": 0.769,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "grammar.g007.ex.0",
+   "file": "5aa0a70d81bd.mp3",
+   "text": "林さんは何歳ですか。",
+   "expected": "りんさんはなんさいですか",
+   "heard": "りんさんはなうさいですか",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.ex.1",
+   "file": "bbde5b4ce7ca.mp3",
+   "text": "田中さんはおいくつですか。",
+   "expected": "たなかさんはおいくつですか",
+   "heard": "かなかさんはおいくつでした",
+   "sim": 0.769,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "grammar.g007.ex.2",
+   "file": "6e9b2a46ce8b.mp3",
+   "text": "私は二十歳です。",
+   "expected": "わたしははたちです",
+   "heard": "わたしははたちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g007.ex.3",
+   "file": "3d84da058371.mp3",
+   "text": "ゆきさんは八歳です。",
+   "expected": "ゆきさんははっさいです",
+   "heard": "ゆくさんははっさいです",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "5aa0a70d81bd.mp3",
+   "text": "林さんは何歳ですか。",
+   "expected": "りんさんはなんさいですか",
+   "heard": "りんさんはなうさいですか",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "bbde5b4ce7ca.mp3",
+   "text": "田中さんはおいくつですか。",
+   "expected": "たなかさんはおいくつですか",
+   "heard": "かなかさんはおいくつでした",
+   "sim": 0.769,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "patterns.2",
+   "file": "6e9b2a46ce8b.mp3",
+   "text": "私は二十歳です。",
+   "expected": "わたしははたちです",
+   "heard": "わたしははたちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "3d84da058371.mp3",
+   "text": "ゆきさんは八歳です。",
+   "expected": "ゆきさんははっさいです",
+   "heard": "ゆくさんははっさいです",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "5fd674ffd057.mp3",
+   "text": "あの人は誰ですか。",
+   "expected": "あのひとはだれですか",
+   "heard": "あのひとはだれでした",
+   "sim": 0.8,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "patterns.5",
+   "file": "aaea37d68e8a.mp3",
+   "text": "あの人は田中さんです。",
+   "expected": "あのひとはたなかさんです",
+   "heard": "あのひとはたなかさんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.6",
+   "file": "33ec2003a875.mp3",
+   "text": "番号は二十です。",
+   "expected": "ばんごうはにじゅうです",
+   "heard": "ばんごうはにじゅうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "0c38d147e74f.mp3",
+   "text": "「林さんはおいくつですか。」\n「二十歳です。学生です。」",
+   "expected": "りんさんはおいくつですかはたちですがくせいです",
+   "heard": "りんさんはおいくつですかはたちですがくせいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "367fa76e2ec5.mp3",
+   "text": "私は林です。台湾人です。大学の学生です。二十歳です。あの人は田中さんです。日本人です。田中さんも二十歳です。",
+   "expected": "わたしはりんですたいわんじんですだいがくのがくせいですはたちですあのひとはたなかさんですにほんじんですたなかさんもはたちです",
+   "heard": "わたしはりんですたいわんじんですだいなくのがくせいですはたちですあのひとはたなたさんですにほんじんですたなかさんもはたちです",
+   "sim": 0.968,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "2f71ad0ae075.mp3",
+   "text": "私は林です。",
+   "expected": "わたしはりんです",
+   "heard": "わたしはりんべす",
+   "sim": 0.875,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "cefb1056bd06.mp3",
+   "text": "台湾人です。",
+   "expected": "たいわんじんです",
+   "heard": "たいわんじんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "26923aff97f7.mp3",
+   "text": "大学の学生です。",
+   "expected": "だいがくのがくせいです",
+   "heard": "だいなくのがくせいです",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "f415e793c04b.mp3",
+   "text": "二十歳です。",
+   "expected": "はたちです",
+   "heard": "はたちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "aaea37d68e8a.mp3",
+   "text": "あの人は田中さんです。",
+   "expected": "あのひとはたなかさんです",
+   "heard": "あのひとはたなかさんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.5",
+   "file": "84c0822d6ad5.mp3",
+   "text": "日本人です。",
+   "expected": "にほんじんです",
+   "heard": "にほんじんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.6",
+   "file": "981d9371200a.mp3",
+   "text": "田中さんも二十歳です。",
+   "expected": "たなかさんもはたちです",
+   "heard": "かなかさんもはたちです",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "1b57e3791972.mp3",
+   "text": "「林さんはおいくつですか。」「二十歳です。」\n「ゆきさんは何歳ですか。」「八歳です。」",
+   "expected": "りんさんはおいくつですかはたちですゆきさんはなんさいですかはっさいです",
+   "heard": "りんさんはおいくつですかはたちですゆきさんはなんさいですかはっさいです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

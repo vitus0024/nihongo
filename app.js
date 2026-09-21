@@ -249,7 +249,7 @@ function renderSchedule() {
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定 <span class="badge">app v8</span></h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v9</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
@@ -350,7 +350,7 @@ function moduleHTML(k, d, cl, x) {
       return `<p class="small muted">SPEC §4.5 流程：盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>
         <div class="row">${Object.keys(RATES).map((k) => `<button class="btn tts" data-act="play" data-id="${runner.id}" data-key="listening" data-text="${esc(d.listening.script_ja)}" data-rate="${k}">▶ ${RATE_LABEL[k]}</button>`).join("")}</div>
         ${quizHTML(d.listening.questions, "listening")}
-        ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3><div class="script ja">${rubyHTML(d.listening.script_ja, d.listening.script_kana)}</div>${rubyToggleHTML()}${d.listening.script_ja.split(/(?<=[。？！」])\s*/).filter((s) => s.trim()).map((s, si) => `<div class="line">${btnPlay(runner.id, `listening.line.${si}`, s)}<span class="ja">${esc(s)}</span></div>`).join("")}` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
+        ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3><div class="script ja">${rubyHTML(d.listening.script_ja, d.listening.script_kana)}</div>${rubyToggleHTML()}${d.listening.script_ja.split(/(?<=[。？！」])\s*/).filter((s) => /[\u3040-\u30ff\u4e00-\u9fff]/.test(s)).map((s, si) => `<div class="line">${btnPlay(runner.id, `listening.line.${si}`, s)}<span class="ja">${esc(s)}</span></div>`).join("")}` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
         <p>${doneBtn()}</p>`;
     }
     case "speaking": { const sp = S.busy ? { task_zh: d.busy_mode.speaking_short, chatgpt_prompt: d.speaking.chatgpt_prompt, type: "忙碌版" } : d.speaking;

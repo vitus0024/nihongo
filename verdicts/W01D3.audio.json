@@ -1,0 +1,467 @@
+{
+ "lesson": "W01D3",
+ "clips": 46,
+ "flagged": 2,
+ "rows": [
+  {
+   "key": "vocab.v0021",
+   "file": "257cb164b7c2.mp3",
+   "text": "零",
+   "expected": "れい",
+   "heard": "れい",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0021.ex",
+   "file": "7bd2b3a2f8f3.mp3",
+   "text": "番号は零です。",
+   "expected": "ばんごうはれいです",
+   "heard": "ばんぼうはでえです",
+   "sim": 0.667,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0022",
+   "file": "254a2d079249.mp3",
+   "text": "一",
+   "expected": "いち",
+   "heard": "いち",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0022.ex",
+   "file": "b18b968fa8d9.mp3",
+   "text": "番号は一です。",
+   "expected": "ばんごうはいちです",
+   "heard": "ばんぼうはいちです",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0023",
+   "file": "659c32d0c81c.mp3",
+   "text": "二",
+   "expected": "に",
+   "heard": "うえっ",
+   "sim": 0.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0023.ex",
+   "file": "aac0f791b1d6.mp3",
+   "text": "番号は二です。",
+   "expected": "ばんごうはにです",
+   "heard": "ばんごうはみです",
+   "sim": 0.875,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0024",
+   "file": "9d30372279ef.mp3",
+   "text": "三",
+   "expected": "さん",
+   "heard": "さむ",
+   "sim": 0.5,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0024.ex",
+   "file": "c62eacb69fdd.mp3",
+   "text": "番号は三です。",
+   "expected": "ばんごうはさんです",
+   "heard": "ばんごうはさんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0025",
+   "file": "7c3f07fb59ad.mp3",
+   "text": "四",
+   "expected": "よん",
+   "heard": "じょん",
+   "sim": 0.4,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0025.ex",
+   "file": "213c4cfd0dca.mp3",
+   "text": "番号は四です。",
+   "expected": "ばんごうはよんです",
+   "heard": "ばんぼうはよんです",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0026",
+   "file": "eea7a5a843a2.mp3",
+   "text": "五",
+   "expected": "ご",
+   "heard": "ご",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0026.ex",
+   "file": "0cd60b0c62a1.mp3",
+   "text": "番号は五です。",
+   "expected": "ばんごうはごです",
+   "heard": "ばんごうはごうです",
+   "sim": 0.941,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0027",
+   "file": "222082650e0d.mp3",
+   "text": "六",
+   "expected": "ろく",
+   "heard": "よく",
+   "sim": 0.5,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0027.ex",
+   "file": "5802da3ee135.mp3",
+   "text": "番号は六です。",
+   "expected": "ばんごうはろくです",
+   "heard": "ばんごうはろくです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0028",
+   "file": "90265d4a3df7.mp3",
+   "text": "十一",
+   "expected": "じゅういち",
+   "heard": "じゅういち",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0028.ex",
+   "file": "f3d66e3e34c6.mp3",
+   "text": "番号は十一です。",
+   "expected": "ばんごうはじゅういちです",
+   "heard": "ばんごうはじゅういちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0029",
+   "file": "5de5b6412a9f.mp3",
+   "text": "番号",
+   "expected": "ばんごう",
+   "heard": "ばんごう",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0029.ex",
+   "file": "4b9502f3249b.mp3",
+   "text": "私の番号は二十一です。",
+   "expected": "わたしのばんごうはにじゅういちです",
+   "heard": "わたしのばんぼうはにじゅういちです",
+   "sim": 0.941,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0030",
+   "file": "134badc4dcde.mp3",
+   "text": "電話",
+   "expected": "でんわ",
+   "heard": "でんわ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0030.ex",
+   "file": "28669a86344a.mp3",
+   "text": "会社の電話の番号は〇三・一二三四・五六〇一です。",
+   "expected": "かいしゃのでんわのばんごうはれいさんいちにさんよんごろくれいいちです",
+   "heard": "かいしゃのでんわのばんごうはれいさんいちにさんよんごろくれいいちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.form.0",
+   "file": "213c4cfd0dca.mp3",
+   "text": "番号は四です。",
+   "expected": "ばんごうはよんです",
+   "heard": "ばんぼうはよんです",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.form.1",
+   "file": "b0aeea073291.mp3",
+   "text": "番号は四ではありません。",
+   "expected": "ばんごうはよんではありません",
+   "heard": "ばんごうはよんではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.form.2",
+   "file": "bab4af0e8cb2.mp3",
+   "text": "番号は四でした。",
+   "expected": "ばんごうはよんでした",
+   "heard": "ばんごうはよんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.form.3",
+   "file": "7449ddb663f2.mp3",
+   "text": "番号は四ではありませんでした。",
+   "expected": "ばんごうはよんではありませんでした",
+   "heard": "ばんごうはよんではかりませんでした",
+   "sim": 0.941,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.ex.0",
+   "file": "1d2b1752e2b8.mp3",
+   "text": "番号は七です。",
+   "expected": "ばんごうはななです",
+   "heard": "ばんごうはななです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.ex.1",
+   "file": "cbd1b44395b1.mp3",
+   "text": "番号は八ですか。",
+   "expected": "ばんごうははちですか",
+   "heard": "ばんごうははちですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g005.ex.2",
+   "file": "0983ed2952bd.mp3",
+   "text": "電話の番号は〇九・一二三四・五六〇一です。",
+   "expected": "でんわのばんごうはれいきゅういちにさんよんごろくれいいちです",
+   "heard": "でんわのばんごうはれいきゅういちにさんよんごろくれいいちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.form.0",
+   "file": "b252722b286b.mp3",
+   "text": "番号は二十一です。",
+   "expected": "ばんごうはにじゅういちです",
+   "heard": "ばんごうはにじゅういちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.form.1",
+   "file": "a4174ab69f59.mp3",
+   "text": "番号は二十一ではありません。",
+   "expected": "ばんごうはにじゅういちではありません",
+   "heard": "ばんごうはにじゅういちではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.form.2",
+   "file": "1a4e0154f12c.mp3",
+   "text": "番号は二十一でした。",
+   "expected": "ばんごうはにじゅういちでした",
+   "heard": "ばんごうはみじゅういちでした",
+   "sim": 0.929,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.form.3",
+   "file": "42164c753764.mp3",
+   "text": "番号は二十一ではありませんでした。",
+   "expected": "ばんごうはにじゅういちではありませんでした",
+   "heard": "ばんごうはみじゅういちではありませんでした",
+   "sim": 0.952,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.ex.0",
+   "file": "b252722b286b.mp3",
+   "text": "番号は二十一です。",
+   "expected": "ばんごうはにじゅういちです",
+   "heard": "ばんごうはにじゅういちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.ex.1",
+   "file": "facd6db496c0.mp3",
+   "text": "番号は五十六ですか。",
+   "expected": "ばんごうはごじゅうろくですか",
+   "heard": "ばんごうはごじゅうろくですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g006.ex.2",
+   "file": "45857ac7ed03.mp3",
+   "text": "私の番号は九十九です。",
+   "expected": "わたしのばんごうはきゅうじゅうきゅうです",
+   "heard": "わたしのばんごうはちゅうじゅうきゅうです",
+   "sim": 0.95,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "5802da3ee135.mp3",
+   "text": "番号は六です。",
+   "expected": "ばんごうはろくです",
+   "heard": "ばんごうはろくです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "e2ed552382c2.mp3",
+   "text": "番号は三十二ですか。",
+   "expected": "ばんごうはさんじゅうにですか",
+   "heard": "ばんごうはさんじゅうにですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "6eaf391bca65.mp3",
+   "text": "いいえ、番号は二十三です。",
+   "expected": "いいえばんごうはにじゅうさんです",
+   "heard": "いいえばんぼうはにじゅうさんです",
+   "sim": 0.938,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "7d12484ab5d3.mp3",
+   "text": "私の番号も十一です。",
+   "expected": "わたしのばんごうもじゅういちです",
+   "heard": "わたしのばんぼうもじゅういちです",
+   "sim": 0.938,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "c08a1e8c9c9c.mp3",
+   "text": "会社の電話の番号は〇二・三四五六・一二〇三です。",
+   "expected": "かいしゃのでんわのばんごうはれいにさんよんごろくいちにれいさんです",
+   "heard": "かいしゃのべんわのばんごうはれいにさんよんごろくいちにれいさんです",
+   "sim": 0.97,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "28669a86344a.mp3",
+   "text": "会社の電話の番号は〇三・一二三四・五六〇一です。",
+   "expected": "かいしゃのでんわのばんごうはれいさんいちにさんよんごろくれいいちです",
+   "heard": "かいしゃのでんわのばんごうはれいさんいちにさんよんごろくれいいちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "60ae3878bbbd.mp3",
+   "text": "「番号は十一ですか。」\n「はい、十一です。」\n「電話の番号は〇二・三四五六・一二〇三ですか。」\n「いいえ、〇二・三四五六・一二〇四です。」",
+   "expected": "ばんごうはじゅういちですかはいじゅういちですでんわのばんごうはれいにさんよんごろくいちにれいさんですかいいえれいにさんよんごろくいちにれいよんです",
+   "heard": "ばんごうはじゅういちですかはいじゅういちですでんわのばんごうはでいにさんよんごうろくいちにでいさんですかいいえでいにさんよんごうろくいちにでいよんです",
+   "sim": 0.932,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "b1fd7ee7532a.mp3",
+   "text": "「番号は十一ですか。",
+   "expected": "ばんごうはじゅういちですか",
+   "heard": "ばんごうはじゅういちですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "0b3e87a8bde8.mp3",
+   "text": "「はい、十一です。",
+   "expected": "はいじゅういちです",
+   "heard": "はいじゅういちです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "101cf1738c41.mp3",
+   "text": "「電話の番号は〇二・三四五六・一二〇三ですか。",
+   "expected": "でんわのばんごうはれいにさんよんごろくいちにれいさんですか",
+   "heard": "でんわのばんごうはれいにさんよんごろくいちにれいさんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "1b83da9ae195.mp3",
+   "text": "「いいえ、〇二・三四五六・一二〇四です。",
+   "expected": "いいえれいにさんよんごろくいちにれいよんです",
+   "heard": "いいえれいみいさんよんごうろくいちみいれいよんです",
+   "sim": 0.851,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "9d5177831622.mp3",
+   "text": "零、一、二、三、四、五、六、七、八、九、十、十一、二十、二十一、四十四、七十、九十九。番号は二十一です。電話の番号は〇二・三四五六・一二〇四です。",
+   "expected": "れいいちにさんしごろくななはちきゅうじゅうじゅういちにじゅうにじゅういちよんじゅうよんななじゅうきゅうじゅうきゅうばんごうはにじゅういちですでんわのばんごうはれいにさんよんごろくいちにれいよんです",
+   "heard": "れいいちにさんよんごろくななはちきゅういちれいいちいちにれいにいちよんよんななれいきゅうきゅうばんごうはにいちですでんわのばんごうはれいにさんよんごろくいちにれいよんです",
+   "sim": 0.798,
+   "name_miss": [],
+   "flag": true
+  }
+ ]
+}
