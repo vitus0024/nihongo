@@ -1,0 +1,290 @@
+{
+ "vocab.v0011": {
+  "file": "bf17c0c42113.mp3",
+  "text": "会社",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0011.ex": {
+  "file": "3277914477bc.mp3",
+  "text": "日本の会社です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0012": {
+  "file": "ef08c5458ad4.mp3",
+  "text": "大学",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0012.ex": {
+  "file": "39590345129e.mp3",
+  "text": "私は台湾の大学の学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0013": {
+  "file": "25275af7a3d3.mp3",
+  "text": "病院",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0013.ex": {
+  "file": "7632642d1944.mp3",
+  "text": "私は台湾の病院の医者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0014": {
+  "file": "d6383e70ef31.mp3",
+  "text": "日本語",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0014.ex": {
+  "file": "eb5cbae5082b.mp3",
+  "text": "私は日本語の教師です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0015": {
+  "file": "0f6c30bd19e1.mp3",
+  "text": "英語",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0015.ex": {
+  "file": "78fdf2626e80.mp3",
+  "text": "田中さんは英語の教師です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0016": {
+  "file": "5819d3e7c4bd.mp3",
+  "text": "あの人",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0016.ex": {
+  "file": "e64979709f46.mp3",
+  "text": "あの人も学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0017": {
+  "file": "240b85659750.mp3",
+  "text": "教師",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0017.ex": {
+  "file": "aec8e88b91f6.mp3",
+  "text": "私は教師です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0018": {
+  "file": "f0a64906fb4d.mp3",
+  "text": "銀行員",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0018.ex": {
+  "file": "31437dbc299d.mp3",
+  "text": "林さんも銀行員です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0019": {
+  "file": "5f9848d0514a.mp3",
+  "text": "研究者",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0019.ex": {
+  "file": "6eb943e8b9c9.mp3",
+  "text": "私は大学の研究者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0020": {
+  "file": "614162f9308d.mp3",
+  "text": "エンジニア",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0020.ex": {
+  "file": "a000e2e9e018.mp3",
+  "text": "あの人は日本の会社のエンジニアです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.form.0": {
+  "file": "bac6ffc57122.mp3",
+  "text": "私も学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.form.1": {
+  "file": "3ce19350777f.mp3",
+  "text": "私も学生ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.form.2": {
+  "file": "3f7713b84a12.mp3",
+  "text": "私も学生でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.form.3": {
+  "file": "292b9dd5cc83.mp3",
+  "text": "私も学生ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.ex.0": {
+  "file": "63daeab19b57.mp3",
+  "text": "私は銀行員です。林さんも銀行員です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.ex.1": {
+  "file": "af9375e5cbb0.mp3",
+  "text": "田中さんは学生です。あの人も学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g003.ex.2": {
+  "file": "bfa978f35fe9.mp3",
+  "text": "私は医者ではありません。林さんも医者ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.form.0": {
+  "file": "6eb943e8b9c9.mp3",
+  "text": "私は大学の研究者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.form.1": {
+  "file": "a651418662dc.mp3",
+  "text": "私は大学の研究者ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.form.2": {
+  "file": "86b1c8fd2abb.mp3",
+  "text": "私は大学の研究者でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.form.3": {
+  "file": "d4b887f64576.mp3",
+  "text": "私は大学の研究者ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.ex.0": {
+  "file": "3277914477bc.mp3",
+  "text": "日本の会社です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.ex.1": {
+  "file": "39590345129e.mp3",
+  "text": "私は台湾の大学の学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g004.ex.2": {
+  "file": "da177eae399b.mp3",
+  "text": "あの人は英語の教師です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "3a23bc54d0b2.mp3",
+  "text": "私は日本の会社のエンジニアです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "39590345129e.mp3",
+  "text": "私は台湾の大学の学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "eb5cbae5082b.mp3",
+  "text": "私は日本語の教師です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "63daeab19b57.mp3",
+  "text": "私は銀行員です。林さんも銀行員です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "c1fd246d442f.mp3",
+  "text": "あの人は病院の医者ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "73441af4531f.mp3",
+  "text": "私は大学の研究者です。林さんも大学の研究者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "73441af4531f.mp3",
+  "text": "私は大学の研究者です。林さんも大学の研究者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "7ccc54844542.mp3",
+  "text": "私は林です。台湾の大学の研究者です。田中さんも台湾の大学の研究者です。あの人は日本語の教師です。英語の教師ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "88c2c44e9b80.mp3",
+  "text": "私は林です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "2e2abb9f402f.mp3",
+  "text": "台湾の大学の研究者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "6092ed368d7e.mp3",
+  "text": "田中さんも台湾の大学の研究者です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "5d2fd3f8b328.mp3",
+  "text": "あの人は日本語の教師です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "4b5c3b02a6c6.mp3",
+  "text": "英語の教師ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "5ad5d4495100.mp3",
+  "text": "私は日本の会社のエンジニアです。林さんも日本の会社のエンジニアです。私は台湾の大学の研究者です。田中さんも台湾の大学の研究者です。私は日本語の教師です。林さんも日本語の教師です。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

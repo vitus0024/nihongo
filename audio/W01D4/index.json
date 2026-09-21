@@ -1,0 +1,284 @@
+{
+ "vocab.v0031": {
+  "file": "a8d5cf8e7c86.mp3",
+  "text": "何歳",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0031.ex": {
+  "file": "076590032a3d.mp3",
+  "text": "林さんは何歳ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0032": {
+  "file": "a0c8870cec8b.mp3",
+  "text": "おいくつ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0032.ex": {
+  "file": "18a367c5bbce.mp3",
+  "text": "田中さんはおいくつですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0033": {
+  "file": "e73f3ab2dcca.mp3",
+  "text": "二十歳",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0033.ex": {
+  "file": "9b63b1d5c9bc.mp3",
+  "text": "私は二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0034": {
+  "file": "4c96f11b3d38.mp3",
+  "text": "人",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0034.ex": {
+  "file": "7f1207ee3f25.mp3",
+  "text": "あの人は日本語の先生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0035": {
+  "file": "8fd715866d0e.mp3",
+  "text": "誰",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0035.ex": {
+  "file": "5fd674ffd057.mp3",
+  "text": "あの人は誰ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0036": {
+  "file": "02dace287503.mp3",
+  "text": "七",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0036.ex": {
+  "file": "1d2b1752e2b8.mp3",
+  "text": "番号は七です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0037": {
+  "file": "6001093d1c32.mp3",
+  "text": "八",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0037.ex": {
+  "file": "733136bad336.mp3",
+  "text": "番号は八です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0038": {
+  "file": "41c87072f53a.mp3",
+  "text": "九",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0038.ex": {
+  "file": "f5018b23d9a3.mp3",
+  "text": "番号は九です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0039": {
+  "file": "da332cee93e8.mp3",
+  "text": "十",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0039.ex": {
+  "file": "38f82b425a99.mp3",
+  "text": "番号は十です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0040": {
+  "file": "51e5951cb237.mp3",
+  "text": "二十",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0040.ex": {
+  "file": "33ec2003a875.mp3",
+  "text": "番号は二十です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.form.0": {
+  "file": "9b63b1d5c9bc.mp3",
+  "text": "私は二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.form.1": {
+  "file": "7309d1376a6c.mp3",
+  "text": "私は二十歳ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.form.2": {
+  "file": "fc36d03d97cd.mp3",
+  "text": "私は二十歳でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.form.3": {
+  "file": "401adbbe9f7a.mp3",
+  "text": "私は二十歳ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.form.4": {
+  "file": "076590032a3d.mp3",
+  "text": "林さんは何歳ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.form.5": {
+  "file": "18a367c5bbce.mp3",
+  "text": "田中さんはおいくつですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.ex.0": {
+  "file": "076590032a3d.mp3",
+  "text": "林さんは何歳ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.ex.1": {
+  "file": "18a367c5bbce.mp3",
+  "text": "田中さんはおいくつですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.ex.2": {
+  "file": "9b63b1d5c9bc.mp3",
+  "text": "私は二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g007.ex.3": {
+  "file": "4229d4131c43.mp3",
+  "text": "ゆきさんは八歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "076590032a3d.mp3",
+  "text": "林さんは何歳ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "18a367c5bbce.mp3",
+  "text": "田中さんはおいくつですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "9b63b1d5c9bc.mp3",
+  "text": "私は二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "4229d4131c43.mp3",
+  "text": "ゆきさんは八歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "5fd674ffd057.mp3",
+  "text": "あの人は誰ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "729d5970965a.mp3",
+  "text": "あの人は田中さんです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.6": {
+  "file": "33ec2003a875.mp3",
+  "text": "番号は二十です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "1f8fe5108e4f.mp3",
+  "text": "「林さんはおいくつですか。」\n「二十歳です。学生です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "7f3e20748a22.mp3",
+  "text": "私は林です。台湾人です。大学の学生です。二十歳です。あの人は田中さんです。日本人です。田中さんも二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "88c2c44e9b80.mp3",
+  "text": "私は林です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "cefb1056bd06.mp3",
+  "text": "台湾人です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "26923aff97f7.mp3",
+  "text": "大学の学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "ec41aaa87ac9.mp3",
+  "text": "二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "729d5970965a.mp3",
+  "text": "あの人は田中さんです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.5": {
+  "file": "3a5253e610b6.mp3",
+  "text": "日本人です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.6": {
+  "file": "42535549b40a.mp3",
+  "text": "田中さんも二十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "71649ff30d7a.mp3",
+  "text": "「林さんはおいくつですか。」「二十歳です。」\n「ゆきさんは何歳ですか。」「八歳です。」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

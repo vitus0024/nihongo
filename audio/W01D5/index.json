@@ -1,0 +1,308 @@
+{
+ "vocab.v0041": {
+  "file": "eabdef078d3c.mp3",
+  "text": "これ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0041.ex": {
+  "file": "b3d2fcfde4b0.mp3",
+  "text": "これは本です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0042": {
+  "file": "35095383b732.mp3",
+  "text": "それ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0042.ex": {
+  "file": "11a74b1c35a0.mp3",
+  "text": "それは辞書ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0043": {
+  "file": "4a32d5be4bc3.mp3",
+  "text": "あれ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0043.ex": {
+  "file": "8f2763b23181.mp3",
+  "text": "あれは雑誌です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0044": {
+  "file": "20421207c220.mp3",
+  "text": "本",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0044.ex": {
+  "file": "89ba084856ec.mp3",
+  "text": "この本は日本語の本です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0045": {
+  "file": "3bd577ef348e.mp3",
+  "text": "辞書",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0045.ex": {
+  "file": "372c6c52ade4.mp3",
+  "text": "その辞書は英語の辞書ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0046": {
+  "file": "cd286797f8a1.mp3",
+  "text": "雑誌",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0046.ex": {
+  "file": "86508799936b.mp3",
+  "text": "これは雑誌です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0047": {
+  "file": "08215458f60d.mp3",
+  "text": "新聞",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0047.ex": {
+  "file": "ec5ff6daca33.mp3",
+  "text": "あれは日本語の新聞です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0048": {
+  "file": "a825fcb9881b.mp3",
+  "text": "ノート",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0048.ex": {
+  "file": "8de6c34893fe.mp3",
+  "text": "このノートは私のノートです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0049": {
+  "file": "1079d50b04f0.mp3",
+  "text": "鉛筆",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0049.ex": {
+  "file": "18ff9a9dcb5f.mp3",
+  "text": "それは鉛筆です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0050": {
+  "file": "0872d00105a2.mp3",
+  "text": "ボールペン",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0050.ex": {
+  "file": "16ed52f9e568.mp3",
+  "text": "これはボールペンですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.form.0": {
+  "file": "47e75a26f9be.mp3",
+  "text": "これは私の本です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.form.1": {
+  "file": "62d0f8ec3f0c.mp3",
+  "text": "これは私の本ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.form.2": {
+  "file": "b743381b5090.mp3",
+  "text": "これは私の本でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.form.3": {
+  "file": "077a5e40a81e.mp3",
+  "text": "これは私の本ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.ex.0": {
+  "file": "afd0c98451a9.mp3",
+  "text": "これはノートですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.ex.1": {
+  "file": "18ff9a9dcb5f.mp3",
+  "text": "それは鉛筆です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g008.ex.2": {
+  "file": "0513ce11f95d.mp3",
+  "text": "あれは私の本です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.form.0": {
+  "file": "0c28c0d0f7af.mp3",
+  "text": "この本は私の本です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.form.1": {
+  "file": "f0ca8a95c5cb.mp3",
+  "text": "この本は私の本ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.form.2": {
+  "file": "0c7e51674e47.mp3",
+  "text": "この本は私の本でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.form.3": {
+  "file": "4310d2a87115.mp3",
+  "text": "この本は私の本ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.ex.0": {
+  "file": "1f2f217974f9.mp3",
+  "text": "この本は日本語の本ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.ex.1": {
+  "file": "21a8394ef2e5.mp3",
+  "text": "その辞書は英語の辞書です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g009.ex.2": {
+  "file": "ec153814e247.mp3",
+  "text": "あのノートは私のノートです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "5b5b2831da11.mp3",
+  "text": "これは本ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "d04a509a7a95.mp3",
+  "text": "それは鉛筆ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "dea7f707435d.mp3",
+  "text": "あれは新聞ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "1f2f217974f9.mp3",
+  "text": "この本は日本語の本ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "372c6c52ade4.mp3",
+  "text": "その辞書は英語の辞書ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "ec153814e247.mp3",
+  "text": "あのノートは私のノートです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "ef5fbf1a0ad1.mp3",
+  "text": "「この本は英語の本ですか。」\n「いいえ、日本語の本です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "1c2e4c9432f1.mp3",
+  "text": "「これは鉛筆ですか。」\n「いいえ、それはボールペンです。」\n「あれは雑誌ですか。」\n「はい、あれは日本語の雑誌です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "648b2e8aa0a5.mp3",
+  "text": "「これは鉛筆ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "5e904bf3f799.mp3",
+  "text": "」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "a253771a4fc7.mp3",
+  "text": "「いいえ、それはボールペンです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "5e904bf3f799.mp3",
+  "text": "」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "e5f99f9e87ef.mp3",
+  "text": "「あれは雑誌ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.5": {
+  "file": "5e904bf3f799.mp3",
+  "text": "」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.6": {
+  "file": "a2582587805e.mp3",
+  "text": "「はい、あれは日本語の雑誌です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.7": {
+  "file": "5e904bf3f799.mp3",
+  "text": "」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "0a2a5545e6e1.mp3",
+  "text": "これは本です。\nそれは辞書です。\nあれは雑誌です。\nこの本は日本語の本です。\nその本は英語の本です。\nあの本は私の本です。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

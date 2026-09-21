@@ -4,3 +4,4 @@ __pycache__/
 audio/_test/
 audio/_compare/
 audio/_preview/
+audio/_gen-*.log
