@@ -19,6 +19,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -124,8 +125,28 @@ def tts_elevenlabs(text: str, prof: dict) -> bytes:
 BACKENDS = {"openai": tts_openai, "voicevox": tts_voicevox, "elevenlabs": tts_elevenlabs}
 
 
+def name_readings() -> dict[str, str]:
+    """schema/readings.txt「# 人名」段落：TTS 會把 林 唸成 はやし，送出前先換成假名。"""
+    out, on = {}, False
+    for ln in (ROOT / "schema" / "readings.txt").read_text(encoding="utf-8").splitlines():
+        if ln.startswith("#"):
+            on = "人名" in ln
+            continue
+        if on and "\t" in ln:
+            k, v = ln.split("\t", 1); out[k.strip()] = v.strip()
+    return out
+
+
+NAMES = name_readings()
+_NAME_RE = re.compile(r"(?<![\u4e00-\u9fff])(" + "|".join(sorted(map(re.escape, NAMES), key=len, reverse=True)) + r")(?=さん|です|は|の|と|も|が|、|。|」|$)") if NAMES else None   # 前面不能是漢字（森林≠森＋林）
+
+
+def for_tts(text: str) -> str:
+    return _NAME_RE.sub(lambda m: NAMES[m.group(1)], text) if _NAME_RE else text
+
+
 def synth(text: str, prof: dict) -> bytes:
-    return BACKENDS[prof["backend"]](text, prof)
+    return BACKENDS[prof["backend"]](for_tts(text), prof)
 
 
 # ---------- 輸入來源 ----------
@@ -170,7 +191,7 @@ def csv_items(p: Path) -> list[tuple[str, str]]:
 
 # ---------- 生成 ----------
 def fname(text: str, prof: dict, name: str | None = None) -> str:
-    h = hashlib.sha1(f"{prof['backend']}|{prof.get('voice') or prof.get('speaker')}|{prof['version']}|{text}".encode()).hexdigest()[:12]
+    h = hashlib.sha1(f"{prof['backend']}|{prof.get('voice') or prof.get('speaker')}|{prof['version']}|{for_tts(text)}".encode()).hexdigest()[:12]
     ext = "mp3" if prof["backend"] != "voicevox" or have_ffmpeg() else "wav"
     return f"{safe(name)}.{ext}" if name else f"{h}.{ext}"
 

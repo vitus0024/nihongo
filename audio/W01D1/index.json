@@ -42,7 +42,7 @@
   "backend": "openai"
  },
  "vocab.v0004.ex": {
-  "file": "bd7c23bff844.mp3",
+  "file": "596f43b3eac7.mp3",
   "text": "田中さんは先生です。",
   "profile": 1,
   "backend": "openai"
@@ -144,7 +144,7 @@
   "backend": "openai"
  },
  "grammar.g001.ex.0": {
-  "file": "4d82af8d54ad.mp3",
+  "file": "eab92bf6babb.mp3",
   "text": "私は陳です。",
   "profile": 1,
   "backend": "openai"
@@ -156,7 +156,7 @@
   "backend": "openai"
  },
  "grammar.g001.ex.2": {
-  "file": "bd7c23bff844.mp3",
+  "file": "596f43b3eac7.mp3",
   "text": "田中さんは先生です。",
   "profile": 1,
   "backend": "openai"
@@ -204,19 +204,19 @@
   "backend": "openai"
  },
  "grammar.g002.ex.1": {
-  "file": "695978bebc0a.mp3",
+  "file": "9d83c9ca8968.mp3",
   "text": "田中さんは医者ですか。",
   "profile": 1,
   "backend": "openai"
  },
  "grammar.g002.ex.2": {
-  "file": "7ce1fcfcd884.mp3",
+  "file": "bde164beb7ed.mp3",
   "text": "林さんは台湾人ですか。",
   "profile": 1,
   "backend": "openai"
  },
  "patterns.0": {
-  "file": "4d82af8d54ad.mp3",
+  "file": "eab92bf6babb.mp3",
   "text": "私は陳です。",
   "profile": 1,
   "backend": "openai"
@@ -228,7 +228,7 @@
   "backend": "openai"
  },
  "patterns.2": {
-  "file": "695978bebc0a.mp3",
+  "file": "9d83c9ca8968.mp3",
   "text": "田中さんは医者ですか。",
   "profile": 1,
   "backend": "openai"
@@ -264,19 +264,19 @@
   "backend": "openai"
  },
  "reading": {
-  "file": "c4fb1afa46f5.mp3",
+  "file": "449d57e3cd57.mp3",
   "text": "私は陳です。私は学生です。田中さんは医者です。",
   "profile": 1,
   "backend": "openai"
  },
  "listening": {
-  "file": "424280ab024c.mp3",
+  "file": "b44f73a6a407.mp3",
   "text": "「私は陳です。私は台湾人です。私は会社員です。田中さんは学生ですか。」\n「いいえ、私は学生ではありません。私は日本人です。私は医者です。」",
   "profile": 1,
   "backend": "openai"
  },
  "listening.line.0": {
-  "file": "bfd0bb8da33e.mp3",
+  "file": "b4ee9f8d50f5.mp3",
   "text": "「私は陳です。",
   "profile": 1,
   "backend": "openai"
@@ -294,7 +294,7 @@
   "backend": "openai"
  },
  "listening.line.3": {
-  "file": "c9a5ae4140da.mp3",
+  "file": "556c2d023f94.mp3",
   "text": "田中さんは学生ですか。",
   "profile": 1,
   "backend": "openai"
@@ -330,7 +330,7 @@
   "backend": "openai"
  },
  "speaking": {
-  "file": "6643cf70184b.mp3",
+  "file": "10b70ae2addc.mp3",
   "text": "私は陳です。私は台湾人です。私は会社員です。田中さんは医者ですか。はい、私は医者です。",
   "profile": 1,
   "backend": "openai"

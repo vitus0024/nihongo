@@ -72,6 +72,7 @@ def build_prompt(lid: str) -> str:
 - JSON schema 在 `schema/lesson.schema.json` 的 `$defs.{l['day_type']}`，請先讀它；欄位一個都不能少、不能多
 - `validate_structure.py` 另外檢查：vocab 的 id 集合必須恰好等於課綱 new_vocab、kanji／kana 寫法必須跟課綱完全一致、例句必須用到該字、warmup 的 tests 只能是複習字或之前教過的文法、check 的 tests 只能是今天的字或文法、每題 evidence 必須是原文中一字不差的片段、answer 是 0 起算的選項索引、選項不可重複
 - 所有 `*_kana` 欄位是**整句全假名**（含助詞），只能有平假名、片假名、長音、日文標點、空白；數字要寫成假名（さんびゃく）
+- 給學習者看的任何文字（compare、usage、explain、note…）**不可出現 g001／v0012 這類 ID**，要引用就寫句型或單字本身
 - 中文一律**台灣用語**（例：「錢包」不是「钱包」、「便利商店」不是「便利店」）
 - 只能使用：今天的新字＋下面列的已學字＋助詞／です・ます 等基本功能詞＋人名地名。**不要用還沒教的單字或文法**——驗證器會用斷詞器檢查每一句日文，出現未教的實詞就不過（人名、數字、助數詞、`schema/allow_words.txt` 裡的詞除外）；選項裡的錯誤讀音不在此限
 

@@ -54,7 +54,7 @@
   "backend": "openai"
  },
  "vocab.v0015.ex": {
-  "file": "78fdf2626e80.mp3",
+  "file": "23236ab86276.mp3",
   "text": "田中さんは英語の教師です。",
   "profile": 1,
   "backend": "openai"
@@ -90,7 +90,7 @@
   "backend": "openai"
  },
  "vocab.v0018.ex": {
-  "file": "31437dbc299d.mp3",
+  "file": "417cc3c832d0.mp3",
   "text": "林さんも銀行員です。",
   "profile": 1,
   "backend": "openai"
@@ -144,19 +144,19 @@
   "backend": "openai"
  },
  "grammar.g003.ex.0": {
-  "file": "63daeab19b57.mp3",
+  "file": "9a8caaf8cd93.mp3",
   "text": "私は銀行員です。林さんも銀行員です。",
   "profile": 1,
   "backend": "openai"
  },
  "grammar.g003.ex.1": {
-  "file": "af9375e5cbb0.mp3",
+  "file": "29cb632f57b0.mp3",
   "text": "田中さんは学生です。あの人も学生です。",
   "profile": 1,
   "backend": "openai"
  },
  "grammar.g003.ex.2": {
-  "file": "bfa978f35fe9.mp3",
+  "file": "d0feee25c18c.mp3",
   "text": "私は医者ではありません。林さんも医者ではありません。",
   "profile": 1,
   "backend": "openai"
@@ -222,7 +222,7 @@
   "backend": "openai"
  },
  "patterns.3": {
-  "file": "63daeab19b57.mp3",
+  "file": "9a8caaf8cd93.mp3",
   "text": "私は銀行員です。林さんも銀行員です。",
   "profile": 1,
   "backend": "openai"
@@ -234,25 +234,25 @@
   "backend": "openai"
  },
  "patterns.5": {
-  "file": "73441af4531f.mp3",
+  "file": "b9aa94a06d45.mp3",
   "text": "私は大学の研究者です。林さんも大学の研究者です。",
   "profile": 1,
   "backend": "openai"
  },
  "reading": {
-  "file": "73441af4531f.mp3",
+  "file": "b9aa94a06d45.mp3",
   "text": "私は大学の研究者です。林さんも大学の研究者です。",
   "profile": 1,
   "backend": "openai"
  },
  "listening": {
-  "file": "7ccc54844542.mp3",
+  "file": "b80d7eba26e5.mp3",
   "text": "私は林です。台湾の大学の研究者です。田中さんも台湾の大学の研究者です。あの人は日本語の教師です。英語の教師ではありません。",
   "profile": 1,
   "backend": "openai"
  },
  "listening.line.0": {
-  "file": "88c2c44e9b80.mp3",
+  "file": "2f71ad0ae075.mp3",
   "text": "私は林です。",
   "profile": 1,
   "backend": "openai"
@@ -264,7 +264,7 @@
   "backend": "openai"
  },
  "listening.line.2": {
-  "file": "6092ed368d7e.mp3",
+  "file": "413cdc343e0a.mp3",
   "text": "田中さんも台湾の大学の研究者です。",
   "profile": 1,
   "backend": "openai"
@@ -282,7 +282,7 @@
   "backend": "openai"
  },
  "speaking": {
-  "file": "5ad5d4495100.mp3",
+  "file": "9f04b9b61b86.mp3",
   "text": "私は日本の会社のエンジニアです。林さんも日本の会社のエンジニアです。私は台湾の大学の研究者です。田中さんも台湾の大学の研究者です。私は日本語の教師です。林さんも日本語の教師です。",
   "profile": 1,
   "backend": "openai"

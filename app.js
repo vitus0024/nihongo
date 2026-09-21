@@ -248,7 +248,7 @@ function renderSchedule() {
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定 <span class="badge">app v7</span></h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v8</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
