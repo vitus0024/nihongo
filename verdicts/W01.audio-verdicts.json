@@ -1,0 +1,33 @@
+{
+ "scope": "audio W01D1–W01D6",
+ "by": "Claude Opus 5 ＋ Bryant",
+ "date": "2026-09-21",
+ "verdicts": [
+  {
+   "pattern": "林さん → はやし",
+   "verdict": "TTS 錯",
+   "action": "送 TTS 前人名換假名；重生"
+  },
+  {
+   "pattern": "二十歳 → にじゅっさい（W01D4 八段）",
+   "verdict": "TTS 錯",
+   "action": "readings.txt 全部條目送 TTS 前換假名；重生"
+  },
+  {
+   "pattern": "〇 → まる／ぜろ（W01D3）",
+   "verdict": "TTS 錯",
+   "action": "同上（〇→れい）；重生"
+  },
+  {
+   "pattern": "〜ですか 辨識成 〜でした（W01D4 五段）",
+   "verdict": "辨識錯",
+   "reason": "Bryant 親耳確認句尾是清楚的 ですか（2026-09-22）",
+   "action": "結案，不動"
+  },
+  {
+   "pattern": "たなか→かなか、病院→でおいん、單字短句",
+   "verdict": "辨識錯",
+   "action": "不動"
+  }
+ ]
+}
