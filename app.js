@@ -213,7 +213,7 @@ function renderHome() {
   const weekDone = curL ? ORDER.filter((id) => L[id].week === curL.week && st(id).status === "done").length : 0;
   const stageWeeks = curL ? ((curL.week - 1) % 4) + 1 : 0;
   const weeks = Object.keys(S.weekly).filter((w) => S.weekly[w].quiz).sort().slice(-8);
-  const chart = weeks.length ? `<div class="card"><h3>每週小測</h3>${weeks.map((w) => { const q = S.weekly[w].quiz; const t = PARTS.reduce((a, [k]) => a + (q[k] ?? 0), 0); return `<div class="row between small"><span>${w}</span><span class="grow"><div class="bar indigo"><i style="width:${t}%"></i></div></span><b>${t}</b><span class="faint">${PARTS.map(([k, n]) => `${n[0]}${q[k] ?? "–"}`).join(" ")}</span></div>`; }).join("")}<p class="faint">85 分以上兩週：加難度；單項 70 以下兩週：加練習（SPEC §7.3）</p></div>` : "";
+  const chart = weeks.length ? `<div class="card"><h3>每週小測</h3>${weeks.map((w) => { const q = S.weekly[w].quiz; const t = PARTS.reduce((a, [k]) => a + (q[k] ?? 0), 0); return `<div class="row between small"><span>${w}</span><span class="grow"><div class="bar indigo"><i style="width:${t}%"></i></div></span><b>${t}</b><span class="faint">${PARTS.map(([k, n]) => `${n[0]}${q[k] ?? "–"}`).join(" ")}</span></div>`; }).join("")}<p class="faint">連續兩週 85 分以上：加難度；單項連續兩週 70 分以下：加練習</p></div>` : "";
   const tasks = S.adjust_tasks.filter((a) => !a.done && !a.superseded && a.round === S.round);
   const exportWarn = !S.last_export || daysBetween(S.last_export, today()) >= 7;
   view.innerHTML = `
@@ -228,7 +228,7 @@ function renderHome() {
     ${S.todo.length ? `<div class="notice">今天先做：${S.todo.map((t) => ({ return_test: "回歸測驗", remedial: `補強 ${t.lesson}`, short_review: "短複習" })[t.kind]).join(" → ")}</div>` : ""}
     ${nx.locked ? `<div class="notice red">${nx.id} 鎖住：${nx.locked}</div>` : ""}
     ${S.suggest && daysBetween(S.suggest.at, today()) < 7 ? `<div class="notice indigo"><b>ChatGPT 建議（${S.suggest.week}）</b>：${esc(S.suggest.text)}</div>` : ""}
-    ${tasks.length ? `<div class="card"><h3>本週必做（SPEC §7.3）</h3>${tasks.map((a) => `<label class="sw"><input type="checkbox" data-act="task-done" data-id="${a.id}"> ${esc(a.task)}</label>`).join("")}</div>` : ""}
+    ${tasks.length ? `<div class="card"><h3>本週必做</h3>${tasks.map((a) => `<label class="sw"><input type="checkbox" data-act="task-done" data-id="${a.id}"> ${esc(a.task)}</label>`).join("")}</div>` : ""}
     ${exportWarn && S.started ? `<div class="notice">已超過一週沒備份進度——到「設定」匯出一次</div>` : ""}
     <button class="btn primary block" data-act="go-today">${nx.id ? `開始今天：${nx.id} ${esc(curL.theme)}` : "查看課表"}</button>
     ${chart}`;
@@ -249,7 +249,7 @@ function renderSchedule() {
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定 <span class="badge">app v9</span></h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v10</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
@@ -288,7 +288,7 @@ async function renderToday() {
 }
 
 function renderDiagnostic() {
-  view.innerHTML = `<h1>第 0 週：入學診斷</h1><div class="card"><p>SPEC §7.1：正式上課前先做 20–25 分鐘診斷。v1 的診斷在 ChatGPT 做（假名、單字、文法、閱讀、聽力、口說），結果回來這裡登記：</p>
+  view.innerHTML = `<h1>第 0 週：入學診斷</h1><div class="card"><p>正式上課前先做 20–25 分鐘診斷。診斷在 ChatGPT 做（假名、單字、文法、閱讀、聽力、口說），結果回來這裡登記：</p>
     <label class="sw"><input type="checkbox" id="kana-ok"> 假名（平假名＋片假名）已熟練</label>
     <p class="small muted">已熟練的單字／文法之後可在課表長按標「豁免」；現在先開始。</p>
     <div class="row"><label class="sw">開始日 <input type="date" id="started" value="${today()}"></label></div>
@@ -296,7 +296,7 @@ function renderDiagnostic() {
     <div class="card soft"><p class="small muted">給 ChatGPT 的診斷指令：</p><pre class="prompt">請依我們的日文學習計畫規格書 §7.1 幫我做 N5 入學診斷，約 20–25 分鐘：假名辨讀 10 題、單字 10 題、文法 10 題、一段閱讀＋3 題、一段聽力（你唸）＋3 題、簡短口說 1 分鐘。做完給我各項百分比，以及「可以跳過的內容」清單。</pre><button class="btn small" data-act="copy" data-text="請依我們的日文學習計畫規格書 §7.1 幫我做 N5 入學診斷，約 20–25 分鐘：假名辨讀 10 題、單字 10 題、文法 10 題、一段閱讀＋3 題、一段聽力（你唸）＋3 題、簡短口說 1 分鐘。做完給我各項百分比，以及「可以跳過的內容」清單。">複製</button></div>`;
 }
 
-function rubyToggleHTML() { return `<label class="sw small"><input type="checkbox" data-act="ruby-toggle" ${SHOW_RUBY ? "checked" : ""}> 顯示注音（熟了就關掉，SPEC §4.4）</label>`; }
+function rubyToggleHTML() { return `<label class="sw small"><input type="checkbox" data-act="ruby-toggle" ${SHOW_RUBY ? "checked" : ""}> 顯示注音（熟了就關掉）</label>`; }
 function quizHTML(qs, key, opts = {}) {                    // 一組題目；runner.answers[key] 記作答
   const ans = (runner.answers ??= {})[key] ??= {};
   const graded = runner.graded?.[key];
@@ -321,7 +321,7 @@ async function renderLesson(id) {
   view.innerHTML = `<div class="row between"><h1>${id} <span class="badge">${esc(cl.stage_name)} · 第 ${cl.week} 週</span></h1></div>
     <p class="muted">${esc(cl.theme)}</p>
     <div class="row between"><label class="sw"><input type="checkbox" data-act="busy-toggle" ${busy ? "checked" : ""}> 忙碌／值班版（20 分鐘）</label><span class="faint">${doneCount}／${MODULES_NEW.length} 模組</span></div>
-    ${busy ? `<div class="notice">忙碌版只做單字複習、聽力跟讀、口說；不算完成這一課（SPEC §5.2）。</div>` : ""}
+    ${busy ? `<div class="notice">忙碌版只做單字複習、聽力跟讀、口說；不算完成這一課，下次正常日再接著上。</div>` : ""}
     ${mods.map(([k, name], i) => `<details class="module ${x.modules[k] ? "done" : ""}" data-mod="${k}" ${k === runner.openMod ? "open" : ""}><summary><span class="num">${x.modules[k] ? "✓" : i + 1}</span>${name}</summary><div class="body">${moduleHTML(k, d, cl, x)}</div></details>`).join("")}
     ${busy ? `<button class="btn primary block" data-act="busy-done">記錄一次忙碌版練習</button>` : ""}`;
   view.querySelectorAll("details.module").forEach((el) => el.addEventListener("toggle", () => { if (el.open) runner.openMod = el.dataset.mod; else if (runner.openMod === el.dataset.mod) runner.openMod = null; }));
@@ -342,12 +342,12 @@ function moduleHTML(k, d, cl, x) {
       <dt>變化</dt><dd>${g.forms.map((f, fi) => `<div class="line">${btnPlay(runner.id, `grammar.${g.id}.form.${fi}`, f.ja)}<div><span class="faint">${esc(f.label)}</span><br><span class="ja">${rubyHTML(f.ja, f.kana)}</span><br><span class="small muted">${esc(f.zh)}</span></div></div>`).join("")}</dd>
       <dt>例句</dt><dd>${g.examples.map((e, ei) => `<div class="line">${btnPlay(runner.id, `grammar.${g.id}.ex.${ei}`, e.ja)}<div><span class="ja">${rubyHTML(e.ja, e.kana)}</span><br><span class="small muted">${esc(e.zh)}</span> <span class="badge">${esc(e.scene)}</span></div></div>`).join("")}</dd>
       <dt>常見錯誤</dt><dd><ul>${g.mistakes.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></dd>${g.compare ? `<dt>比較</dt><dd>${esc(g.compare)}</dd>` : ""}</dl></div>`).join("<hr>") + `<p>${doneBtn()}</p>`;
-    case "patterns": return d.patterns.map((p, pi) => `<div class="line">${btnPlay(runner.id, `patterns.${pi}`, p.ja)}<div><span class="ja">${rubyHTML(p.ja, p.kana)}</span><br><span class="small muted">${esc(p.zh)}</span> <span class="faint">可換：${p.swap_slots.map(esc).join("、")}</span></div></div>`).join("") + `<p class="faint">照 SPEC §4.4：每句用自己的資訊換一次。</p><p>${doneBtn()}</p>`;
+    case "patterns": return d.patterns.map((p, pi) => `<div class="line">${btnPlay(runner.id, `patterns.${pi}`, p.ja)}<div><span class="ja">${rubyHTML(p.ja, p.kana)}</span><br><span class="small muted">${esc(p.zh)}</span> <span class="faint">可換：${p.swap_slots.map(esc).join("、")}</span></div></div>`).join("") + `<p class="faint">每句用自己的資訊換一次。</p><p>${doneBtn()}</p>`;
     case "reading": return `<span class="badge">${esc(d.reading.type)}</span><div class="script ja">${rubyHTML(d.reading.text_ja, d.reading.text_kana)}</div>${rubyToggleHTML()}
       ${btnPlay(runner.id, "reading", d.reading.text_ja, "▶ 朗讀")}${quizHTML(d.reading.questions, "reading")}<p>${doneBtn()}</p>`;
     case "listening": {
       const src = S.busy ? d.busy_mode : d;  // 忙碌版聽力同上
-      return `<p class="small muted">SPEC §4.5 流程：盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>
+      return `<p class="small muted">流程：盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>
         <div class="row">${Object.keys(RATES).map((k) => `<button class="btn tts" data-act="play" data-id="${runner.id}" data-key="listening" data-text="${esc(d.listening.script_ja)}" data-rate="${k}">▶ ${RATE_LABEL[k]}</button>`).join("")}</div>
         ${quizHTML(d.listening.questions, "listening")}
         ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3><div class="script ja">${rubyHTML(d.listening.script_ja, d.listening.script_kana)}</div>${rubyToggleHTML()}${d.listening.script_ja.split(/(?<=[。？！」])\s*/).filter((s) => /[\u3040-\u30ff\u4e00-\u9fff]/.test(s)).map((s, si) => `<div class="line">${btnPlay(runner.id, `listening.line.${si}`, s)}<span class="ja">${esc(s)}</span></div>`).join("")}` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
@@ -407,13 +407,13 @@ async function renderShortReview(t) {
   const d = last && await loadLesson(last);
   if (!d || !d.warmup) { completeTodo(t); return renderToday(); }
   runner.sr ??= {};
-  view.innerHTML = `<h1>短複習 <span class="badge amber">中斷 ${daysBetween(S.flow.settled_last_activity, today())} 天</span></h1><p class="muted">SPEC §7.2：中斷 1–3 天先做短複習，不補課。用 ${last} 的暖身題：</p><div class="card">${quizHTML(d.warmup, "sr")}${runner.graded?.sr ? `<button class="btn primary block" data-act="sr-done">完成，進今天的課</button>` : ""}</div>`;
+  view.innerHTML = `<h1>短複習 <span class="badge amber">中斷 ${daysBetween(S.flow.settled_last_activity, today())} 天</span></h1><p class="muted">中斷幾天，先做短複習就好，不用補課。用 ${last} 的暖身題：</p><div class="card">${quizHTML(d.warmup, "sr")}${runner.graded?.sr ? `<button class="btn primary block" data-act="sr-done">完成，進今天的課</button>` : ""}</div>`;
 }
 async function renderRemedial(t) {
   const d = await loadLesson(t.lesson); const x = st(t.lesson);
   if (!d) { view.innerHTML = `<div class="notice red">找不到 ${t.lesson} 的教材</div>`; return; }
   const wrong = x.check?.wrong || [];
-  view.innerHTML = `<h1>補強 ${t.lesson} <span class="badge amber">小檢核 ${x.check?.score}／${x.check?.total}</span></h1><p class="muted">SPEC §7.2：未達 70%，先補強 5–10 分鐘再開新課。</p>
+  view.innerHTML = `<h1>補強 ${t.lesson} <span class="badge amber">小檢核 ${x.check?.score}／${x.check?.total}</span></h1><p class="muted">小檢核未達 70%，先補強 5–10 分鐘再開新課。</p>
     <div class="card"><h3>上次錯的</h3>${wrong.length ? wrong.map((w) => V[w] ? `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(V[w].kana)}">▶</button><span class="ja">${rubyHTML(V[w].kanji, V[w].kana)}</span> ${esc(V[w].zh)}</div>` : G[w] ? `<div class="line"><span class="ja">${esc(G[w].pattern)}</span> <span class="muted small">${esc(G[w].meaning_zh)}</span></div>` : "").join("") : "<p class='muted'>（沒有記錄到錯題項目）</p>"}</div>
     <div class="card"><h3>重做小檢核</h3>${quizHTML(d.check, "rem")}${runner.graded?.rem ? `<button class="btn primary block" data-act="rem-done">補強完成</button>` : ""}</div>`;
 }
@@ -524,7 +524,7 @@ function weeklyReport() {
   return [`【nihongo 週報 ${wk}】${today()}`, `完成課次：${done.join("、") || "無"}`, `本週新字：${vocab.join("、") || "無"}`, `小測：${q ? PARTS.map(([k, n]) => `${n} ${q[k] ?? "未填"}`).join("／") : "未測"}`,
     `弱點清單：${S.weak.slice(-15).map((w) => (V[w.id]?.kanji || G[w.id]?.pattern || w.id) + (w.note ? `（${w.note}）` : "") + `×${w.count}`).join("、") || "無"}`,
     `忙碌版：${S.practice.filter((p) => p.kind === "busy" && p.date >= addDays(today(), -7)).length} 次`, `上週建議是否執行：${S.adjust_tasks.filter((a) => a.week === week).map((a) => `${a.task}→${a.done ? "完成" : "未完成"}`).join("；") || "無"}`,
-    `請依 SPEC §7.3、§11 做週檢討，最後用 n5-feedback 格式輸出回饋。`].join("\n");
+    `請依我們的日文學習計畫規格書做週檢討（難度調整規則與學習紀錄項目），最後用 n5-feedback 格式輸出回饋。`].join("\n");
 }
 
 // ---------- 啟動 ----------
