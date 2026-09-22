@@ -1,0 +1,497 @@
+{
+ "lesson": "W02D1",
+ "clips": 49,
+ "flagged": 5,
+ "rows": [
+  {
+   "key": "vocab.v0051",
+   "file": "fbf793d2471c.mp3",
+   "text": "何",
+   "expected": "なん",
+   "heard": "なに",
+   "sim": 0.5,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0051.ex",
+   "file": "6473dc64a318.mp3",
+   "text": "これは何ですか。",
+   "expected": "これはなんですか",
+   "heard": "これはなんでした",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0052",
+   "file": "d0a670a59561.mp3",
+   "text": "コーヒー",
+   "expected": "こーひー",
+   "heard": "こうひい",
+   "sim": 0.5,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0052.ex",
+   "file": "949dab4125cd.mp3",
+   "text": "これはコーヒーです。",
+   "expected": "これはこーひーです",
+   "heard": "これはこうひいです",
+   "sim": 0.778,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0053",
+   "file": "3c5ff11bf6cd.mp3",
+   "text": "チョコレート",
+   "expected": "ちょこれーと",
+   "heard": "しょこれーと",
+   "sim": 0.833,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0053.ex",
+   "file": "df63b244dd0f.mp3",
+   "text": "これはチョコレートのケーキです。",
+   "expected": "これはちょこれーとのけーきです",
+   "heard": "これはちょこれーとのけーきです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0054",
+   "file": "0596d8d76d81.mp3",
+   "text": "お土産",
+   "expected": "おみやげ",
+   "heard": "おみやげ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0054.ex",
+   "file": "c2d20941ffd0.mp3",
+   "text": "お土産はチョコレートです。",
+   "expected": "おみやげはちょこれーとです",
+   "heard": "おみやげはしょこれーとです",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0055",
+   "file": "813032a9bd39.mp3",
+   "text": "お茶",
+   "expected": "おちゃ",
+   "heard": "おちゃ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0055.ex",
+   "file": "536e8313433b.mp3",
+   "text": "これはお茶ですか、紅茶ですか。",
+   "expected": "これはおちゃですかこうちゃですか",
+   "heard": "これはおちゃですかこうちゃですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0056",
+   "file": "0415b3b11c06.mp3",
+   "text": "水",
+   "expected": "みず",
+   "heard": "みず",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0056.ex",
+   "file": "510ca518a1cf.mp3",
+   "text": "それは水です。",
+   "expected": "それはみずです",
+   "heard": "それはみずです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0057",
+   "file": "c1bba656208b.mp3",
+   "text": "牛乳",
+   "expected": "ぎゅうにゅう",
+   "heard": "ぎゅーみゅー",
+   "sim": 0.5,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0057.ex",
+   "file": "68d2ad857b8f.mp3",
+   "text": "これは牛乳ですか。",
+   "expected": "これはぎゅうにゅうですか",
+   "heard": "これはぎゅうにゅうですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0058",
+   "file": "54c5c955a7a5.mp3",
+   "text": "紅茶",
+   "expected": "こうちゃ",
+   "heard": "こうちゃ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0058.ex",
+   "file": "2d0f5d1d580f.mp3",
+   "text": "それは紅茶です。",
+   "expected": "それはこうちゃです",
+   "heard": "それはこうちゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0059",
+   "file": "49822c7e953a.mp3",
+   "text": "パン",
+   "expected": "ぱん",
+   "heard": "ぱむ",
+   "sim": 0.5,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0059.ex",
+   "file": "8cc4d0a507c1.mp3",
+   "text": "これはパンですか、ケーキですか。",
+   "expected": "これはぱんですかけーきですか",
+   "heard": "これはぱんですかけーきですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0060",
+   "file": "20e7e9d03ea3.mp3",
+   "text": "ケーキ",
+   "expected": "けーき",
+   "heard": "けーき",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0060.ex",
+   "file": "44ee8d3343f5.mp3",
+   "text": "あれもケーキです。",
+   "expected": "あれもけーきです",
+   "heard": "あれもけーきです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g010.form.0",
+   "file": "6473dc64a318.mp3",
+   "text": "これは何ですか。",
+   "expected": "これはなんですか",
+   "heard": "これはなんでした",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "grammar.g010.form.1",
+   "file": "aa47945f29a4.mp3",
+   "text": "これはケーキです。",
+   "expected": "これはけーきです",
+   "heard": "これはけーきです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g010.form.2",
+   "file": "4d8fbceb2be0.mp3",
+   "text": "これはパンではありません。",
+   "expected": "これはぱんではありません",
+   "heard": "これはぱんではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g010.form.3",
+   "file": "7f21fd3585c6.mp3",
+   "text": "あれはケーキでした。",
+   "expected": "あれはけーきでした",
+   "heard": "あれはけーきでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g010.form.4",
+   "file": "a67c00f769eb.mp3",
+   "text": "あれはパンではありませんでした。",
+   "expected": "あれはぱんではありませんでした",
+   "heard": "あれはぱんではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g010.ex.0",
+   "file": "6473dc64a318.mp3",
+   "text": "これは何ですか。",
+   "expected": "これはなんですか",
+   "heard": "これはなんでした",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "grammar.g010.ex.1",
+   "file": "5e87ebcf5115.mp3",
+   "text": "それは何ですか。",
+   "expected": "それはなんですか",
+   "heard": "それはなんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g010.ex.2",
+   "file": "3b40e87ddf20.mp3",
+   "text": "お土産は何ですか。",
+   "expected": "おみやげはなんですか",
+   "heard": "おみやげはなんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.form.0",
+   "file": "8cc4d0a507c1.mp3",
+   "text": "これはパンですか、ケーキですか。",
+   "expected": "これはぱんですかけーきですか",
+   "heard": "これはぱんですかけーきですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.form.1",
+   "file": "aa47945f29a4.mp3",
+   "text": "これはケーキです。",
+   "expected": "これはけーきです",
+   "heard": "これはけーきです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.form.2",
+   "file": "4d8fbceb2be0.mp3",
+   "text": "これはパンではありません。",
+   "expected": "これはぱんではありません",
+   "heard": "これはぱんではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.form.3",
+   "file": "7f21fd3585c6.mp3",
+   "text": "あれはケーキでした。",
+   "expected": "あれはけーきでした",
+   "heard": "あれはけーきでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.form.4",
+   "file": "a67c00f769eb.mp3",
+   "text": "あれはパンではありませんでした。",
+   "expected": "あれはぱんではありませんでした",
+   "heard": "あれはぱんではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.ex.0",
+   "file": "8cc4d0a507c1.mp3",
+   "text": "これはパンですか、ケーキですか。",
+   "expected": "これはぱんですかけーきですか",
+   "heard": "これはぱんですかけーきですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.ex.1",
+   "file": "49c196ad37b1.mp3",
+   "text": "それはコーヒーですか、紅茶ですか。",
+   "expected": "それはこーひーですかこうちゃですか",
+   "heard": "それはこうひいですかこうちゃですか",
+   "sim": 0.882,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g011.ex.2",
+   "file": "96ab18a84120.mp3",
+   "text": "お土産はチョコレートですか、お茶ですか。",
+   "expected": "おみやげはちょこれーとですかおちゃですか",
+   "heard": "おみやげはちょこれーとですかおちゃですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "6473dc64a318.mp3",
+   "text": "これは何ですか。",
+   "expected": "これはなんですか",
+   "heard": "これはなんでした",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "patterns.1",
+   "file": "8cc4d0a507c1.mp3",
+   "text": "これはパンですか、ケーキですか。",
+   "expected": "これはぱんですかけーきですか",
+   "heard": "これはぱんですかけーきですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "49c196ad37b1.mp3",
+   "text": "それはコーヒーですか、紅茶ですか。",
+   "expected": "それはこーひーですかこうちゃですか",
+   "heard": "それはこうひいですかこうちゃですか",
+   "sim": 0.882,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "df63b244dd0f.mp3",
+   "text": "これはチョコレートのケーキです。",
+   "expected": "これはちょこれーとのけーきです",
+   "heard": "これはちょこれーとのけーきです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "3b40e87ddf20.mp3",
+   "text": "お土産は何ですか。",
+   "expected": "おみやげはなんですか",
+   "heard": "おみやげはなんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "9bf7e112d75c.mp3",
+   "text": "それは牛乳ではありません。水です。",
+   "expected": "それはぎゅうにゅうではありませんみずです",
+   "heard": "それはぎゅうにゅうではありませんみずです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "384685f0f78a.mp3",
+   "text": "コーヒー　紅茶　お茶　水　牛乳\nパン　チョコレートのケーキ\nお土産　日本のお茶　日本のチョコレート",
+   "expected": "こーひーこうちゃおちゃみずぎゅうにゅうぱんちょこれーとのけーきおみやげにほんのおちゃにほんのちょこれーと",
+   "heard": "こーひーこうちゃおちゃみずぎゅうにゅうぱんちょこれーとのけーきおみやげにほんのおちゃにほんのちょこれーと",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "0ac3cf1b4c3a.mp3",
+   "text": "「これは何ですか。」\n「チョコレートのケーキです。」\n「それはコーヒーですか、紅茶ですか。」\n「紅茶です。」",
+   "expected": "これはなんですかちょこれーとのけーきですそれはこーひーですかこうちゃですかこうちゃです",
+   "heard": "これはなんですかちょこれーとのけーきですそれはこーひーですかこうちゃですかこうちゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "84d220d5d5ef.mp3",
+   "text": "「これは何ですか。",
+   "expected": "これはなんですか",
+   "heard": "これはなんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "693e317a148d.mp3",
+   "text": "「チョコレートのケーキです。",
+   "expected": "ちょこれーとのけーきです",
+   "heard": "しょこれーとのけーきです",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "22df13cfa09a.mp3",
+   "text": "「それはコーヒーですか、紅茶ですか。",
+   "expected": "それはこーひーですかこうちゃですか",
+   "heard": "それはこーひーですかこうちゃですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "a0e34b51b4e1.mp3",
+   "text": "「紅茶です。",
+   "expected": "こうちゃです",
+   "heard": "こうちゃです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "cfbeaf1c872f.mp3",
+   "text": "これは何ですか。これはコーヒーですか、紅茶ですか。",
+   "expected": "これはなんですかこれはこーひーですかこうちゃですか",
+   "heard": "これはなんですかこれはこうひいですかこうちゃですか",
+   "sim": 0.92,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

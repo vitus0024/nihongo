@@ -1,0 +1,417 @@
+{
+ "lesson": "W03D3",
+ "clips": 41,
+ "flagged": 0,
+ "rows": [
+  {
+   "key": "vocab.v0121",
+   "file": "be98a290ba11.mp3",
+   "text": "銀行",
+   "expected": "ぎんこう",
+   "heard": "ぎんこう",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0121.ex",
+   "file": "b90b66b203b5.mp3",
+   "text": "銀行と郵便局はあそこです。",
+   "expected": "ぎんこうとゆうびんきょくはあそこです",
+   "heard": "ぎんこうとゆうびんきょくはあそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0122",
+   "file": "2963ab9ca6a2.mp3",
+   "text": "郵便局",
+   "expected": "ゆうびんきょく",
+   "heard": "ゆうびんきょく",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0122.ex",
+   "file": "16bdd643d091.mp3",
+   "text": "郵便局は午前九時から午後五時までです。",
+   "expected": "ゆうびんきょくはごぜんくじからごごごじまでです",
+   "heard": "ゆうびんきょくはごぜんきゅうじからごごごじまでです",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0123",
+   "file": "4d338c06d987.mp3",
+   "text": "図書館",
+   "expected": "としょかん",
+   "heard": "としよーかん",
+   "sim": 0.727,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0123.ex",
+   "file": "2e3c770e8a54.mp3",
+   "text": "図書館の休みは月曜日と木曜日です。",
+   "expected": "としょかんのやすみはげつようびともくようびです",
+   "heard": "としょかんのやすみはげつようびともくようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0124",
+   "file": "7f1dd941127c.mp3",
+   "text": "美術館",
+   "expected": "びじゅつかん",
+   "heard": "びじつかん",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0124.ex",
+   "file": "51c8a50ffa67.mp3",
+   "text": "美術館はどこですか。",
+   "expected": "びじゅつかんはどこですか",
+   "heard": "びじゅうつかんはどこですか",
+   "sim": 0.96,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0125",
+   "file": "75b7b4a20408.mp3",
+   "text": "昼休み",
+   "expected": "ひるやすみ",
+   "heard": "ひるやすみ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0125.ex",
+   "file": "e5a497bcc355.mp3",
+   "text": "昼休みは十二時から一時までです。",
+   "expected": "ひるやすみはじゅうにじからいちじまでです",
+   "heard": "ひるやすみはじゅうにじからいちじまでです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0126",
+   "file": "48d8dcd26cf4.mp3",
+   "text": "朝",
+   "expected": "あさ",
+   "heard": "あさ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0126.ex",
+   "file": "09d618ea4f18.mp3",
+   "text": "朝の会議は九時からです。",
+   "expected": "あさのかいぎはくじからです",
+   "heard": "あさのかいぎはくじからです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0127",
+   "file": "dc22584d2078.mp3",
+   "text": "昼",
+   "expected": "ひる",
+   "heard": "ひーる",
+   "sim": 0.8,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0127.ex",
+   "file": "15f66ea23b08.mp3",
+   "text": "昼の会議は一時からです。",
+   "expected": "ひるのかいぎはいちじからです",
+   "heard": "ひるのかいぎはいちじからです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0128",
+   "file": "d522aa66bf25.mp3",
+   "text": "晩",
+   "expected": "ばん",
+   "heard": "ばん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0128.ex",
+   "file": "a9910b647c2e.mp3",
+   "text": "晩の会議は七時からです。",
+   "expected": "ばんのかいぎはしちじからです",
+   "heard": "ばんのかいぎはしちじからです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0129",
+   "file": "1535badc6d3c.mp3",
+   "text": "試験",
+   "expected": "しけん",
+   "heard": "しけん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0129.ex",
+   "file": "865d5c0014dd.mp3",
+   "text": "日本語の試験は火曜日と金曜日です。",
+   "expected": "にほんごのしけんはかようびときんようびです",
+   "heard": "にほんごのしけんはかようびときんようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0130",
+   "file": "658ee784ed34.mp3",
+   "text": "会議",
+   "expected": "かいぎ",
+   "heard": "かいぎ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0130.ex",
+   "file": "f0d4adff9852.mp3",
+   "text": "会議は十時から十一時までです。",
+   "expected": "かいぎはじゅうじからじゅういちじまでです",
+   "heard": "かいみはじゅうじからじゅういちじまでです",
+   "sim": 0.95,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.form.0",
+   "file": "8739cac4861e.mp3",
+   "text": "休みは土曜日と日曜日です。",
+   "expected": "やすみはどようびとにちようびです",
+   "heard": "やすみはどようびとにちようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.form.1",
+   "file": "7832e4ddb727.mp3",
+   "text": "休みは土曜日と日曜日ではありません。",
+   "expected": "やすみはどようびとにちようびではありません",
+   "heard": "やすみはどようびとにちようびではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.form.2",
+   "file": "d9c65b36577e.mp3",
+   "text": "休みは土曜日と日曜日でした。",
+   "expected": "やすみはどようびとにちようびでした",
+   "heard": "やすみはどようびとにちようびでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.form.3",
+   "file": "6a044e205947.mp3",
+   "text": "休みは土曜日と日曜日ではありませんでした。",
+   "expected": "やすみはどようびとにちようびではありませんでした",
+   "heard": "やすみはどようびとにちようびではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.ex.0",
+   "file": "0f9f20a2b381.mp3",
+   "text": "切手と葉書をください。",
+   "expected": "きってとはがきをください",
+   "heard": "きってとはだきをください",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.ex.1",
+   "file": "8cabe306ec9e.mp3",
+   "text": "銀行と郵便局はあちらです。",
+   "expected": "ぎんこうとゆうびんきょくはあちらです",
+   "heard": "ぎんこうとゆうびんきょくはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g023.ex.2",
+   "file": "d8c9ff9bbbd3.mp3",
+   "text": "銀行の休みは土曜日と日曜日です。",
+   "expected": "ぎんこうのやすみはどようびとにちようびです",
+   "heard": "ぎんこうのやすみはどようびとにちようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "c3950f6738a4.mp3",
+   "text": "切手と封筒をください。",
+   "expected": "きってとふうとうをください",
+   "heard": "きってとふうとうをください",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "44b24703c070.mp3",
+   "text": "銀行と郵便局はどこですか。",
+   "expected": "ぎんこうとゆうびんきょくはどこですか",
+   "heard": "ぎんこうとゆうびんきょくはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "94b86ba9eb61.mp3",
+   "text": "郵便局の休みは土曜日と日曜日です。",
+   "expected": "ゆうびんきょくのやすみはどようびとにちようびです",
+   "heard": "ゆうびんきょくのやすみはどようびとにちようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "5d9f49209a33.mp3",
+   "text": "銀行は午前九時から午後三時までですか。",
+   "expected": "ぎんこうはごぜんくじからごごさんじまでですか",
+   "heard": "ぎんこうはごぜんくじからごぼうさんじまでですか",
+   "sim": 0.933,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "e5a497bcc355.mp3",
+   "text": "昼休みは十二時から一時までです。",
+   "expected": "ひるやすみはじゅうにじからいちじまでです",
+   "heard": "ひるやすみはじゅうにじからいちじまでです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "436843ab6a4c.mp3",
+   "text": "試験は月曜日と水曜日です。",
+   "expected": "しけんはげつようびとすいようびです",
+   "heard": "しけんはげつようびとすいようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "05bff1ea4a10.mp3",
+   "text": "月曜日\n朝、九時から銀行です。十時から郵便局です。\n昼は十二時から一時まで休みです。\n午後は図書館と美術館です。\n銀行と郵便局の休みは土曜日と日曜日です。",
+   "expected": "げつようびあさくじからぎんこうですじゅうじからゆうびんきょくですひるはじゅうにじからいちじまでやすみですごごはとしょかんとびじゅつかんですぎんこうとゆうびんきょくのやすみはどようびとにちようびです",
+   "heard": "げつようびあさくじからぎんこうですじゅうじからゆうびんきょくですひるはじゅうにじからいちじまでやすみですごごはとしょかんとびじゅつかんですぎんこうとゆうびんきょくのやすみはどようびとにちようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "b1fbb6071232.mp3",
+   "text": "「日本語の試験は何曜日ですか。」\n「火曜日と金曜日です。」\n「会議も火曜日ですか。」\n「いいえ、会議は水曜日です。昼休みは十二時からです。」",
+   "expected": "にほんごのしけんはなんようびですかかようびときんようびですかいぎもかようびですかいいえかいぎはすいようびですひるやすみはじゅうにじからです",
+   "heard": "にほんごのしけんはないようびですかかようびとつうようびですかいにもかようびですかいいえかいにはすいようびですひるやすみはじゅうにじからです",
+   "sim": 0.928,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "3391aa1907f0.mp3",
+   "text": "「日本語の試験は何曜日ですか。",
+   "expected": "にほんごのしけんはなんようびですか",
+   "heard": "にほんごのしけんはなんようびですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "78cf83197cee.mp3",
+   "text": "「火曜日と金曜日です。",
+   "expected": "かようびときんようびです",
+   "heard": "かようびときんようびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "eb473943029d.mp3",
+   "text": "「会議も火曜日ですか。",
+   "expected": "かいぎもかようびですか",
+   "heard": "かいぎもかようびですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "3cd3b07e9f85.mp3",
+   "text": "「いいえ、会議は水曜日です。",
+   "expected": "いいえかいぎはすいようびです",
+   "heard": "いいえかいにはすいようびです",
+   "sim": 0.929,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "e77489720a70.mp3",
+   "text": "昼休みは十二時からです。",
+   "expected": "ひるやすみはじゅうにじからです",
+   "heard": "ひるやすみはじゅうにじからです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "4cbcd5518eaa.mp3",
+   "text": "銀行と郵便局の休みは何曜日ですか。銀行は何時から何時までですか。郵便局は何時から何時までですか。",
+   "expected": "ぎんこうとゆうびんきょくのやすみはなんようびですかぎんこうはなんじからなんじまでですかゆうびんきょくはなんじからなんじまでですか",
+   "heard": "ぎんこうとゆうびんきょくのやすみはなんようびですかぎんこうはなんじからなんじまでですかゆうびんきょくはなんじからなんじまでですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

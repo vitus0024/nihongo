@@ -1,0 +1,296 @@
+{
+ "vocab.v0061": {
+  "file": "1326e3096ae3.mp3",
+  "text": "鍵",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0061.ex": {
+  "file": "1db4d339d84b.mp3",
+  "text": "この鍵は誰のですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0062": {
+  "file": "5f986752ed6a.mp3",
+  "text": "傘",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0062.ex": {
+  "file": "91283d89943e.mp3",
+  "text": "その傘は私のです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0063": {
+  "file": "98502ca5d72b.mp3",
+  "text": "鞄",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0063.ex": {
+  "file": "41a42323053a.mp3",
+  "text": "この鞄は林さんのです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0064": {
+  "file": "8abffbe0ccd1.mp3",
+  "text": "時計",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0064.ex": {
+  "file": "7806f683c740.mp3",
+  "text": "これは時計です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0065": {
+  "file": "e84bb86d813f.mp3",
+  "text": "手帳",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0065.ex": {
+  "file": "6e8a911440bf.mp3",
+  "text": "この手帳は私のではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0066": {
+  "file": "cb248738e0b4.mp3",
+  "text": "名刺",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0066.ex": {
+  "file": "b22f5cf375b2.mp3",
+  "text": "これは陳さんの名刺です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0067": {
+  "file": "bd60d7f1a88e.mp3",
+  "text": "カード",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0067.ex": {
+  "file": "ae7fcffef7b2.mp3",
+  "text": "このカードは鍵です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0068": {
+  "file": "984f4e46823d.mp3",
+  "text": "カメラ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0068.ex": {
+  "file": "2006a1cd6bd6.mp3",
+  "text": "そのカメラは誰のですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0069": {
+  "file": "5b5a342dbfb1.mp3",
+  "text": "コンピューター",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0069.ex": {
+  "file": "1c962d5653d9.mp3",
+  "text": "あのコンピューターは会社のです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0070": {
+  "file": "85236f8dbe0a.mp3",
+  "text": "そう",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0070.ex": {
+  "file": "293703f57f51.mp3",
+  "text": "「これはカメラですか。」「はい、そうです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.form.0": {
+  "file": "fa27211b0259.mp3",
+  "text": "この鍵は私のです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.form.1": {
+  "file": "0c6eecfa189e.mp3",
+  "text": "この鍵は私のではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.form.2": {
+  "file": "a23e682793fc.mp3",
+  "text": "この鞄は私のでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.form.3": {
+  "file": "b66ee6394211.mp3",
+  "text": "この鞄は私のではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.form.4": {
+  "file": "1db4d339d84b.mp3",
+  "text": "この鍵は誰のですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.ex.0": {
+  "file": "aafeced5a8ba.mp3",
+  "text": "「この傘は誰のですか。」「林さんのです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.ex.1": {
+  "file": "bd13c3ae8660.mp3",
+  "text": "「その手帳は誰のですか。」「私のです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g012.ex.2": {
+  "file": "56edc8f496ae.mp3",
+  "text": "このコンピューターは会社のです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.form.0": {
+  "file": "d652ff8cfa39.mp3",
+  "text": "はい、そうです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.form.1": {
+  "file": "d87ae1ec7f1d.mp3",
+  "text": "いいえ、そうじゃありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.form.2": {
+  "file": "13b3b69f25d9.mp3",
+  "text": "はい、そうでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.form.3": {
+  "file": "56e9b3773e08.mp3",
+  "text": "いいえ、そうではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.ex.0": {
+  "file": "293703f57f51.mp3",
+  "text": "「これはカメラですか。」「はい、そうです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.ex.1": {
+  "file": "22bce6d4b5ed.mp3",
+  "text": "「これはノートですか。」「いいえ、そうじゃありません。手帳です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g013.ex.2": {
+  "file": "223e53b15c54.mp3",
+  "text": "「この時計は林さんのですか。」「はい、そうです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "1db4d339d84b.mp3",
+  "text": "この鍵は誰のですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "91283d89943e.mp3",
+  "text": "その傘は私のです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "33475c02a583.mp3",
+  "text": "この鞄は私のではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "2756aeb37870.mp3",
+  "text": "「これは名刺ですか。」「はい、そうです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "22bce6d4b5ed.mp3",
+  "text": "「これはノートですか。」「いいえ、そうじゃありません。手帳です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "a7b7f80f488f.mp3",
+  "text": "「そのカメラは陳さんのですか。」「はい、そうです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "4052e06ba06d.mp3",
+  "text": "「この鍵は誰のですか。」\n「私のです。」\n「この傘もあなたのですか。」\n「いいえ、そうじゃありません。林さんのです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "9dab7a067a94.mp3",
+  "text": "「これはあなたのカードですか。」\n「はい、そうです。」\n「これは名刺ですか。」\n「いいえ、そうじゃありません。鍵です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "c168770d6099.mp3",
+  "text": "「これはあなたのカードですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "a65104419d94.mp3",
+  "text": "「はい、そうです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "6eeea8287a05.mp3",
+  "text": "「これは名刺ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "6675d5988007.mp3",
+  "text": "「いいえ、そうじゃありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "f46c7d1096b4.mp3",
+  "text": "鍵です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "4052e06ba06d.mp3",
+  "text": "「この鍵は誰のですか。」「私のです。」\n「この傘もあなたのですか。」「いいえ、そうじゃありません。林さんのです。」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

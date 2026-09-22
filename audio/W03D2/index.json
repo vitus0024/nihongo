@@ -1,0 +1,302 @@
+{
+ "vocab.v0111": {
+  "file": "bc41011a274d.mp3",
+  "text": "月曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0111.ex": {
+  "file": "d97c03218295.mp3",
+  "text": "デパートの休みは月曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0112": {
+  "file": "ac49b96bd6de.mp3",
+  "text": "火曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0112.ex": {
+  "file": "5ac9fd1d6dc1.mp3",
+  "text": "火曜日は午前十時からです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0113": {
+  "file": "3838f3a8e4e3.mp3",
+  "text": "水曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0113.ex": {
+  "file": "9387b9f71150.mp3",
+  "text": "水曜日も午前十時からです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0114": {
+  "file": "71a27d0484c9.mp3",
+  "text": "木曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0114.ex": {
+  "file": "2841cd6ce7c4.mp3",
+  "text": "木曜日は午後八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0115": {
+  "file": "78ddcc0e8b90.mp3",
+  "text": "金曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0115.ex": {
+  "file": "b1d19665b560.mp3",
+  "text": "金曜日も午後八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0116": {
+  "file": "8ab7f51f89aa.mp3",
+  "text": "土曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0116.ex": {
+  "file": "eadbfcfbefaa.mp3",
+  "text": "土曜日は休みではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0117": {
+  "file": "5186ef2a901d.mp3",
+  "text": "日曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0117.ex": {
+  "file": "ee63e14eeb1e.mp3",
+  "text": "日曜日は午前十時から午後六時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0118": {
+  "file": "ffac13f856ce.mp3",
+  "text": "何曜日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0118.ex": {
+  "file": "25e6309dd7fd.mp3",
+  "text": "デパートの休みは何曜日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0119": {
+  "file": "5290757dffff.mp3",
+  "text": "休み",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0119.ex": {
+  "file": "dbc0319191e8.mp3",
+  "text": "休みは月曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0120": {
+  "file": "933510de0656.mp3",
+  "text": "デパート",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0120.ex": {
+  "file": "159be0ca2ffd.mp3",
+  "text": "デパートは午前十時から午後八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.form.0": {
+  "file": "dbc0319191e8.mp3",
+  "text": "休みは月曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.form.1": {
+  "file": "d3c39b4e0466.mp3",
+  "text": "休みは日曜日ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.form.2": {
+  "file": "10509399dc19.mp3",
+  "text": "休みは月曜日でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.form.3": {
+  "file": "324e91aae0ab.mp3",
+  "text": "休みは日曜日ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.ex.0": {
+  "file": "25e6309dd7fd.mp3",
+  "text": "デパートの休みは何曜日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.ex.1": {
+  "file": "851fe20725a0.mp3",
+  "text": "土曜日は休みですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g021.ex.2": {
+  "file": "79ceeec87ab2.mp3",
+  "text": "私の休みは日曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.form.0": {
+  "file": "8e507ca53d58.mp3",
+  "text": "デパートは十時から八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.form.1": {
+  "file": "d54d6bab6c86.mp3",
+  "text": "デパートは十時から八時までではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.form.2": {
+  "file": "19c6236e81a2.mp3",
+  "text": "デパートは十時から八時まででした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.form.3": {
+  "file": "8d20d49861fd.mp3",
+  "text": "デパートは十時から八時までではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.ex.0": {
+  "file": "9a03fcb6ffba.mp3",
+  "text": "デパートは火曜日から日曜日までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.ex.1": {
+  "file": "7cdbbd035b9b.mp3",
+  "text": "デパートは何時から何時までですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.ex.2": {
+  "file": "fce3b3ec551f.mp3",
+  "text": "デパートは午前十時からです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.ex.3": {
+  "file": "1f61b4dc5701.mp3",
+  "text": "デパートは午後八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g022.ex.4": {
+  "file": "a665ca8b981c.mp3",
+  "text": "私の休みは土曜日から日曜日までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "25e6309dd7fd.mp3",
+  "text": "デパートの休みは何曜日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "dbc0319191e8.mp3",
+  "text": "休みは月曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "9a03fcb6ffba.mp3",
+  "text": "デパートは火曜日から日曜日までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "7cdbbd035b9b.mp3",
+  "text": "デパートは何時から何時までですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "f87eaffd51bc.mp3",
+  "text": "午前十時から午後八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "cf08c744495b.mp3",
+  "text": "土曜日は午前十時からです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.6": {
+  "file": "592cc36ba3c4.mp3",
+  "text": "日曜日は午後六時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "39dfee0cfc86.mp3",
+  "text": "さくらデパート\n火曜日から日曜日までです。\n午前十時から午後八時までです。\n日曜日は午後六時までです。\n休みは月曜日です。\n靴の売り場は二階です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "a85874874e7e.mp3",
+  "text": "「デパートの休みは何曜日ですか。」\n「月曜日です。」\n「土曜日は何時から何時までですか。」\n「午前十時から午後八時までです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "627ebd43429e.mp3",
+  "text": "「デパートの休みは何曜日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "3b89d2dd78fb.mp3",
+  "text": "「月曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "9dd3f88aca07.mp3",
+  "text": "「土曜日は何時から何時までですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "6a334836b73c.mp3",
+  "text": "「午前十時から午後八時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "a9ade3f67a1f.mp3",
+  "text": "デパートは何曜日から何曜日までですか。何時から何時までですか。休みは何曜日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

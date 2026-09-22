@@ -1,0 +1,27 @@
+{
+ "scope": "audio W02–W04",
+ "by": "Claude Opus 5",
+ "date": "2026-09-22",
+ "verdicts": [
+  {
+   "pattern": "家→いえ、七月→なながつ、二十日→にじゅうにち、今月、一昨日→いっさくじつ、明日→あす",
+   "verdict": "TTS 錯（讀法可接受但非教材所教）",
+   "action": "readings.txt「TTS 常錯」段加條目，送 TTS 前換假名；重生 ≈60 段"
+  },
+  {
+   "pattern": "今日は働きますか → 緊急ですか（W03D5 兩段）",
+   "verdict": "TTS 壞掉的一次生成",
+   "action": "--redo 重生後正確"
+  },
+  {
+   "pattern": "4月1日／9時 辨識寫成數字",
+   "verdict": "辨識格式",
+   "action": "validate_audio 先把 N月／N日／N時／N分 換成日文讀法再比"
+  },
+  {
+   "pattern": "〜ですか→でした、ごご→ぼうぼう、單字短句",
+   "verdict": "辨識錯",
+   "action": "不動"
+  }
+ ]
+}

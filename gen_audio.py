@@ -276,6 +276,7 @@ def main() -> None:
     ap.add_argument("--preview", action="store_true", help="6 句探針試 profile")
     ap.add_argument("--speakers", action="store_true", help="列 VOICEVOX speaker")
     ap.add_argument("--backend", choices=BACKENDS, help="臨時覆蓋 profile 的後端")
+    ap.add_argument("--redo", nargs="*", metavar="LESSON:KEY", help="強制重生指定段（音檔驗收裁決為 TTS 錯時用），例：W03D5:vocab.v0141.ex")
     a = ap.parse_args()
 
     if a.speakers:
@@ -291,6 +292,19 @@ def main() -> None:
     elif "backends" in prof:
         prof = {**prof, **prof["backends"].get(prof["backend"], {})}
 
+    if a.redo:
+        for spec in a.redo:
+            lid, key = spec.split(":", 1)
+            d = AUDIO / lid; idx_path = d / "index.json"; index = json.loads(idx_path.read_text(encoding="utf-8"))
+            if key in index:
+                f = d / index.pop(key)["file"]
+                if f.exists() and not any(v["file"] == f.name for v in index.values()):
+                    subprocess.run(["trash", str(f)], check=False)
+                idx_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+        for lid in sorted({x.split(":", 1)[0] for x in a.redo}):
+            print(f"▶ {lid}（重生指定段）")
+            generate(lesson_items(lid), AUDIO / lid, prof)
+        return
     if a.compare:
         out = AUDIO / "_compare"; out.mkdir(parents=True, exist_ok=True)
         for b in BACKENDS:

@@ -1,0 +1,507 @@
+{
+ "lesson": "W03D4",
+ "clips": 50,
+ "flagged": 0,
+ "rows": [
+  {
+   "key": "vocab.v0131",
+   "file": "830c7b2c2c62.mp3",
+   "text": "起きる",
+   "expected": "おきる",
+   "heard": "おきれ",
+   "sim": 0.667,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0131.ex",
+   "file": "affafd431396.mp3",
+   "text": "毎朝、六時に起きます。",
+   "expected": "まいあさろくじにおきます",
+   "heard": "まいあさろくじにおきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0132",
+   "file": "68afb00f89c9.mp3",
+   "text": "寝る",
+   "expected": "ねる",
+   "heard": "めで",
+   "sim": 0.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0132.ex",
+   "file": "898d4d8441c0.mp3",
+   "text": "毎晩、十一時に寝ます。",
+   "expected": "まいばんじゅういちじにねます",
+   "heard": "まいばんじゅういちじにねます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0133",
+   "file": "8facc969ec21.mp3",
+   "text": "働く",
+   "expected": "はたらく",
+   "heard": "はたらく",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0133.ex",
+   "file": "06a93a6cc74e.mp3",
+   "text": "九時から五時まで働きます。",
+   "expected": "くじからごじまではたらきます",
+   "heard": "きゅうじからごじまではたらきます",
+   "sim": 0.867,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0134",
+   "file": "1e2b0b3b58b5.mp3",
+   "text": "休む",
+   "expected": "やすむ",
+   "heard": "やっすむ",
+   "sim": 0.857,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0134.ex",
+   "file": "afba10e0a395.mp3",
+   "text": "昼休みに休みます。",
+   "expected": "ひるやすみにやすみます",
+   "heard": "ひるやすみにやすみます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0135",
+   "file": "d3ae459b6d53.mp3",
+   "text": "勉強する",
+   "expected": "べんきょうする",
+   "heard": "べんちょうする",
+   "sim": 0.857,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0135.ex",
+   "file": "5e0206d8ac52.mp3",
+   "text": "「勉強する」は日本語です。",
+   "expected": "べんきょうするはにほんごです",
+   "heard": "べんきょうするはにほんごです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0136",
+   "file": "747ca546a4c3.mp3",
+   "text": "終わる",
+   "expected": "おわる",
+   "heard": "おーわーる",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0136.ex",
+   "file": "9840c4bdd967.mp3",
+   "text": "仕事は午後五時に終わります。",
+   "expected": "しごとはごごごじにおわります",
+   "heard": "しごとはごごごじにおわります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0137",
+   "file": "953e54672131.mp3",
+   "text": "毎日",
+   "expected": "まいにち",
+   "heard": "まいみち",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0137.ex",
+   "file": "2350efbf39d6.mp3",
+   "text": "毎日、働きます。",
+   "expected": "まいにちはたらきます",
+   "heard": "まいにちはたらきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0138",
+   "file": "8b1494c24270.mp3",
+   "text": "毎朝",
+   "expected": "まいあさ",
+   "heard": "まいあさ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0138.ex",
+   "file": "206807cf81ad.mp3",
+   "text": "毎朝、七時に起きます。",
+   "expected": "まいあさしちじにおきます",
+   "heard": "まいあさしちじにおきなす",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0139",
+   "file": "ace8572c246e.mp3",
+   "text": "毎晩",
+   "expected": "まいばん",
+   "heard": "まいばん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0139.ex",
+   "file": "5f35e39bc85c.mp3",
+   "text": "毎晩、十時半に寝ます。",
+   "expected": "まいばんじゅうじはんにねます",
+   "heard": "まいばんじゅうじはんにねます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0140",
+   "file": "87f936a8ce3e.mp3",
+   "text": "仕事",
+   "expected": "しごと",
+   "heard": "しごと",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0140.ex",
+   "file": "a55143ca4baa.mp3",
+   "text": "仕事は九時から五時までです。",
+   "expected": "しごとはくじからごじまでです",
+   "heard": "しごとはきゅうじからごじまでです",
+   "sim": 0.867,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.form.0",
+   "file": "dd4f91337e8f.mp3",
+   "text": "働きます。",
+   "expected": "はたらきます",
+   "heard": "はたらきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.form.1",
+   "file": "03d9c5e46a02.mp3",
+   "text": "働きません。",
+   "expected": "はたらきません",
+   "heard": "はたらきません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.form.2",
+   "file": "78528dac00ae.mp3",
+   "text": "働きました。",
+   "expected": "はたらきました",
+   "heard": "はたらきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.form.3",
+   "file": "822e18afe85b.mp3",
+   "text": "働きませんでした。",
+   "expected": "はたらきませんでした",
+   "heard": "はたらきませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.ex.0",
+   "file": "2350efbf39d6.mp3",
+   "text": "毎日、働きます。",
+   "expected": "まいにちはたらきます",
+   "heard": "まいにちはたらきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.ex.1",
+   "file": "1e2f761f83bc.mp3",
+   "text": "日曜日は働きません。",
+   "expected": "にちようびははたらきません",
+   "heard": "みちようびははたらきません",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.ex.2",
+   "file": "66af6fccb3a9.mp3",
+   "text": "昼休みに休みました。",
+   "expected": "ひるやすみにやすみました",
+   "heard": "ひるやすににやすみました",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g024.ex.3",
+   "file": "deeaad18d636.mp3",
+   "text": "昼休みに休みませんでした。",
+   "expected": "ひるやすみにやすみませんでした",
+   "heard": "ひるやすみにやすみませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.form.0",
+   "file": "5ec6c1c97c46.mp3",
+   "text": "六時に起きます。",
+   "expected": "ろくじにおきます",
+   "heard": "ろくじにおきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.form.1",
+   "file": "bfcc004f943f.mp3",
+   "text": "六時に起きません。",
+   "expected": "ろくじにおきません",
+   "heard": "ろくしにおきません",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.form.2",
+   "file": "e779265ded00.mp3",
+   "text": "六時に起きました。",
+   "expected": "ろくじにおきました",
+   "heard": "ろくじにおきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.form.3",
+   "file": "6c0ab2e22e16.mp3",
+   "text": "六時に起きませんでした。",
+   "expected": "ろくじにおきませんでした",
+   "heard": "ろくじにおきませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.ex.0",
+   "file": "9840c4bdd967.mp3",
+   "text": "仕事は午後五時に終わります。",
+   "expected": "しごとはごごごじにおわります",
+   "heard": "しごとはごごごじにおわります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.ex.1",
+   "file": "83b5e5e4bcc1.mp3",
+   "text": "毎朝、六時半に起きます。",
+   "expected": "まいあさろくじはんにおきます",
+   "heard": "まいあさろくじはんにおきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.ex.2",
+   "file": "898d4d8441c0.mp3",
+   "text": "毎晩、十一時に寝ます。",
+   "expected": "まいばんじゅういちじにねます",
+   "heard": "まいばんじゅういちじにねます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g025.ex.3",
+   "file": "a0825d114da2.mp3",
+   "text": "何時に寝ましたか。",
+   "expected": "なんじにねましたか",
+   "heard": "なんじにねましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "affafd431396.mp3",
+   "text": "毎朝、六時に起きます。",
+   "expected": "まいあさろくじにおきます",
+   "heard": "まいあさろくじにおきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "06a93a6cc74e.mp3",
+   "text": "九時から五時まで働きます。",
+   "expected": "くじからごじまではたらきます",
+   "heard": "きゅうじからごじまではたらきます",
+   "sim": 0.867,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "17fcf84029f3.mp3",
+   "text": "十二時に休みます。",
+   "expected": "じゅうにじにやすみます",
+   "heard": "じゅうにじにやすみます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "9840c4bdd967.mp3",
+   "text": "仕事は午後五時に終わります。",
+   "expected": "しごとはごごごじにおわります",
+   "heard": "しごとはごごごじにおわります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "898d4d8441c0.mp3",
+   "text": "毎晩、十一時に寝ます。",
+   "expected": "まいばんじゅういちじにねます",
+   "heard": "まいばんじゅういちじにねます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "1e2f761f83bc.mp3",
+   "text": "日曜日は働きません。",
+   "expected": "にちようびははたらきません",
+   "heard": "みちようびははたらきません",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.6",
+   "file": "66af6fccb3a9.mp3",
+   "text": "昼休みに休みました。",
+   "expected": "ひるやすみにやすみました",
+   "heard": "ひるやすににやすみました",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "01ed646e9189.mp3",
+   "text": "田中です。毎朝、六時に起きます。九時から五時まで働きます。昼休みに休みます。仕事は五時に終わります。毎晩、十一時に寝ます。日曜日は働きません。",
+   "expected": "たなかですまいあさろくじにおきますくじからごじまではたらきますひるやすみにやすみますしごとはごじにおわりますまいばんじゅういちじにねますにちようびははたらきません",
+   "heard": "かなかですまいあさろくじにおきますきゅうじからごじまではたらきますひるやすみにやすみますしごとはごじにおわりますまいばんいちいちじにねますにちようびははたらきません",
+   "sim": 0.933,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "a35f9e29beef.mp3",
+   "text": "田中「林さん、何時に起きましたか。」\n林「六時に起きました。」\n田中「昼休みに休みましたか。」\n林「いいえ、休みませんでした。」",
+   "expected": "たなかりんさんなんじにおきましたかりんろくじにおきましたたなかひるやすみにやすみましたかりんいいえやすみませんでした",
+   "heard": "たなかりんさんなんじにおきましたかりんろくじにおきましたひるやすみにやすみましたかりんいいえやすみませんでした",
+   "sim": 0.973,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "2faf25efb1b3.mp3",
+   "text": "田中「林さん、何時に起きましたか。",
+   "expected": "たなかりんさんなんじにおきましたか",
+   "heard": "たなかりんさんなんじにおきましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "99de8f9dfc58.mp3",
+   "text": "林「六時に起きました。",
+   "expected": "りんろくじにおきました",
+   "heard": "りんどくじにおきました",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "a28ef47a1e8d.mp3",
+   "text": "田中「昼休みに休みましたか。",
+   "expected": "たなかひるやすみにやすみましたか",
+   "heard": "たなかひるやすみにやすみましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "86c83ea69046.mp3",
+   "text": "林「いいえ、休みませんでした。",
+   "expected": "りんいいえやすみませんでした",
+   "heard": "いいえやすみませんでした",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "11f42d4d4141.mp3",
+   "text": "何時に起きますか。何時から何時まで働きますか。何時に休みますか。昼休みに休みましたか。",
+   "expected": "なんじにおきますかなんじからなんじまではたらきますかなんじにやすみますかひるやすみにやすみましたか",
+   "heard": "なんじにおきますかなんじからなんじまではたらきますかなんじにやすみますかひるやすみにやすみましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

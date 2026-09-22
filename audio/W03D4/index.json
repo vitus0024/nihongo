@@ -1,0 +1,302 @@
+{
+ "vocab.v0131": {
+  "file": "830c7b2c2c62.mp3",
+  "text": "起きる",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0131.ex": {
+  "file": "affafd431396.mp3",
+  "text": "毎朝、六時に起きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0132": {
+  "file": "68afb00f89c9.mp3",
+  "text": "寝る",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0132.ex": {
+  "file": "898d4d8441c0.mp3",
+  "text": "毎晩、十一時に寝ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0133": {
+  "file": "8facc969ec21.mp3",
+  "text": "働く",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0133.ex": {
+  "file": "06a93a6cc74e.mp3",
+  "text": "九時から五時まで働きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0134": {
+  "file": "1e2b0b3b58b5.mp3",
+  "text": "休む",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0134.ex": {
+  "file": "afba10e0a395.mp3",
+  "text": "昼休みに休みます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0135": {
+  "file": "d3ae459b6d53.mp3",
+  "text": "勉強する",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0135.ex": {
+  "file": "5e0206d8ac52.mp3",
+  "text": "「勉強する」は日本語です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0136": {
+  "file": "747ca546a4c3.mp3",
+  "text": "終わる",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0136.ex": {
+  "file": "9840c4bdd967.mp3",
+  "text": "仕事は午後五時に終わります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0137": {
+  "file": "953e54672131.mp3",
+  "text": "毎日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0137.ex": {
+  "file": "2350efbf39d6.mp3",
+  "text": "毎日、働きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0138": {
+  "file": "8b1494c24270.mp3",
+  "text": "毎朝",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0138.ex": {
+  "file": "206807cf81ad.mp3",
+  "text": "毎朝、七時に起きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0139": {
+  "file": "ace8572c246e.mp3",
+  "text": "毎晩",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0139.ex": {
+  "file": "5f35e39bc85c.mp3",
+  "text": "毎晩、十時半に寝ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0140": {
+  "file": "87f936a8ce3e.mp3",
+  "text": "仕事",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0140.ex": {
+  "file": "a55143ca4baa.mp3",
+  "text": "仕事は九時から五時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.form.0": {
+  "file": "dd4f91337e8f.mp3",
+  "text": "働きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.form.1": {
+  "file": "03d9c5e46a02.mp3",
+  "text": "働きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.form.2": {
+  "file": "78528dac00ae.mp3",
+  "text": "働きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.form.3": {
+  "file": "822e18afe85b.mp3",
+  "text": "働きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.ex.0": {
+  "file": "2350efbf39d6.mp3",
+  "text": "毎日、働きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.ex.1": {
+  "file": "1e2f761f83bc.mp3",
+  "text": "日曜日は働きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.ex.2": {
+  "file": "66af6fccb3a9.mp3",
+  "text": "昼休みに休みました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g024.ex.3": {
+  "file": "deeaad18d636.mp3",
+  "text": "昼休みに休みませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.form.0": {
+  "file": "5ec6c1c97c46.mp3",
+  "text": "六時に起きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.form.1": {
+  "file": "bfcc004f943f.mp3",
+  "text": "六時に起きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.form.2": {
+  "file": "e779265ded00.mp3",
+  "text": "六時に起きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.form.3": {
+  "file": "6c0ab2e22e16.mp3",
+  "text": "六時に起きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.ex.0": {
+  "file": "9840c4bdd967.mp3",
+  "text": "仕事は午後五時に終わります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.ex.1": {
+  "file": "83b5e5e4bcc1.mp3",
+  "text": "毎朝、六時半に起きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.ex.2": {
+  "file": "898d4d8441c0.mp3",
+  "text": "毎晩、十一時に寝ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g025.ex.3": {
+  "file": "a0825d114da2.mp3",
+  "text": "何時に寝ましたか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "affafd431396.mp3",
+  "text": "毎朝、六時に起きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "06a93a6cc74e.mp3",
+  "text": "九時から五時まで働きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "17fcf84029f3.mp3",
+  "text": "十二時に休みます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "9840c4bdd967.mp3",
+  "text": "仕事は午後五時に終わります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "898d4d8441c0.mp3",
+  "text": "毎晩、十一時に寝ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "1e2f761f83bc.mp3",
+  "text": "日曜日は働きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.6": {
+  "file": "66af6fccb3a9.mp3",
+  "text": "昼休みに休みました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "01ed646e9189.mp3",
+  "text": "田中です。毎朝、六時に起きます。九時から五時まで働きます。昼休みに休みます。仕事は五時に終わります。毎晩、十一時に寝ます。日曜日は働きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "a35f9e29beef.mp3",
+  "text": "田中「林さん、何時に起きましたか。」\n林「六時に起きました。」\n田中「昼休みに休みましたか。」\n林「いいえ、休みませんでした。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "2faf25efb1b3.mp3",
+  "text": "田中「林さん、何時に起きましたか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "99de8f9dfc58.mp3",
+  "text": "林「六時に起きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "a28ef47a1e8d.mp3",
+  "text": "田中「昼休みに休みましたか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "86c83ea69046.mp3",
+  "text": "林「いいえ、休みませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "11f42d4d4141.mp3",
+  "text": "何時に起きますか。何時から何時まで働きますか。何時に休みますか。昼休みに休みましたか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

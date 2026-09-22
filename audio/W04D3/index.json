@@ -1,0 +1,260 @@
+{
+ "vocab.v0171": {
+  "file": "835d32a74aae.mp3",
+  "text": "いつ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0171.ex": {
+  "file": "3be21e28bbdb.mp3",
+  "text": "いつデパートへ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0172": {
+  "file": "1193e90c72b0.mp3",
+  "text": "先週",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0172.ex": {
+  "file": "0089b8d02d9c.mp3",
+  "text": "先週、友達とデパートへ行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0173": {
+  "file": "484d4be2bd73.mp3",
+  "text": "今週",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0173.ex": {
+  "file": "a5af51d54dbe.mp3",
+  "text": "今週の土曜日、食堂へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0174": {
+  "file": "1b9ce12bca93.mp3",
+  "text": "来週",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0174.ex": {
+  "file": "8a61d80d1776.mp3",
+  "text": "来週、新幹線で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0175": {
+  "file": "ba73e353d2cb.mp3",
+  "text": "先月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0175.ex": {
+  "file": "bcbb53854843.mp3",
+  "text": "先月、家族と大阪へ行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0176": {
+  "file": "63bcdf3dfcfe.mp3",
+  "text": "今月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0176.ex": {
+  "file": "709a3863b148.mp3",
+  "text": "今月、台湾へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0177": {
+  "file": "13db33fb0790.mp3",
+  "text": "来月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0177.ex": {
+  "file": "cff79ae40461.mp3",
+  "text": "来月、飛行機で日本へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0178": {
+  "file": "a88faf3a656f.mp3",
+  "text": "去年",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0178.ex": {
+  "file": "67be9ed16f79.mp3",
+  "text": "去年、一人で東京へ行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0179": {
+  "file": "e7d0a853fc29.mp3",
+  "text": "今年",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0179.ex": {
+  "file": "75183f710f54.mp3",
+  "text": "今年、家族と京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0180": {
+  "file": "366eab85db8b.mp3",
+  "text": "来年",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0180.ex": {
+  "file": "345a75e329ba.mp3",
+  "text": "来年も日本へ来ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.form.0": {
+  "file": "8a42e6d54867.mp3",
+  "text": "いつ京都へ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.form.1": {
+  "file": "8b7ec9188997.mp3",
+  "text": "来週、京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.form.2": {
+  "file": "5e20ea9c7dd2.mp3",
+  "text": "今週は京都へ行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.form.3": {
+  "file": "181106f47b1c.mp3",
+  "text": "いつ大阪へ行きましたか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.form.4": {
+  "file": "0752eb9a44cc.mp3",
+  "text": "先月、大阪へ行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.form.5": {
+  "file": "7080edc661ac.mp3",
+  "text": "先週は大阪へ行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.ex.0": {
+  "file": "033249647729.mp3",
+  "text": "いつデパートへ行きますか。来週行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.ex.1": {
+  "file": "671f762c6d08.mp3",
+  "text": "いつ食堂へ行きますか。十二時に行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g032.ex.2": {
+  "file": "5f63099c6f40.mp3",
+  "text": "いつ台湾へ帰りますか。来月帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "3be21e28bbdb.mp3",
+  "text": "いつデパートへ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "5e174d71a581.mp3",
+  "text": "今週の土曜日、友達と食堂へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "8a61d80d1776.mp3",
+  "text": "来週、新幹線で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "62c55ab430c6.mp3",
+  "text": "来月、家族と台湾へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "932cf1d35845.mp3",
+  "text": "いつ日本へ来ますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "583cdc2e646a.mp3",
+  "text": "去年は大阪へ行きました。今年は東京へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "e14a55019269.mp3",
+  "text": "林さん、今週の土曜日、友達とデパートへ行きます。来週は一人で京都へ行きます。新幹線で行きます。来月は家族と飛行機で台湾へ帰ります。林さんはいつ台湾へ帰りますか。来年も家族と日本へ来ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "d1c297dd9968.mp3",
+  "text": "「いつ大阪へ行きますか。」\n「来週の金曜日に行きます。」\n「家族と行きますか。」\n「いいえ、一人で行きます。日曜日に帰ります。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "e05ce3d0b1da.mp3",
+  "text": "「いつ大阪へ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "b79dd9746b5d.mp3",
+  "text": "「来週の金曜日に行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "7c72ca31d108.mp3",
+  "text": "「家族と行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "0fcbfe72f6d0.mp3",
+  "text": "「いいえ、一人で行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "45601b475224.mp3",
+  "text": "日曜日に帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "186e4aa9fdab.mp3",
+  "text": "今週はどこへ行きますか。来週はどこへ行きますか。来月はどこへ行きますか。いつ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

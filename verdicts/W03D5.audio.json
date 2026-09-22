@@ -1,0 +1,507 @@
+{
+ "lesson": "W03D5",
+ "clips": 50,
+ "flagged": 5,
+ "rows": [
+  {
+   "key": "vocab.v0141",
+   "file": "3660e688c021.mp3",
+   "text": "今日",
+   "expected": "きょう",
+   "heard": "ちょう",
+   "sim": 0.667,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0141.ex",
+   "file": "174c54f157ae.mp3",
+   "text": "今日は働きますか。",
+   "expected": "きょうははたらきますか",
+   "heard": "きんきゅうですか",
+   "sim": 0.421,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0142",
+   "file": "7bb849f9cdcf.mp3",
+   "text": "明日",
+   "expected": "あした",
+   "heard": "あした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0142.ex",
+   "file": "5ced5df587f2.mp3",
+   "text": "明日は休みますか。",
+   "expected": "あしたはやすみますか",
+   "heard": "あしたはやすみますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0143",
+   "file": "3ffa4b91fd9d.mp3",
+   "text": "昨日",
+   "expected": "きのう",
+   "heard": "きしのう",
+   "sim": 0.857,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0143.ex",
+   "file": "8cb763ee6468.mp3",
+   "text": "昨日は働きましたか。",
+   "expected": "きのうははたらきましたか",
+   "heard": "きのうははたらきましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0144",
+   "file": "47f8f749b043.mp3",
+   "text": "一昨日",
+   "expected": "おととい",
+   "heard": "いちとび",
+   "sim": 0.25,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0144.ex",
+   "file": "7b1ab43b23b9.mp3",
+   "text": "一昨日は休みました。",
+   "expected": "おとといはやすみました",
+   "heard": "いつさかみはやすみました",
+   "sim": 0.696,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0145",
+   "file": "70b56809cc96.mp3",
+   "text": "明後日",
+   "expected": "あさって",
+   "heard": "あさって",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0145.ex",
+   "file": "5521990abd81.mp3",
+   "text": "明後日は休みですね。",
+   "expected": "あさってはやすみですね",
+   "heard": "あさってはやすみですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0146",
+   "file": "facb0b967f1b.mp3",
+   "text": "今朝",
+   "expected": "けさ",
+   "heard": "けさ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0146.ex",
+   "file": "29b649e8bc1d.mp3",
+   "text": "今朝は六時に起きました。",
+   "expected": "けさはろくじにおきました",
+   "heard": "いまはろくじにおきました",
+   "sim": 0.833,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0147",
+   "file": "7b6aff4914b2.mp3",
+   "text": "今晩",
+   "expected": "こんばん",
+   "heard": "こんばん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0147.ex",
+   "file": "c3ad70b26d48.mp3",
+   "text": "今晩は休みますか。",
+   "expected": "こんばんはやすみますか",
+   "heard": "こんばんはやすみますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0148",
+   "file": "c8af7f980b77.mp3",
+   "text": "大変",
+   "expected": "たいへん",
+   "heard": "たいへん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0148.ex",
+   "file": "1b97b27d0a54.mp3",
+   "text": "仕事は大変ですね。",
+   "expected": "しごとはたいへんですね",
+   "heard": "しごとはたいへんですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0149",
+   "file": "2cf3b7b02ced.mp3",
+   "text": "何番",
+   "expected": "なんばん",
+   "heard": "なんばん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0149.ex",
+   "file": "4d551c0a9f6f.mp3",
+   "text": "ホテルの電話は何番ですか。",
+   "expected": "ほてるのでんわはなんばんですか",
+   "heard": "ほてるのでんわはなんばんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0150",
+   "file": "8a58984b3eae.mp3",
+   "text": "ニューヨーク",
+   "expected": "にゅーよーく",
+   "heard": "にゅーよーく",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0150.ex",
+   "file": "435726422d7b.mp3",
+   "text": "ニューヨークは今、午前九時ですね。",
+   "expected": "にゅーよーくはいまごぜんくじですね",
+   "heard": "にゅーよーくはいまごぜんくじですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.form.0",
+   "file": "b2917a49ffba.mp3",
+   "text": "働きますか。はい、働きます。",
+   "expected": "はたらきますかはいはたらきます",
+   "heard": "はたらきますかはいはたらきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.form.1",
+   "file": "95990d88119d.mp3",
+   "text": "働きますか。いいえ、働きません。",
+   "expected": "はたらきますかいいえはたらきません",
+   "heard": "はたらきますかいいえはたらきません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.form.2",
+   "file": "4cdf99e26a4a.mp3",
+   "text": "働きましたか。はい、働きました。",
+   "expected": "はたらきましたかはいはたらきました",
+   "heard": "はたらきましたかはいはたらきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.form.3",
+   "file": "f174138de7cb.mp3",
+   "text": "働きましたか。いいえ、働きませんでした。",
+   "expected": "はたらきましたかいいえはたらきませんでした",
+   "heard": "はだらきましたいいえはだらきませんでした",
+   "sim": 0.878,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.ex.0",
+   "file": "048552ee7765.mp3",
+   "text": "今日は働きますか。はい、働きます。",
+   "expected": "きょうははたらきますかはいはたらきます",
+   "heard": "きょうははたらきますかはいはたらきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.ex.1",
+   "file": "3a6d7a861523.mp3",
+   "text": "昨日は働きましたか。いいえ、働きませんでした。",
+   "expected": "きのうははたらきましたかいいえはたらきませんでした",
+   "heard": "きのうははたらきましたかいいえはたらきませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g026.ex.2",
+   "file": "a95a206c0259.mp3",
+   "text": "明日は休みますか。はい、休みます。",
+   "expected": "あしたはやすみますかはいやすみます",
+   "heard": "あしたはやすみますかはいやすみます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.form.0",
+   "file": "b9e4577fd9c4.mp3",
+   "text": "今日は休みですね。",
+   "expected": "きょうはやすみですね",
+   "heard": "きょうはやすにですね",
+   "sim": 0.9,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.form.1",
+   "file": "8dfe8d00bf61.mp3",
+   "text": "今日は休みではありませんね。",
+   "expected": "きょうはやすみではありませんね",
+   "heard": "きょうはやすにではありませんね",
+   "sim": 0.933,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.form.2",
+   "file": "afc0f2a318ab.mp3",
+   "text": "昨日は休みでしたね。",
+   "expected": "きのうはやすみでしたね",
+   "heard": "きのうはやすみでしたね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.form.3",
+   "file": "ef7789f0d09c.mp3",
+   "text": "昨日は休みではありませんでしたね。",
+   "expected": "きのうはやすみではありませんでしたね",
+   "heard": "きのうはやすみではありませんでしたね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.ex.0",
+   "file": "d84b91a31161.mp3",
+   "text": "デパートは十時からですね。",
+   "expected": "でぱーとはじゅうじからですね",
+   "heard": "でぱーとはじゅうじからですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.ex.1",
+   "file": "435726422d7b.mp3",
+   "text": "ニューヨークは今、午前九時ですね。",
+   "expected": "にゅーよーくはいまごぜんくじですね",
+   "heard": "にゅーよーくはいまごぜんくじですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g027.ex.2",
+   "file": "dc5a821df076.mp3",
+   "text": "毎日、午前九時から午後十一時まで働きます。大変ですね。",
+   "expected": "まいにちごぜんくじからごごじゅういちじまではたらきますたいへんですね",
+   "heard": "まいにちごぜんくじからごごじゅういちじまではたらきます",
+   "sim": 0.885,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "d84b91a31161.mp3",
+   "text": "デパートは十時からですね。",
+   "expected": "でぱーとはじゅうじからですね",
+   "heard": "でぱーとはじゅうじからですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "4d551c0a9f6f.mp3",
+   "text": "ホテルの電話は何番ですか。",
+   "expected": "ほてるのでんわはなんばんですか",
+   "heard": "ほてるのでんわはなんばんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "174c54f157ae.mp3",
+   "text": "今日は働きますか。",
+   "expected": "きょうははたらきますか",
+   "heard": "きんきゅうですか",
+   "sim": 0.421,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "patterns.3",
+   "file": "8cb763ee6468.mp3",
+   "text": "昨日は働きましたか。",
+   "expected": "きのうははたらきましたか",
+   "heard": "きのうははたらきましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "c3ad70b26d48.mp3",
+   "text": "今晩は休みますか。",
+   "expected": "こんばんはやすみますか",
+   "heard": "こんばんはやすみますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "435726422d7b.mp3",
+   "text": "ニューヨークは今、午前九時ですね。",
+   "expected": "にゅーよーくはいまごぜんくじですね",
+   "heard": "にゅーよーくはいまごぜんくじですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.6",
+   "file": "1b97b27d0a54.mp3",
+   "text": "仕事は大変ですね。",
+   "expected": "しごとはたいへんですね",
+   "heard": "しごとはたいへんですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "76b9248fe618.mp3",
+   "text": "林「今日は働きますか。」\n田中「はい、働きます。昨日も働きました。明日は休みます。」\n林「大変ですね。明後日も休みですか。」\n田中「はい。明後日は日曜日ですね。」",
+   "expected": "りんきょうははたらきますかたなかはいはたらきますきのうもはたらきましたあしたはやすみますりんたいへんですねあさってもやすみですかたなかはいあさってはにちようびですね",
+   "heard": "りんきょうははたらきますかたなかはいはたらきますきのうもはたらきましたあすはやすみますりんたいへんですねあさってもやすみですかたなかはいあさってはにちようりですね",
+   "sim": 0.969,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "b9ff9bebf661.mp3",
+   "text": "林「今朝は何時に起きましたか。」\n田中「五時に起きました。」\n林「大変ですね。今晩は働きますか。」\n田中「いいえ、働きません。十時に寝ます。」",
+   "expected": "りんけさはなんじにおきましたかたなかごじにおきましたりんたいへんですねこんばんははたらきますかたなかいいえはたらきませんじゅうじにねます",
+   "heard": "りんけさはなんじにおきましたかたなかごじにおきましたたいへんですねこんばんははたらきますかたなかいいえはたらきませんじゅうじにねます",
+   "sim": 0.985,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "0312f6c2477d.mp3",
+   "text": "林「今朝は何時に起きましたか。",
+   "expected": "りんけさはなんじにおきましたか",
+   "heard": "りんけさはなんじにおきましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "e405fb375d28.mp3",
+   "text": "田中「五時に起きました。",
+   "expected": "たなかごじにおきました",
+   "heard": "はなかごじにおきました",
+   "sim": 0.909,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "814822192da2.mp3",
+   "text": "林「大変ですね。",
+   "expected": "りんたいへんですね",
+   "heard": "りんたいへんですね",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "7f7868df0bf7.mp3",
+   "text": "今晩は働きますか。",
+   "expected": "こんばんははたらきますか",
+   "heard": "こんばんははたらきますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "77734d3216ee.mp3",
+   "text": "田中「いいえ、働きません。",
+   "expected": "たなかいいえはたらきません",
+   "heard": "たなかいいえはだらきません",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.5",
+   "file": "95c9a09c727e.mp3",
+   "text": "十時に寝ます。",
+   "expected": "じゅうじにねます",
+   "heard": "じゅうじにねます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "8b137696bf63.mp3",
+   "text": "今日は働きますか。昨日は働きましたか。ニューヨークは今、午前九時ですね。仕事は大変ですね。",
+   "expected": "きょうははたらきますかきのうははたらきましたかにゅーよーくはいまごぜんくじですねしごとはたいへんですね",
+   "heard": "きょうははたらきますかきのうははたらきましたかにゅーよーくはいまごぜんくじですねしもとはたいへんですね",
+   "sim": 0.98,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

@@ -1,0 +1,587 @@
+{
+ "lesson": "W04D1",
+ "clips": 58,
+ "flagged": 2,
+ "rows": [
+  {
+   "key": "vocab.v0151",
+   "file": "df1b0c2c8ed9.mp3",
+   "text": "行く",
+   "expected": "いく",
+   "heard": "いく",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0151.ex",
+   "file": "eb6ace57668c.mp3",
+   "text": "スーパーへ行きます。",
+   "expected": "すーぱーへいきます",
+   "heard": "すーぱーへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0152",
+   "file": "0ad50aaaa0cc.mp3",
+   "text": "来る",
+   "expected": "くる",
+   "heard": "くる",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0152.ex",
+   "file": "341fd36215f9.mp3",
+   "text": "田中さんはここへ来ます。",
+   "expected": "たなかさんはここへきます",
+   "heard": "たなたさんはここへきます",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0153",
+   "file": "636abd044d7c.mp3",
+   "text": "帰る",
+   "expected": "かえる",
+   "heard": "かえる",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0153.ex",
+   "file": "47bcffc9afcf.mp3",
+   "text": "午後六時に家へ帰ります。（帰る）",
+   "expected": "ごごろくじにうちへかえりますかえる",
+   "heard": "ごごうろくじにうちへかえります",
+   "sim": 0.875,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0154",
+   "file": "51e0f2d64647.mp3",
+   "text": "学校",
+   "expected": "がっこう",
+   "heard": "だっご",
+   "sim": 0.286,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0154.ex",
+   "file": "03e16e5af7dd.mp3",
+   "text": "毎朝、学校へ行きます。",
+   "expected": "まいあさがっこうへいきます",
+   "heard": "まいあさがっこうへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0155",
+   "file": "781433c5f273.mp3",
+   "text": "スーパー",
+   "expected": "すーぱー",
+   "heard": "すーぱー",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0155.ex",
+   "file": "3f0aa3921178.mp3",
+   "text": "スーパーはどこですか。",
+   "expected": "すーぱーはどこですか",
+   "heard": "すーぱーはどこでした",
+   "sim": 0.8,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0156",
+   "file": "cb166d7a1297.mp3",
+   "text": "駅",
+   "expected": "えき",
+   "heard": "えき",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0156.ex",
+   "file": "332caa93bad0.mp3",
+   "text": "駅へ行きます。",
+   "expected": "えきへいきます",
+   "heard": "えきへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0157",
+   "file": "9be9d2b0a9f9.mp3",
+   "text": "家",
+   "expected": "うち",
+   "heard": "うち",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0157.ex",
+   "file": "dcf12252e81e.mp3",
+   "text": "今日は家へ帰ります。",
+   "expected": "きょうはうちへかえります",
+   "heard": "きょうはうちへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0158",
+   "file": "85b1e80f1317.mp3",
+   "text": "京都",
+   "expected": "きょうと",
+   "heard": "きょうと",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0158.ex",
+   "file": "e7204e5d4258.mp3",
+   "text": "明日、京都へ行きます。",
+   "expected": "あしたきょうとへいきます",
+   "heard": "あしたきょうとへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0159",
+   "file": "e809621b0363.mp3",
+   "text": "東京",
+   "expected": "とうきょう",
+   "heard": "とうきょう",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0159.ex",
+   "file": "bd40b7506164.mp3",
+   "text": "林さんは東京へ帰ります。",
+   "expected": "りんさんはとうきょうへかえります",
+   "heard": "りんさんはとうきょうへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0160",
+   "file": "3e1ddea849d3.mp3",
+   "text": "大阪",
+   "expected": "おおさか",
+   "heard": "おおさか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0160.ex",
+   "file": "1e961055ab1a.mp3",
+   "text": "昨日、大阪へ行きました。",
+   "expected": "きのうおおさかへいきました",
+   "heard": "きのうおおさかへいきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.0",
+   "file": "eb6ace57668c.mp3",
+   "text": "スーパーへ行きます。",
+   "expected": "すーぱーへいきます",
+   "heard": "すーぱーへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.1",
+   "file": "31145cae8c36.mp3",
+   "text": "スーパーへ行きません。",
+   "expected": "すーぱーへいきません",
+   "heard": "すーぱーへいきません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.2",
+   "file": "aac1a38379dc.mp3",
+   "text": "スーパーへ行きました。",
+   "expected": "すーぱーへいきました",
+   "heard": "すーぱーへいきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.3",
+   "file": "bea74347e99f.mp3",
+   "text": "スーパーへ行きませんでした。",
+   "expected": "すーぱーへいきませんでした",
+   "heard": "すーぱーへいきませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.4",
+   "file": "6725879230a8.mp3",
+   "text": "ここへ来ます。",
+   "expected": "ここへきます",
+   "heard": "ここへきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.5",
+   "file": "8edcdcf5b9d9.mp3",
+   "text": "ここへ来ません。",
+   "expected": "ここへきません",
+   "heard": "ここへきません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.6",
+   "file": "aca070d4672d.mp3",
+   "text": "ここへ来ました。",
+   "expected": "ここへきました",
+   "heard": "ここへきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.7",
+   "file": "e0f6055029a8.mp3",
+   "text": "ここへ来ませんでした。",
+   "expected": "ここへきませんでした",
+   "heard": "ここへきませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.8",
+   "file": "1029279f74dd.mp3",
+   "text": "家へ帰ります。",
+   "expected": "うちへかえります",
+   "heard": "うちへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.9",
+   "file": "4342ac555dab.mp3",
+   "text": "家へ帰りません。",
+   "expected": "うちへかえりません",
+   "heard": "うちへかえりません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.10",
+   "file": "c4d04f723fb4.mp3",
+   "text": "家へ帰りました。",
+   "expected": "うちへかえりました",
+   "heard": "うちへかえりました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.form.11",
+   "file": "13c96c83955a.mp3",
+   "text": "家へ帰りませんでした。",
+   "expected": "うちへかえりませんでした",
+   "heard": "うちへかえりませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.ex.0",
+   "file": "eb6ace57668c.mp3",
+   "text": "スーパーへ行きます。",
+   "expected": "すーぱーへいきます",
+   "heard": "すーぱーへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.ex.1",
+   "file": "341fd36215f9.mp3",
+   "text": "田中さんはここへ来ます。",
+   "expected": "たなかさんはここへきます",
+   "heard": "たなたさんはここへきます",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g028.ex.2",
+   "file": "50750f0059ae.mp3",
+   "text": "午後八時にホテルへ帰ります。",
+   "expected": "ごごはちじにほてるへかえります",
+   "heard": "ごごうはちじみほてるへかえります",
+   "sim": 0.903,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.form.0",
+   "file": "cda1887629aa.mp3",
+   "text": "どこへ行きますか。",
+   "expected": "どこへいきますか",
+   "heard": "どこへいきますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.form.1",
+   "file": "eb6ace57668c.mp3",
+   "text": "スーパーへ行きます。",
+   "expected": "すーぱーへいきます",
+   "heard": "すーぱーへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.form.2",
+   "file": "183eb1235fc8.mp3",
+   "text": "駅へ行きません。",
+   "expected": "えきへいきません",
+   "heard": "えきへいきません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.form.3",
+   "file": "65481c0e7225.mp3",
+   "text": "昨日、どこへ行きましたか。",
+   "expected": "きのうどこへいきましたか",
+   "heard": "きのうどこへいきましたか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.form.4",
+   "file": "2097f4836d7e.mp3",
+   "text": "大阪へ行きました。",
+   "expected": "おおさかへいきました",
+   "heard": "おおさかへいきました",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.form.5",
+   "file": "28897a0da3f1.mp3",
+   "text": "京都へ行きませんでした。",
+   "expected": "きょうとへいきませんでした",
+   "heard": "きょうとへいきませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.ex.0",
+   "file": "a342a737e544.mp3",
+   "text": "どこへ行きますか。スーパーへ行きます。",
+   "expected": "どこへいきますかすーぱーへいきます",
+   "heard": "どこへいきますかすーぱーへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.ex.1",
+   "file": "530b8dba04b5.mp3",
+   "text": "今日、どこへ行きますか。京都へ行きます。",
+   "expected": "きょうどこへいきますかきょうとへいきます",
+   "heard": "きょうどこへいきますかきょうとへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g029.ex.2",
+   "file": "fea466106b57.mp3",
+   "text": "田中さんはどこへ行きますか。学校へ行きます。",
+   "expected": "たなかさんはどこへいきますかがっこうへいきます",
+   "heard": "はなたさんはどこへいきますかだっこうへいきます",
+   "sim": 0.87,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "eb6ace57668c.mp3",
+   "text": "スーパーへ行きます。",
+   "expected": "すーぱーへいきます",
+   "heard": "すーぱーへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "cda1887629aa.mp3",
+   "text": "どこへ行きますか。",
+   "expected": "どこへいきますか",
+   "heard": "どこへいきますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "ea858039a9a6.mp3",
+   "text": "駅はどこですか。",
+   "expected": "えきはどこですか",
+   "heard": "えいきはどこですか",
+   "sim": 0.941,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "341fd36215f9.mp3",
+   "text": "田中さんはここへ来ます。",
+   "expected": "たなかさんはここへきます",
+   "heard": "たなたさんはここへきます",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "cf39785249f6.mp3",
+   "text": "午後六時に家へ帰ります。",
+   "expected": "ごごろくじにうちへかえります",
+   "heard": "ごごろくじにうちへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "55afcd926719.mp3",
+   "text": "明日、大阪へ行きます。",
+   "expected": "あしたおおさかへいきます",
+   "heard": "あしたおおさかへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "d8f0ea65c967.mp3",
+   "text": "今日　京都\n私は林です。\n午前九時　スーパーへ行きます。\n午前十一時　駅へ行きます。\n午後一時　ホテルへ帰ります。\n午後二時　田中さんはここへ来ます。\n午後六時　田中さんは家へ帰ります。",
+   "expected": "きょうきょうとわたしはりんですごぜんくじすーぱーへいきますごぜんじゅういちじえきへいきますごごいちじほてるへかえりますごごにじたなかさんはここへきますごごろくじたなかさんはうちへかえります",
+   "heard": "きょうきょうとうわたしはりんですごぜんくじすーぱーへいきますごぜんじゅういちじえきへいきますごごいちじほてるへかえりますごごにじたなたさんはここへきますごごろくじたなたさんはうちへかえります",
+   "sim": 0.974,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "ea2b5e1b1ea8.mp3",
+   "text": "林「駅はどこですか。」\n田中「あそこです。どこへ行きますか。」\n林「大阪へ行きます。」\n田中「私も大阪へ行きます。」",
+   "expected": "りんえきはどこですかたなかあそこですどこへいきますかりんおおさかへいきますたなかわたしもおおさかへいきます",
+   "heard": "りんえきはどこですかたなかあそこですどこへいきますかりんおおさかへいきますたなかわたしもおおさかへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "088e17367488.mp3",
+   "text": "林「駅はどこですか。",
+   "expected": "りんえきはどこですか",
+   "heard": "りんえきはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "e0af6b00e952.mp3",
+   "text": "田中「あそこです。",
+   "expected": "たなかあそこです",
+   "heard": "かなかあそこです",
+   "sim": 0.875,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "cda1887629aa.mp3",
+   "text": "どこへ行きますか。",
+   "expected": "どこへいきますか",
+   "heard": "どこへいきますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "f3090a7833fb.mp3",
+   "text": "林「大阪へ行きます。",
+   "expected": "りんおおさかへいきます",
+   "heard": "りんおおさかへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "3a0da8e48e80.mp3",
+   "text": "田中「私も大阪へ行きます。",
+   "expected": "たなかわたしもおおさかへいきます",
+   "heard": "たなかわたしもおおさかへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "7cc83c9ac437.mp3",
+   "text": "今日、どこへ行きますか。田中さんはどこへ行きますか。田中さんはここへ来ますか。何時に家へ帰りますか。",
+   "expected": "きょうどこへいきますかたなかさんはどこへいきますかたなかさんはここへきますかなんじにうちへかえりますか",
+   "heard": "じょうどこへいきますかたなたさんはどこへいきますかたなたさんはここへきますかなんじにうちへかえりますか",
+   "sim": 0.941,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

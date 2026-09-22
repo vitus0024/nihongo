@@ -1,0 +1,284 @@
+{
+ "vocab.v0161": {
+  "file": "7e470d021a3f.mp3",
+  "text": "電車",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0161.ex": {
+  "file": "b74a4d916e55.mp3",
+  "text": "電車でデパートへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0162": {
+  "file": "77b2e7b21a8a.mp3",
+  "text": "地下鉄",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0162.ex": {
+  "file": "a043031a3d9a.mp3",
+  "text": "地下鉄で食堂へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0163": {
+  "file": "77f83f73f2a1.mp3",
+  "text": "新幹線",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0163.ex": {
+  "file": "5e9c314e3135.mp3",
+  "text": "家族と新幹線で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0164": {
+  "file": "c7e36bc089b3.mp3",
+  "text": "バス",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0164.ex": {
+  "file": "8d9ffd284429.mp3",
+  "text": "バスでスーパーへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0165": {
+  "file": "ae525d818353.mp3",
+  "text": "タクシー",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0165.ex": {
+  "file": "9b40ad608bde.mp3",
+  "text": "タクシーでホテルへ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0166": {
+  "file": "d70428879985.mp3",
+  "text": "飛行機",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0166.ex": {
+  "file": "7bb69b9d708d.mp3",
+  "text": "飛行機で東京へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0167": {
+  "file": "02d36b5949cc.mp3",
+  "text": "自転車",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0167.ex": {
+  "file": "1d454b989043.mp3",
+  "text": "自転車で駅へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0168": {
+  "file": "edf18908ee81.mp3",
+  "text": "友達",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0168.ex": {
+  "file": "3439f483daaf.mp3",
+  "text": "友達とデパートへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0169": {
+  "file": "96cd63999347.mp3",
+  "text": "家族",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0169.ex": {
+  "file": "72eb1cc4d62d.mp3",
+  "text": "家族とバスでスーパーへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0170": {
+  "file": "cc3fcd7c482c.mp3",
+  "text": "一人で",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0170.ex": {
+  "file": "5f68ba9cf723.mp3",
+  "text": "一人で銀行へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.form.0": {
+  "file": "5b86ed2e9254.mp3",
+  "text": "電車で行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.form.1": {
+  "file": "e0958c9accf0.mp3",
+  "text": "電車で行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.form.2": {
+  "file": "020ab75bc716.mp3",
+  "text": "電車で行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.form.3": {
+  "file": "d0c1ef26620f.mp3",
+  "text": "電車で行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.ex.0": {
+  "file": "8d9ffd284429.mp3",
+  "text": "バスでスーパーへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.ex.1": {
+  "file": "c16633bd5d29.mp3",
+  "text": "友達はバスでここへ来ます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g030.ex.2": {
+  "file": "9b40ad608bde.mp3",
+  "text": "タクシーでホテルへ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.form.0": {
+  "file": "7fe69180458c.mp3",
+  "text": "友達と行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.form.1": {
+  "file": "dd9e06d4baa3.mp3",
+  "text": "友達と行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.form.2": {
+  "file": "f963804450fc.mp3",
+  "text": "友達と行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.form.3": {
+  "file": "9be21ba8991b.mp3",
+  "text": "友達と行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.ex.0": {
+  "file": "72eb1cc4d62d.mp3",
+  "text": "家族とバスでスーパーへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.ex.1": {
+  "file": "5e9c314e3135.mp3",
+  "text": "家族と新幹線で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g031.ex.2": {
+  "file": "5f68ba9cf723.mp3",
+  "text": "一人で銀行へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "8d9ffd284429.mp3",
+  "text": "バスでスーパーへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "a043031a3d9a.mp3",
+  "text": "地下鉄で食堂へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "72eb1cc4d62d.mp3",
+  "text": "家族とバスでスーパーへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "9b40ad608bde.mp3",
+  "text": "タクシーでホテルへ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "5e9c314e3135.mp3",
+  "text": "家族と新幹線で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "5f68ba9cf723.mp3",
+  "text": "一人で銀行へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "959d5c50ad37.mp3",
+  "text": "明日\n午前九時、家族とバスでスーパーへ行きます。\n午前十時、家族と電車でデパートへ行きます。\n午後二時、友達と地下鉄で食堂へ行きます。\n午後三時、一人でタクシーで家へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "1019597d3f96.mp3",
+  "text": "「明日、どこへ行きますか。」\n「友達と電車で京都へ行きます。」\n「今日も友達と行きますか。」\n「いいえ、今日は一人で自転車で駅へ行きます。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "82f2709c1f03.mp3",
+  "text": "「明日、どこへ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "c03fbba3a915.mp3",
+  "text": "「友達と電車で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "3f978e4463e0.mp3",
+  "text": "「今日も友達と行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "87b616aa7a35.mp3",
+  "text": "「いいえ、今日は一人で自転車で駅へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "47debe1f8019.mp3",
+  "text": "家族とどこへ行きますか。友達とどこへ行きますか。電車で行きますか。バスで行きますか。一人でどこへ行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

@@ -1,0 +1,507 @@
+{
+ "lesson": "W02D3",
+ "clips": 50,
+ "flagged": 2,
+ "rows": [
+  {
+   "key": "vocab.v0071",
+   "file": "9db14996e162.mp3",
+   "text": "ここ",
+   "expected": "ここ",
+   "heard": "ここ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0071.ex",
+   "file": "fac10ac42e2d.mp3",
+   "text": "ここは受付です。",
+   "expected": "ここはうけつけです",
+   "heard": "ここはうけつけです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0072",
+   "file": "30128692bbd5.mp3",
+   "text": "そこ",
+   "expected": "そこ",
+   "heard": "そこ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0072.ex",
+   "file": "f4084d8c9f8a.mp3",
+   "text": "そこはロビーです。",
+   "expected": "そこはろびーです",
+   "heard": "そこはろびーです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0073",
+   "file": "a5e98236b941.mp3",
+   "text": "あそこ",
+   "expected": "あそこ",
+   "heard": "あそこ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0073.ex",
+   "file": "3656c966844b.mp3",
+   "text": "あそこは食堂です。",
+   "expected": "あそこはしょくどうです",
+   "heard": "あそこはしょくどうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0074",
+   "file": "06873489282c.mp3",
+   "text": "どこ",
+   "expected": "どこ",
+   "heard": "どこ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0074.ex",
+   "file": "118d83dd887c.mp3",
+   "text": "トイレはどこですか。",
+   "expected": "といれはどこですか",
+   "heard": "こいれはどこですか",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0075",
+   "file": "07da60c38b1a.mp3",
+   "text": "受付",
+   "expected": "うけつけ",
+   "heard": "うけたけ",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0075.ex",
+   "file": "cb6497e73122.mp3",
+   "text": "受付はここです。",
+   "expected": "うけつけはここです",
+   "heard": "うけつけはここです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0076",
+   "file": "08752f4e2a7d.mp3",
+   "text": "ロビー",
+   "expected": "ろびー",
+   "heard": "どうび",
+   "sim": 0.333,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0076.ex",
+   "file": "e5b67e784d02.mp3",
+   "text": "ロビーはそこです。",
+   "expected": "ろびーはそこです",
+   "heard": "ろびーはそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0077",
+   "file": "949356334ab3.mp3",
+   "text": "トイレ",
+   "expected": "といれ",
+   "heard": "といれ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0077.ex",
+   "file": "bd3c069f8c26.mp3",
+   "text": "トイレはあそこです。",
+   "expected": "といれはあそこです",
+   "heard": "といれはあそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0078",
+   "file": "beb80293618c.mp3",
+   "text": "部屋",
+   "expected": "へや",
+   "heard": "へや",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0078.ex",
+   "file": "793a7ba3582d.mp3",
+   "text": "私の部屋はここです。",
+   "expected": "わたしのへやはここです",
+   "heard": "わたしのへやはここです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0079",
+   "file": "6830d892e82c.mp3",
+   "text": "食堂",
+   "expected": "しょくどう",
+   "heard": "しょくどう",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0079.ex",
+   "file": "b222b47b02ba.mp3",
+   "text": "食堂はどこですか。",
+   "expected": "しょくどうはどこですか",
+   "heard": "しょくどうはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0080",
+   "file": "ce0b93920d5a.mp3",
+   "text": "エレベーター",
+   "expected": "えれべーたー",
+   "heard": "えれべーたー",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0080.ex",
+   "file": "f494e588ea59.mp3",
+   "text": "エレベーターはあそこです。",
+   "expected": "えれべーたーはあそこです",
+   "heard": "えれべーたーはあそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.form.0",
+   "file": "fac10ac42e2d.mp3",
+   "text": "ここは受付です。",
+   "expected": "ここはうけつけです",
+   "heard": "ここはうけつけです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.form.1",
+   "file": "7555c407104b.mp3",
+   "text": "ここは受付ではありません。",
+   "expected": "ここはうけつけではありません",
+   "heard": "ここはうけつけではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.form.2",
+   "file": "2185d95e27de.mp3",
+   "text": "ここは受付でした。",
+   "expected": "ここはうけつけでした",
+   "heard": "ここはうけつけでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.form.3",
+   "file": "5a8a5d716af2.mp3",
+   "text": "ここは受付ではありませんでした。",
+   "expected": "ここはうけつけではありませんでした",
+   "heard": "ここはうけつけではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.ex.0",
+   "file": "acce47574bb0.mp3",
+   "text": "ここは食堂です。",
+   "expected": "ここはしょくどうです",
+   "heard": "ここはしょくどうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.ex.1",
+   "file": "f4084d8c9f8a.mp3",
+   "text": "そこはロビーです。",
+   "expected": "そこはろびーです",
+   "heard": "そこはろびーです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g014.ex.2",
+   "file": "271302ca0883.mp3",
+   "text": "あそこはトイレです。",
+   "expected": "あそこはといれです",
+   "heard": "あそこはといれです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.form.0",
+   "file": "cb6497e73122.mp3",
+   "text": "受付はここです。",
+   "expected": "うけつけはここです",
+   "heard": "うけつけはここです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.form.1",
+   "file": "e6504855d474.mp3",
+   "text": "受付はここではありません。",
+   "expected": "うけつけはここではありません",
+   "heard": "うけつけはここではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.form.2",
+   "file": "4821f5eae89e.mp3",
+   "text": "受付はここでした。",
+   "expected": "うけつけはここでした",
+   "heard": "うけつけはここでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.form.3",
+   "file": "e5c7fb6658b6.mp3",
+   "text": "受付はここではありませんでした。",
+   "expected": "うけつけはここではありませんでした",
+   "heard": "うけつけはここではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.form.4",
+   "file": "1d9a7127461d.mp3",
+   "text": "受付はどこですか。",
+   "expected": "うけつけはどこですか",
+   "heard": "うけいきはどこですか",
+   "sim": 0.8,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "grammar.g015.ex.0",
+   "file": "b222b47b02ba.mp3",
+   "text": "食堂はどこですか。",
+   "expected": "しょくどうはどこですか",
+   "heard": "しょくどうはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.ex.1",
+   "file": "f494e588ea59.mp3",
+   "text": "エレベーターはあそこです。",
+   "expected": "えれべーたーはあそこです",
+   "heard": "えれべーたーはあそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g015.ex.2",
+   "file": "793a7ba3582d.mp3",
+   "text": "私の部屋はここです。",
+   "expected": "わたしのへやはここです",
+   "heard": "わたしのへやはここです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "1d9a7127461d.mp3",
+   "text": "受付はどこですか。",
+   "expected": "うけつけはどこですか",
+   "heard": "うけいきはどこですか",
+   "sim": 0.8,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "patterns.1",
+   "file": "bd3c069f8c26.mp3",
+   "text": "トイレはあそこです。",
+   "expected": "といれはあそこです",
+   "heard": "といれはあそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "0a17bc6808f0.mp3",
+   "text": "ここはロビーです。",
+   "expected": "ここはろびーです",
+   "heard": "ここはどびーです",
+   "sim": 0.875,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "c6ca587fce7a.mp3",
+   "text": "食堂はそこですか。",
+   "expected": "しょくどうはそこですか",
+   "heard": "しょくどうはそこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "e44c01388c19.mp3",
+   "text": "私の部屋はどこですか。",
+   "expected": "わたしのへやはどこですか",
+   "heard": "わたしのへやはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "a5e2115a197e.mp3",
+   "text": "受付はそこではありません。",
+   "expected": "うけつけはそこではありません",
+   "heard": "うけつけはそこではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "51bb6613dbf5.mp3",
+   "text": "ここはロビーです。\n受付はここです。\nトイレはあそこです。\n食堂もあそこです。\nエレベーターはそこです。",
+   "expected": "ここはろびーですうけつけはここですといれはあそこですしょくどうもあそこですえれべーたーはそこです",
+   "heard": "ここはろびーですうけつけはここですといれはあそこですしょくどうもあそこですえれべーたーはそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "687780f01fb7.mp3",
+   "text": "「受付はどこですか。」\n「受付はここです。」\n「トイレはどこですか。」\n「トイレはあそこです。」\n「エレベーターもあそこですか。」\n「はい、そうです。」",
+   "expected": "うけつけはどこですかうけつけはここですといれはどこですかといれはあそこですえれべーたーもあそこですかはいそうです",
+   "heard": "うけつけはどこですかうけつけはここですといれはどこですかといれはあそこですえれべーたーもあそこですかはいそうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "6379f049959d.mp3",
+   "text": "「受付はどこですか。",
+   "expected": "うけつけはどこですか",
+   "heard": "うけつけはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "9e24be020d0b.mp3",
+   "text": "「受付はここです。",
+   "expected": "うけつけはここです",
+   "heard": "うけつけはここです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "6061d7c5c980.mp3",
+   "text": "「トイレはどこですか。",
+   "expected": "といれはどこですか",
+   "heard": "といれはどこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "a8bd2d4acdd2.mp3",
+   "text": "「トイレはあそこです。",
+   "expected": "といれはあそこです",
+   "heard": "といれはあそこです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "bfdab1ba0bcf.mp3",
+   "text": "「エレベーターもあそこですか。",
+   "expected": "えれべーたーもあそこですか",
+   "heard": "えれべーたーもあそこですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.5",
+   "file": "a65104419d94.mp3",
+   "text": "「はい、そうです。",
+   "expected": "はいそうです",
+   "heard": "はいそうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "0134111a7927.mp3",
+   "text": "「トイレはどこですか。」「トイレはあそこです。」\n「受付はどこですか。」「受付はここです。」\n「私の部屋はどこですか。」「あなたの部屋はそこです。」",
+   "expected": "といれはどこですかといれはあそこですうけつけはどこですかうけつけはここですわたしのへやはどこですかあなたのへやはそこです",
+   "heard": "といれはどこですかといれはあそこですうけつてはどこですかうけつけはここですわたしのへやはどこですかあなたのへやはそこです",
+   "sim": 0.983,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

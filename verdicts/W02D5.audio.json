@@ -1,0 +1,507 @@
+{
+ "lesson": "W02D5",
+ "clips": 50,
+ "flagged": 2,
+ "rows": [
+  {
+   "key": "vocab.v0091",
+   "file": "4be71344a8ca.mp3",
+   "text": "百",
+   "expected": "ひゃく",
+   "heard": "ひゃく",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0091.ex",
+   "file": "8165ca4a9e35.mp3",
+   "text": "ノートは百円です。",
+   "expected": "のーとはひゃくえんです",
+   "heard": "のーとはひゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0092",
+   "file": "d268636911d6.mp3",
+   "text": "三百",
+   "expected": "さんびゃく",
+   "heard": "さんびゃく",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0092.ex",
+   "file": "0dd241f585fc.mp3",
+   "text": "コーヒーは三百円です。",
+   "expected": "こーひーはさんびゃくえんです",
+   "heard": "こうひいはさんびゃくえんです",
+   "sim": 0.857,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0093",
+   "file": "8bc0f4128f03.mp3",
+   "text": "千",
+   "expected": "せん",
+   "heard": "せん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0093.ex",
+   "file": "b68b5979c4b3.mp3",
+   "text": "傘は千円です。",
+   "expected": "かさはせんえんです",
+   "heard": "かさはせいえんです",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0094",
+   "file": "f075863f6a26.mp3",
+   "text": "一万",
+   "expected": "いちまん",
+   "heard": "いちまん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0094.ex",
+   "file": "6bbf1d54df5b.mp3",
+   "text": "靴は一万円です。",
+   "expected": "くつはいちまんえんです",
+   "heard": "くつはいちまんえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0095",
+   "file": "3f35ac1ece05.mp3",
+   "text": "円",
+   "expected": "えん",
+   "heard": "えん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0095.ex",
+   "file": "be7595d2fd9f.mp3",
+   "text": "水は百円です。",
+   "expected": "みずはひゃくえんです",
+   "heard": "みずはひゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0096",
+   "file": "b322ed27b590.mp3",
+   "text": "いくら",
+   "expected": "いくら",
+   "heard": "いくら",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0096.ex",
+   "file": "a9b15249a776.mp3",
+   "text": "このネクタイはいくらですか。",
+   "expected": "このねくたいはいくらですか",
+   "heard": "このねくたいはいくらでした",
+   "sim": 0.846,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "vocab.v0097",
+   "file": "64081df87b9f.mp3",
+   "text": "靴",
+   "expected": "くつ",
+   "heard": "くつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0097.ex",
+   "file": "6ab28bfa3810.mp3",
+   "text": "この靴は八千円です。",
+   "expected": "このくつははっせんえんです",
+   "heard": "このくつははっせいえんです",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0098",
+   "file": "53638ce0cf23.mp3",
+   "text": "ネクタイ",
+   "expected": "ねくたい",
+   "heard": "ねくたい",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0098.ex",
+   "file": "bb9fa8d4eafc.mp3",
+   "text": "そのネクタイは三千円です。",
+   "expected": "そのねくたいはさんぜんえんです",
+   "heard": "そのねくたいはさんぜんえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0099",
+   "file": "5358b74c8dcc.mp3",
+   "text": "ワイン",
+   "expected": "わいん",
+   "heard": "わいん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0099.ex",
+   "file": "113e03501b14.mp3",
+   "text": "このワインは六百円です。",
+   "expected": "このわいんはろっぴゃくえんです",
+   "heard": "このわいんはろっぴゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0100",
+   "file": "af488d1f2e4b.mp3",
+   "text": "売り場",
+   "expected": "うりば",
+   "heard": "うりば",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0100.ex",
+   "file": "155354722232.mp3",
+   "text": "靴の売り場はあちらです。",
+   "expected": "くつのうりばはあちらです",
+   "heard": "くつのうりばはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.form.0",
+   "file": "c72c4958b1ae.mp3",
+   "text": "三百円です。",
+   "expected": "さんびゃくえんです",
+   "heard": "さんびゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.form.1",
+   "file": "7052fd067ed8.mp3",
+   "text": "三百円ではありません。",
+   "expected": "さんびゃくえんではありません",
+   "heard": "さんびゃくえんではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.form.2",
+   "file": "3dba20c0cc06.mp3",
+   "text": "三百円でした。",
+   "expected": "さんびゃくえんでした",
+   "heard": "さんびゃくえんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.form.3",
+   "file": "fd62ee984055.mp3",
+   "text": "三百円ではありませんでした。",
+   "expected": "さんびゃくえんではありませんでした",
+   "heard": "さんびゃくえんではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.ex.0",
+   "file": "fe069e0b7a70.mp3",
+   "text": "チョコレートは八百円です。",
+   "expected": "ちょこれーとははっぴゃくえんです",
+   "heard": "しょこれいこははっぴゃくえんです",
+   "sim": 0.812,
+   "name_miss": [],
+   "flag": true
+  },
+  {
+   "key": "grammar.g017.ex.1",
+   "file": "c1c9da408837.mp3",
+   "text": "ネクタイは三千六百円です。",
+   "expected": "ねくたいはさんぜんろっぴゃくえんです",
+   "heard": "ねくたいはさんぜんろっぎゃくえんです",
+   "sim": 0.944,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.ex.2",
+   "file": "cabccee64f1d.mp3",
+   "text": "靴は一万三千八百円です。",
+   "expected": "くつはいちまんさんぜんはっぴゃくえんです",
+   "heard": "すはいちまんさんぜんはっぴゃくえんです",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g017.ex.3",
+   "file": "b47a1390de3a.mp3",
+   "text": "鞄は八千三百円です。",
+   "expected": "かばんははっせんさんびゃくえんです",
+   "heard": "かばんははっせんさんびゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.form.0",
+   "file": "6bbf1d54df5b.mp3",
+   "text": "靴は一万円です。",
+   "expected": "くつはいちまんえんです",
+   "heard": "くつはいちまんえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.form.1",
+   "file": "2a1c6d8cc4fb.mp3",
+   "text": "靴は一万円ではありません。",
+   "expected": "くつはいちまんえんではありません",
+   "heard": "くつはいちまんえんではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.form.2",
+   "file": "b5997193253e.mp3",
+   "text": "靴は一万円でした。",
+   "expected": "くつはいちまんえんでした",
+   "heard": "ふつうはいちまんえんでした",
+   "sim": 0.88,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.form.3",
+   "file": "a9ba55a7ecda.mp3",
+   "text": "靴は一万円ではありませんでした。",
+   "expected": "くつはいちまんえんではありませんでした",
+   "heard": "くつはいちまんえんではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.ex.0",
+   "file": "a7b6c573cb7a.mp3",
+   "text": "この靴はいくらですか。",
+   "expected": "このくつはいくらですか",
+   "heard": "このくつはいくらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.ex.1",
+   "file": "6bbf4d0f78f3.mp3",
+   "text": "ネクタイは三千円です。",
+   "expected": "ねくたいはさんぜんえんです",
+   "heard": "ねくたいはさんぜいえんです",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g018.ex.2",
+   "file": "29a47cbd30ad.mp3",
+   "text": "このパンはいくらですか。",
+   "expected": "このぱんはいくらですか",
+   "heard": "このぱんはいくらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "a7b6c573cb7a.mp3",
+   "text": "この靴はいくらですか。",
+   "expected": "このくつはいくらですか",
+   "heard": "このくつはいくらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "6bbf4d0f78f3.mp3",
+   "text": "ネクタイは三千円です。",
+   "expected": "ねくたいはさんぜんえんです",
+   "heard": "ねくたいはさんぜいえんです",
+   "sim": 0.923,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "b1d0aef237d6.mp3",
+   "text": "このワインは六百円ですか。",
+   "expected": "このわいんはろっぴゃくえんですか",
+   "heard": "このわいんはろっぴゃくえんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "80a599fa6868.mp3",
+   "text": "いいえ、八百円です。",
+   "expected": "いいえはっぴゃくえんです",
+   "heard": "いいえはっぴゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "dc8056b35387.mp3",
+   "text": "靴の売り場はどちらですか。",
+   "expected": "くつのうりばはどちらですか",
+   "heard": "くつのうりばはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "e1aa545fb5e2.mp3",
+   "text": "鞄は一万三百円です。",
+   "expected": "かばんはいちまんさんびゃくえんです",
+   "heard": "かばんはいちまんさんびゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "7d3bec03de15.mp3",
+   "text": "靴の売り場\n靴　一万三千八百円\nネクタイ　三千六百円\n鞄　八千円\n傘　千円\n時計　一万円\n手帳　三百円\nノート　百円",
+   "expected": "くつのうりばくついちまんさんぜんはっぴゃくえんねくたいさんぜんろっぴゃくえんかばんはっせんえんかさせんえんとけいいちまんえんてちょうさんびゃくえんのーとひゃくえん",
+   "heard": "くつのうりばくついちまんさんぜんはっぴゃくえんめくたいさんぜんろっぴゃくえんかばんはっせんえんかさせんえんどけいちまんえんてちょうさんびゃくえんのおとひゃくえん",
+   "sim": 0.957,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "69d9b2350011.mp3",
+   "text": "「ワインの売り場はどちらですか。」\n「こちらです。」\n「このワインはいくらですか。」\n「六百円です。」\n「そのワインも六百円ですか。」\n「いいえ、八百円です。」",
+   "expected": "わいんのうりばはどちらですかこちらですこのわいんはいくらですかろっぴゃくえんですそのわいんもろっぴゃくえんですかいいえはっぴゃくえんです",
+   "heard": "わいんのうりばはどちらですかこちらですこのわいんはいくらですかろっぴゃくえんですそのわいんもろっぴゃくえんですかいいえはっぴゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "498d92637d32.mp3",
+   "text": "「ワインの売り場はどちらですか。",
+   "expected": "わいんのうりばはどちらですか",
+   "heard": "わいんのうりばはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "83e67bd8e6e9.mp3",
+   "text": "「こちらです。",
+   "expected": "こちらです",
+   "heard": "こちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "ae0c8d1b148c.mp3",
+   "text": "「このワインはいくらですか。",
+   "expected": "このわいんはいくらですか",
+   "heard": "このわいんはいくらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "0ba5259328d3.mp3",
+   "text": "「六百円です。",
+   "expected": "ろっぴゃくえんです",
+   "heard": "ろっきゃくえんです",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "edd44ab68837.mp3",
+   "text": "「そのワインも六百円ですか。",
+   "expected": "そのわいんもろっぴゃくえんですか",
+   "heard": "そのわいんもろっぴゃくえんですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.5",
+   "file": "ff526b114772.mp3",
+   "text": "「いいえ、八百円です。",
+   "expected": "いいえはっぴゃくえんです",
+   "heard": "いいえはっぴゃくえんです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "c430a1ed7c8e.mp3",
+   "text": "この靴はいくらですか。ネクタイはいくらですか。",
+   "expected": "このくつはいくらですかねくたいはいくらですか",
+   "heard": "このくつはいくらですかねくたいはいくらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

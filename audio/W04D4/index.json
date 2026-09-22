@@ -1,0 +1,296 @@
+{
+ "vocab.v0181": {
+  "file": "95f672d8c528.mp3",
+  "text": "何月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0181.ex": {
+  "file": "a44688a17aaf.mp3",
+  "text": "誕生日は何月ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0182": {
+  "file": "80f09d87b577.mp3",
+  "text": "四月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0182.ex": {
+  "file": "86603cc5d7c2.mp3",
+  "text": "四月にホテルへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0183": {
+  "file": "1234698262a0.mp3",
+  "text": "七月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0183.ex": {
+  "file": "58a9f2d39697.mp3",
+  "text": "七月に京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0184": {
+  "file": "6d5880e45ea5.mp3",
+  "text": "九月",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0184.ex": {
+  "file": "e7b8ffc59071.mp3",
+  "text": "九月に家へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0185": {
+  "file": "90bd8a33267b.mp3",
+  "text": "何日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0185.ex": {
+  "file": "c54798b72dd1.mp3",
+  "text": "誕生日は何日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0186": {
+  "file": "c0b6e385e538.mp3",
+  "text": "一日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0186.ex": {
+  "file": "b2cc991ebac8.mp3",
+  "text": "四月一日にホテルへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0187": {
+  "file": "ecadfbcc307a.mp3",
+  "text": "二日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0187.ex": {
+  "file": "ca5d55b6f6b8.mp3",
+  "text": "四月二日に家へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0188": {
+  "file": "3a686860d476.mp3",
+  "text": "二十日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0188.ex": {
+  "file": "a3cef1401a2f.mp3",
+  "text": "誕生日は七月二十日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0189": {
+  "file": "720d9d5f8be6.mp3",
+  "text": "誕生日",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0189.ex": {
+  "file": "3ce437d76b81.mp3",
+  "text": "私の誕生日は九月二日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0190": {
+  "file": "0daa566970e6.mp3",
+  "text": "カレンダー",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0190.ex": {
+  "file": "333280a8b09c.mp3",
+  "text": "カレンダーはホテルの受付です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.form.0": {
+  "file": "377b7558b629.mp3",
+  "text": "休みは四月です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.form.1": {
+  "file": "205d33cf021a.mp3",
+  "text": "休みは四月ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.form.2": {
+  "file": "2907bea98bbb.mp3",
+  "text": "休みは四月でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.form.3": {
+  "file": "fdbbeecc8a4e.mp3",
+  "text": "休みは四月ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.ex.0": {
+  "file": "8a95c6fccf09.mp3",
+  "text": "ホテルへ何月に行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.ex.1": {
+  "file": "001b76b3bcfe.mp3",
+  "text": "七月にホテルへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g033.ex.2": {
+  "file": "08584a381d49.mp3",
+  "text": "私の誕生日は九月です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.form.0": {
+  "file": "85a5fdeb73e0.mp3",
+  "text": "休みは二十日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.form.1": {
+  "file": "8ced92984e71.mp3",
+  "text": "休みは二十日ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.form.2": {
+  "file": "65191a210f35.mp3",
+  "text": "休みは二十日でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.form.3": {
+  "file": "bf605100e1ee.mp3",
+  "text": "休みは二十日ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.ex.0": {
+  "file": "c54798b72dd1.mp3",
+  "text": "誕生日は何日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.ex.1": {
+  "file": "b2cc991ebac8.mp3",
+  "text": "四月一日にホテルへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g034.ex.2": {
+  "file": "320b1ec6d813.mp3",
+  "text": "七月二十日に家へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "a68f009261b7.mp3",
+  "text": "林さんの誕生日は何月ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "fd7c1768d1ae.mp3",
+  "text": "私の誕生日は四月二日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "8a95c6fccf09.mp3",
+  "text": "ホテルへ何月に行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "6b671eba684b.mp3",
+  "text": "ホテルへ何日に行きますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "35d838e7c4d5.mp3",
+  "text": "七月一日にホテルへ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "2cffd0719c8c.mp3",
+  "text": "九月二十日に家へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "624b25bc033f.mp3",
+  "text": "私のカレンダー\n四月一日　家族と京都のホテルへ行きます。\n四月二日　私の誕生日です。ホテルの食堂へ行きます。\n四月三日　家へ帰ります。\n七月二十日　友達と大阪へ行きます。\n九月二日　東京へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "527016ee3669.mp3",
+  "text": "「ホテルの受付です。何月何日に来ますか。」\n「七月二十日に行きます。」\n「誕生日ですか。」\n「はい、私の誕生日です。カレンダーをお願いします。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "6630b0c90bf9.mp3",
+  "text": "「ホテルの受付です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "22cbfe146ba1.mp3",
+  "text": "何月何日に来ますか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "ea93461a1f35.mp3",
+  "text": "「七月二十日に行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "e2daeff8b0e4.mp3",
+  "text": "「誕生日ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "d5b682d17f1f.mp3",
+  "text": "「はい、私の誕生日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.5": {
+  "file": "b33954653b50.mp3",
+  "text": "カレンダーをお願いします。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "7794c4e86b69.mp3",
+  "text": "誕生日は何月何日ですか。ホテルへ何月何日に行きますか。何月何日に家へ帰りますか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

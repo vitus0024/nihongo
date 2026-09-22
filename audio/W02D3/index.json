@@ -1,0 +1,302 @@
+{
+ "vocab.v0071": {
+  "file": "9db14996e162.mp3",
+  "text": "ここ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0071.ex": {
+  "file": "fac10ac42e2d.mp3",
+  "text": "ここは受付です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0072": {
+  "file": "30128692bbd5.mp3",
+  "text": "そこ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0072.ex": {
+  "file": "f4084d8c9f8a.mp3",
+  "text": "そこはロビーです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0073": {
+  "file": "a5e98236b941.mp3",
+  "text": "あそこ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0073.ex": {
+  "file": "3656c966844b.mp3",
+  "text": "あそこは食堂です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0074": {
+  "file": "06873489282c.mp3",
+  "text": "どこ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0074.ex": {
+  "file": "118d83dd887c.mp3",
+  "text": "トイレはどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0075": {
+  "file": "07da60c38b1a.mp3",
+  "text": "受付",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0075.ex": {
+  "file": "cb6497e73122.mp3",
+  "text": "受付はここです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0076": {
+  "file": "08752f4e2a7d.mp3",
+  "text": "ロビー",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0076.ex": {
+  "file": "e5b67e784d02.mp3",
+  "text": "ロビーはそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0077": {
+  "file": "949356334ab3.mp3",
+  "text": "トイレ",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0077.ex": {
+  "file": "bd3c069f8c26.mp3",
+  "text": "トイレはあそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0078": {
+  "file": "beb80293618c.mp3",
+  "text": "部屋",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0078.ex": {
+  "file": "793a7ba3582d.mp3",
+  "text": "私の部屋はここです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0079": {
+  "file": "6830d892e82c.mp3",
+  "text": "食堂",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0079.ex": {
+  "file": "b222b47b02ba.mp3",
+  "text": "食堂はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0080": {
+  "file": "ce0b93920d5a.mp3",
+  "text": "エレベーター",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0080.ex": {
+  "file": "f494e588ea59.mp3",
+  "text": "エレベーターはあそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.form.0": {
+  "file": "fac10ac42e2d.mp3",
+  "text": "ここは受付です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.form.1": {
+  "file": "7555c407104b.mp3",
+  "text": "ここは受付ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.form.2": {
+  "file": "2185d95e27de.mp3",
+  "text": "ここは受付でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.form.3": {
+  "file": "5a8a5d716af2.mp3",
+  "text": "ここは受付ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.ex.0": {
+  "file": "acce47574bb0.mp3",
+  "text": "ここは食堂です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.ex.1": {
+  "file": "f4084d8c9f8a.mp3",
+  "text": "そこはロビーです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g014.ex.2": {
+  "file": "271302ca0883.mp3",
+  "text": "あそこはトイレです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.form.0": {
+  "file": "cb6497e73122.mp3",
+  "text": "受付はここです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.form.1": {
+  "file": "e6504855d474.mp3",
+  "text": "受付はここではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.form.2": {
+  "file": "4821f5eae89e.mp3",
+  "text": "受付はここでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.form.3": {
+  "file": "e5c7fb6658b6.mp3",
+  "text": "受付はここではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.form.4": {
+  "file": "1d9a7127461d.mp3",
+  "text": "受付はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.ex.0": {
+  "file": "b222b47b02ba.mp3",
+  "text": "食堂はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.ex.1": {
+  "file": "f494e588ea59.mp3",
+  "text": "エレベーターはあそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g015.ex.2": {
+  "file": "793a7ba3582d.mp3",
+  "text": "私の部屋はここです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "1d9a7127461d.mp3",
+  "text": "受付はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "bd3c069f8c26.mp3",
+  "text": "トイレはあそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "0a17bc6808f0.mp3",
+  "text": "ここはロビーです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "c6ca587fce7a.mp3",
+  "text": "食堂はそこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "e44c01388c19.mp3",
+  "text": "私の部屋はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "a5e2115a197e.mp3",
+  "text": "受付はそこではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "51bb6613dbf5.mp3",
+  "text": "ここはロビーです。\n受付はここです。\nトイレはあそこです。\n食堂もあそこです。\nエレベーターはそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "687780f01fb7.mp3",
+  "text": "「受付はどこですか。」\n「受付はここです。」\n「トイレはどこですか。」\n「トイレはあそこです。」\n「エレベーターもあそこですか。」\n「はい、そうです。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "6379f049959d.mp3",
+  "text": "「受付はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "9e24be020d0b.mp3",
+  "text": "「受付はここです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "6061d7c5c980.mp3",
+  "text": "「トイレはどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "a8bd2d4acdd2.mp3",
+  "text": "「トイレはあそこです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "bfdab1ba0bcf.mp3",
+  "text": "「エレベーターもあそこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.5": {
+  "file": "a65104419d94.mp3",
+  "text": "「はい、そうです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "0134111a7927.mp3",
+  "text": "「トイレはどこですか。」「トイレはあそこです。」\n「受付はどこですか。」「受付はここです。」\n「私の部屋はどこですか。」「あなたの部屋はそこです。」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

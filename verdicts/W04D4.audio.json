@@ -1,0 +1,497 @@
+{
+ "lesson": "W04D4",
+ "clips": 49,
+ "flagged": 0,
+ "rows": [
+  {
+   "key": "vocab.v0181",
+   "file": "95f672d8c528.mp3",
+   "text": "何月",
+   "expected": "なんがつ",
+   "heard": "なんがつか",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0181.ex",
+   "file": "a44688a17aaf.mp3",
+   "text": "誕生日は何月ですか。",
+   "expected": "たんじょうびはなんがつですか",
+   "heard": "たんじょうびはなんがつですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0182",
+   "file": "80f09d87b577.mp3",
+   "text": "四月",
+   "expected": "しがつ",
+   "heard": "しがつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0182.ex",
+   "file": "86603cc5d7c2.mp3",
+   "text": "四月にホテルへ行きます。",
+   "expected": "しがつにほてるへいきます",
+   "heard": "しがつにほてるへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0183",
+   "file": "1234698262a0.mp3",
+   "text": "七月",
+   "expected": "しちがつ",
+   "heard": "しちがつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0183.ex",
+   "file": "58a9f2d39697.mp3",
+   "text": "七月に京都へ行きます。",
+   "expected": "しちがつにきょうとへいきます",
+   "heard": "しちがつにきょうとへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0184",
+   "file": "6d5880e45ea5.mp3",
+   "text": "九月",
+   "expected": "くがつ",
+   "heard": "くがつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0184.ex",
+   "file": "e7b8ffc59071.mp3",
+   "text": "九月に家へ帰ります。",
+   "expected": "くがつにうちへかえります",
+   "heard": "くがつにうちへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0185",
+   "file": "90bd8a33267b.mp3",
+   "text": "何日",
+   "expected": "なんにち",
+   "heard": "なんにち",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0185.ex",
+   "file": "c54798b72dd1.mp3",
+   "text": "誕生日は何日ですか。",
+   "expected": "たんじょうびはなんにちですか",
+   "heard": "たんじょうびはなんにちですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0186",
+   "file": "c0b6e385e538.mp3",
+   "text": "一日",
+   "expected": "ついたち",
+   "heard": "すいたち",
+   "sim": 0.75,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0186.ex",
+   "file": "b2cc991ebac8.mp3",
+   "text": "四月一日にホテルへ行きます。",
+   "expected": "しがつついたちにほてるへいきます",
+   "heard": "しがつついたちにほてるへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0187",
+   "file": "ecadfbcc307a.mp3",
+   "text": "二日",
+   "expected": "ふつか",
+   "heard": "ふつが",
+   "sim": 0.667,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0187.ex",
+   "file": "ca5d55b6f6b8.mp3",
+   "text": "四月二日に家へ帰ります。",
+   "expected": "しがつふつかにうちへかえります",
+   "heard": "しがつふつかにうちへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0188",
+   "file": "3a686860d476.mp3",
+   "text": "二十日",
+   "expected": "はつか",
+   "heard": "はつか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0188.ex",
+   "file": "a3cef1401a2f.mp3",
+   "text": "誕生日は七月二十日です。",
+   "expected": "たんじょうびはしちがつはつかです",
+   "heard": "たんじょうびはしちがつはつかです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0189",
+   "file": "720d9d5f8be6.mp3",
+   "text": "誕生日",
+   "expected": "たんじょうび",
+   "heard": "たんじょうび",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0189.ex",
+   "file": "3ce437d76b81.mp3",
+   "text": "私の誕生日は九月二日です。",
+   "expected": "わたしのたんじょうびはくがつふつかです",
+   "heard": "わたしのたんじょうびはくがつふつかです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0190",
+   "file": "0daa566970e6.mp3",
+   "text": "カレンダー",
+   "expected": "かれんだー",
+   "heard": "かれんだ",
+   "sim": 0.889,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0190.ex",
+   "file": "333280a8b09c.mp3",
+   "text": "カレンダーはホテルの受付です。",
+   "expected": "かれんだーはほてるのうけつけです",
+   "heard": "かれんだーはほてるのうけつけです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.form.0",
+   "file": "377b7558b629.mp3",
+   "text": "休みは四月です。",
+   "expected": "やすみはしがつです",
+   "heard": "やすみはしがつです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.form.1",
+   "file": "205d33cf021a.mp3",
+   "text": "休みは四月ではありません。",
+   "expected": "やすみはしがつではありません",
+   "heard": "やすみはしがつではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.form.2",
+   "file": "2907bea98bbb.mp3",
+   "text": "休みは四月でした。",
+   "expected": "やすみはしがつでした",
+   "heard": "やすみはしがつでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.form.3",
+   "file": "fdbbeecc8a4e.mp3",
+   "text": "休みは四月ではありませんでした。",
+   "expected": "やすみはしがつではありませんでした",
+   "heard": "やすみはしがつではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.ex.0",
+   "file": "8a95c6fccf09.mp3",
+   "text": "ホテルへ何月に行きますか。",
+   "expected": "ほてるへなんがつにいきますか",
+   "heard": "ほてるへなんだつにいきますか",
+   "sim": 0.929,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.ex.1",
+   "file": "001b76b3bcfe.mp3",
+   "text": "七月にホテルへ行きます。",
+   "expected": "しちがつにほてるへいきます",
+   "heard": "しちがつにほてるへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g033.ex.2",
+   "file": "08584a381d49.mp3",
+   "text": "私の誕生日は九月です。",
+   "expected": "わたしのたんじょうびはくがつです",
+   "heard": "わたしのたんじょうびはくがつです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.form.0",
+   "file": "85a5fdeb73e0.mp3",
+   "text": "休みは二十日です。",
+   "expected": "やすみははつかです",
+   "heard": "やすみははつかです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.form.1",
+   "file": "8ced92984e71.mp3",
+   "text": "休みは二十日ではありません。",
+   "expected": "やすみははつかではありません",
+   "heard": "やすみははつかではありません",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.form.2",
+   "file": "65191a210f35.mp3",
+   "text": "休みは二十日でした。",
+   "expected": "やすみははつかでした",
+   "heard": "やすみははつかでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.form.3",
+   "file": "bf605100e1ee.mp3",
+   "text": "休みは二十日ではありませんでした。",
+   "expected": "やすみははつかではありませんでした",
+   "heard": "やすみははつかではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.ex.0",
+   "file": "c54798b72dd1.mp3",
+   "text": "誕生日は何日ですか。",
+   "expected": "たんじょうびはなんにちですか",
+   "heard": "たんじょうびはなんにちですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.ex.1",
+   "file": "b2cc991ebac8.mp3",
+   "text": "四月一日にホテルへ行きます。",
+   "expected": "しがつついたちにほてるへいきます",
+   "heard": "しがつついたちにほてるへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g034.ex.2",
+   "file": "320b1ec6d813.mp3",
+   "text": "七月二十日に家へ帰ります。",
+   "expected": "しちがつはつかにうちへかえります",
+   "heard": "しちがつはつかにうちへかえります",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "a68f009261b7.mp3",
+   "text": "林さんの誕生日は何月ですか。",
+   "expected": "りんさんのたんじょうびはなんがつですか",
+   "heard": "りんさんのたんじょうびはなんなつですか",
+   "sim": 0.947,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "fd7c1768d1ae.mp3",
+   "text": "私の誕生日は四月二日です。",
+   "expected": "わたしのたんじょうびはしがつふつかです",
+   "heard": "わたしのたんじょうびはしがつふつかです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "8a95c6fccf09.mp3",
+   "text": "ホテルへ何月に行きますか。",
+   "expected": "ほてるへなんがつにいきますか",
+   "heard": "ほてるへなんだつにいきますか",
+   "sim": 0.929,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "6b671eba684b.mp3",
+   "text": "ホテルへ何日に行きますか。",
+   "expected": "ほてるへなんにちにいきますか",
+   "heard": "ほてるへなんにちにいきますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "35d838e7c4d5.mp3",
+   "text": "七月一日にホテルへ行きます。",
+   "expected": "しちがつついたちにほてるへいきます",
+   "heard": "しちがつついたちにほてるへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "2cffd0719c8c.mp3",
+   "text": "九月二十日に家へ帰ります。",
+   "expected": "くがつはつかにうちへかえります",
+   "heard": "くがつはすかにうちへかえります",
+   "sim": 0.933,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "624b25bc033f.mp3",
+   "text": "私のカレンダー\n四月一日　家族と京都のホテルへ行きます。\n四月二日　私の誕生日です。ホテルの食堂へ行きます。\n四月三日　家へ帰ります。\n七月二十日　友達と大阪へ行きます。\n九月二日　東京へ行きます。",
+   "expected": "わたしのかれんだーしがつついたちかぞくときょうとのほてるへいきますしがつふつかわたしのたんじょうびですほてるのしょくどうへいきますしがつみっかうちへかえりますしちがつはつかともだちとおおさかへいきますくがつふつかとうきょうへいきます",
+   "heard": "わたしのかれんだーしがつついたちかぞくときょうとのほてるへいきますしがつふつかわたしのたんじょうびですほてるのしょくどうへいきますしがつみっかうちへかえりますしちがつはつかともだちとおおさかへいきますくがつふつかとうきょうへいきます",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "527016ee3669.mp3",
+   "text": "「ホテルの受付です。何月何日に来ますか。」\n「七月二十日に行きます。」\n「誕生日ですか。」\n「はい、私の誕生日です。カレンダーをお願いします。」",
+   "expected": "ほてるのうけつけですなんがつなんにちにきますかしちがつはつかにいきますたんじょうびですかはいわたしのたんじょうびですかれんだーをおねがいします",
+   "heard": "ほてるのうけつけですなんがつなんにちにきますかしちがつはつかにいきますたんじょうびですかはいわたしのたんじょうびですかれんだーをおねがいします",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "6630b0c90bf9.mp3",
+   "text": "「ホテルの受付です。",
+   "expected": "ほてるのうけつけです",
+   "heard": "ほてるのうけつけです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "22cbfe146ba1.mp3",
+   "text": "何月何日に来ますか。",
+   "expected": "なんがつなんにちにきますか",
+   "heard": "なんがつなんにちにきますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "ea93461a1f35.mp3",
+   "text": "「七月二十日に行きます。",
+   "expected": "しちがつはつかにいきます",
+   "heard": "しちなつはつかにいきます",
+   "sim": 0.917,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "e2daeff8b0e4.mp3",
+   "text": "「誕生日ですか。",
+   "expected": "たんじょうびですか",
+   "heard": "たんじょうびですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "d5b682d17f1f.mp3",
+   "text": "「はい、私の誕生日です。",
+   "expected": "はいわたしのたんじょうびです",
+   "heard": "はいわたしのたんじょうびです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.5",
+   "file": "b33954653b50.mp3",
+   "text": "カレンダーをお願いします。",
+   "expected": "かれんだーをおねがいします",
+   "heard": "かれんだーをおねがいします",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "7794c4e86b69.mp3",
+   "text": "誕生日は何月何日ですか。ホテルへ何月何日に行きますか。何月何日に家へ帰りますか。",
+   "expected": "たんじょうびはなんがつなんにちですかほてるへなんがつなんにちにいきますかなんがつなんにちにうちへかえりますか",
+   "heard": "たんじょうびはなんがつなんにちですかほてるへなんがつなんにちにいきますかなんがつなんにちにうちへかえりますか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

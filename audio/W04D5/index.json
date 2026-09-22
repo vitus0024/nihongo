@@ -1,0 +1,296 @@
+{
+ "vocab.v0191": {
+  "file": "72c7c735fd34.mp3",
+  "text": "船",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0191.ex": {
+  "file": "62b7f4edff10.mp3",
+  "text": "船で大阪へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0192": {
+  "file": "6be31afed421.mp3",
+  "text": "歩いて",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0192.ex": {
+  "file": "e359c9082586.mp3",
+  "text": "駅へ歩いて行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0193": {
+  "file": "e16cfa4657a3.mp3",
+  "text": "彼",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0193.ex": {
+  "file": "48aa22050c87.mp3",
+  "text": "彼は明日どこへも行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0194": {
+  "file": "982c6b62f033.mp3",
+  "text": "彼女",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0194.ex": {
+  "file": "5166974978e0.mp3",
+  "text": "彼女は昨日どこも行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0195": {
+  "file": "d06cb259992a.mp3",
+  "text": "次",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0195.ex": {
+  "file": "36aedf048ee4.mp3",
+  "text": "次の電車は急行ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0196": {
+  "file": "699bc3bef850.mp3",
+  "text": "普通",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0196.ex": {
+  "file": "44c5d70c55fb.mp3",
+  "text": "この電車は普通ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0197": {
+  "file": "4dcde19fc49f.mp3",
+  "text": "急行",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0197.ex": {
+  "file": "f6a8bbb86e08.mp3",
+  "text": "急行で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0198": {
+  "file": "795c9af3e2dd.mp3",
+  "text": "特急",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0198.ex": {
+  "file": "b9147aa908e0.mp3",
+  "text": "あの電車は特急ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0199": {
+  "file": "e4cfdea6fa9f.mp3",
+  "text": "往復",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0199.ex": {
+  "file": "7b96d1c6bd50.mp3",
+  "text": "往復はいくらですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0200": {
+  "file": "80f85eb231c8.mp3",
+  "text": "片道",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0200.ex": {
+  "file": "36d13dce9b18.mp3",
+  "text": "片道は三百円ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.form.0": {
+  "file": "288bb0d815fe.mp3",
+  "text": "明日は京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.form.1": {
+  "file": "9e24d4c300ea.mp3",
+  "text": "明日はどこへも行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.form.2": {
+  "file": "5557086733da.mp3",
+  "text": "昨日は京都へ行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.form.3": {
+  "file": "7e817d543b25.mp3",
+  "text": "昨日はどこも行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.ex.0": {
+  "file": "011060d9a74a.mp3",
+  "text": "今日はどこも行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.ex.1": {
+  "file": "48aa22050c87.mp3",
+  "text": "彼は明日どこへも行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g035.ex.2": {
+  "file": "0e1e0a82c4ab.mp3",
+  "text": "彼女は昨日どこへも行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.form.0": {
+  "file": "36aedf048ee4.mp3",
+  "text": "次の電車は急行ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.form.1": {
+  "file": "54b0f84b43b9.mp3",
+  "text": "この電車は特急ではありませんよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.form.2": {
+  "file": "131770296d4d.mp3",
+  "text": "昨日は休みでしたよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.form.3": {
+  "file": "532f7a712b97.mp3",
+  "text": "昨日はどこも行きませんでしたよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.ex.0": {
+  "file": "36d13dce9b18.mp3",
+  "text": "片道は三百円ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.ex.1": {
+  "file": "357081c0ad00.mp3",
+  "text": "駅はあそこですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g036.ex.2": {
+  "file": "fcbc9c19e992.mp3",
+  "text": "明日はどこへも行きませんよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "7b96d1c6bd50.mp3",
+  "text": "往復はいくらですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "36d13dce9b18.mp3",
+  "text": "片道は三百円ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "aa778744a794.mp3",
+  "text": "次の電車は普通ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "e359c9082586.mp3",
+  "text": "駅へ歩いて行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "9e24d4c300ea.mp3",
+  "text": "明日はどこへも行きません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "7e817d543b25.mp3",
+  "text": "昨日はどこも行きませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.6": {
+  "file": "2195f96b239b.mp3",
+  "text": "明日は友達と急行で京都へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "8c8431abba80.mp3",
+  "text": "今日はどこへも行きません。昨日もどこも行きませんでした。明日は友達と京都へ行きます。駅へ歩いて行きます。急行で京都へ行きます。片道は五百円です。往復は千円ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "6d457ba88fee.mp3",
+  "text": "「駅はどこですか。」\n「あそこですよ。」\n「次の電車は急行ですか。」\n「いいえ、普通ですよ。片道は三百円です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "e8a763bab481.mp3",
+  "text": "「駅はどこですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "2e9c4798c6d6.mp3",
+  "text": "「あそこですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "39f70ac6b5d0.mp3",
+  "text": "「次の電車は急行ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "4bacfd7e19fb.mp3",
+  "text": "「いいえ、普通ですよ。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "4079ff0caa38.mp3",
+  "text": "片道は三百円です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "0d18a9038c70.mp3",
+  "text": "今日はどこへも行きません。明日はどこへ行きますか。電車で行きますか。次の電車は何ですか。片道はいくらですか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

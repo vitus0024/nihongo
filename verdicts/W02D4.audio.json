@@ -1,0 +1,437 @@
+{
+ "lesson": "W02D4",
+ "clips": 43,
+ "flagged": 0,
+ "rows": [
+  {
+   "key": "vocab.v0081",
+   "file": "b7f34ca6417c.mp3",
+   "text": "こちら",
+   "expected": "こちら",
+   "heard": "こちら",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0081.ex",
+   "file": "0c957adeb329.mp3",
+   "text": "受付はこちらです。",
+   "expected": "うけつけはこちらです",
+   "heard": "うけつけはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0082",
+   "file": "d2a9cee699d1.mp3",
+   "text": "そちら",
+   "expected": "そちら",
+   "heard": "そちら",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0082.ex",
+   "file": "0c503f6c2786.mp3",
+   "text": "そちらはロビーです。",
+   "expected": "そちらはろびーです",
+   "heard": "そちらはろびーです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0083",
+   "file": "1491d852f3e3.mp3",
+   "text": "あちら",
+   "expected": "あちら",
+   "heard": "あちら",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0083.ex",
+   "file": "1ac58693566b.mp3",
+   "text": "食堂はあちらです。",
+   "expected": "しょくどうはあちらです",
+   "heard": "しょくどうはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0084",
+   "file": "5e598281586c.mp3",
+   "text": "どちら",
+   "expected": "どちら",
+   "heard": "どちら",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0084.ex",
+   "file": "a0cd6dcf4b3d.mp3",
+   "text": "ホテルはどちらですか。",
+   "expected": "ほてるはどちらですか",
+   "heard": "ほてるはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0085",
+   "file": "437396371a3d.mp3",
+   "text": "階段",
+   "expected": "かいだん",
+   "heard": "かいだん",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0085.ex",
+   "file": "2f6553da20a8.mp3",
+   "text": "階段はそちらです。",
+   "expected": "かいだんはそちらです",
+   "heard": "かいだんはそちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0086",
+   "file": "6872915df93e.mp3",
+   "text": "エスカレーター",
+   "expected": "えすかれーたー",
+   "heard": "えすかれーたー",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0086.ex",
+   "file": "a4eefea7bb5b.mp3",
+   "text": "エスカレーターはあちらです。",
+   "expected": "えすかれーたーはあちらです",
+   "heard": "えすかれーたーはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0087",
+   "file": "9dd9c6318bcb.mp3",
+   "text": "会議室",
+   "expected": "かいぎしつ",
+   "heard": "かいぎしつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0087.ex",
+   "file": "94bb5f60115e.mp3",
+   "text": "会議室はこちらです。",
+   "expected": "かいぎしつはこちらです",
+   "heard": "かいぎしつはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0088",
+   "file": "9966f53bd578.mp3",
+   "text": "事務所",
+   "expected": "じむしょ",
+   "heard": "じむしょ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0088.ex",
+   "file": "3388a60c1735.mp3",
+   "text": "事務所はそちらです。",
+   "expected": "じむしょはそちらです",
+   "heard": "じむしょはそちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0089",
+   "file": "2039cad3c881.mp3",
+   "text": "教室",
+   "expected": "きょうしつ",
+   "heard": "きょうしつ",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0089.ex",
+   "file": "2f1e9bd88ccb.mp3",
+   "text": "日本語の教室はこちらです。",
+   "expected": "にほんごのきょうしつはこちらです",
+   "heard": "にほんごのきょうしつはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0090",
+   "file": "2225df59bacc.mp3",
+   "text": "ホテル",
+   "expected": "ほてる",
+   "heard": "ほてる",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "vocab.v0090.ex",
+   "file": "69d2d30319b8.mp3",
+   "text": "あちらはホテルです。",
+   "expected": "あちらはほてるです",
+   "heard": "あちらはほてるです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.form.0",
+   "file": "94bb5f60115e.mp3",
+   "text": "会議室はこちらです。",
+   "expected": "かいぎしつはこちらです",
+   "heard": "かいぎしつはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.form.1",
+   "file": "222391eb1b8b.mp3",
+   "text": "会議室はこちらではありません。",
+   "expected": "かいぎしつはこちらではありません",
+   "heard": "かいにしつはこちらではありません",
+   "sim": 0.938,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.form.2",
+   "file": "69af4858dc33.mp3",
+   "text": "会議室はこちらでした。",
+   "expected": "かいぎしつはこちらでした",
+   "heard": "かいぎしつはこちらでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.form.3",
+   "file": "77d1eda2b3c4.mp3",
+   "text": "会議室はこちらではありませんでした。",
+   "expected": "かいぎしつはこちらではありませんでした",
+   "heard": "かいぎしつはこちらではありませんでした",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.form.4",
+   "file": "c3ce6ff819d9.mp3",
+   "text": "会議室はどちらですか。",
+   "expected": "かいぎしつはどちらですか",
+   "heard": "かいぎしつはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.ex.0",
+   "file": "7f160c27238a.mp3",
+   "text": "お土産はこちらです。",
+   "expected": "おみやげはこちらです",
+   "heard": "おみやげはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.ex.1",
+   "file": "dfa34acb9d3c.mp3",
+   "text": "食堂はどちらですか。",
+   "expected": "しょくどうはどちらですか",
+   "heard": "しょくどうはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.ex.2",
+   "file": "1a71f83a7ec3.mp3",
+   "text": "ホテルはあちらです。",
+   "expected": "ほてるはあちらです",
+   "heard": "ほてるはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "grammar.g016.ex.3",
+   "file": "5c762b1ddd2c.mp3",
+   "text": "会議室はそちらです。",
+   "expected": "かいぎしつはそちらです",
+   "heard": "かいぎしつはそちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.0",
+   "file": "7f160c27238a.mp3",
+   "text": "お土産はこちらです。",
+   "expected": "おみやげはこちらです",
+   "heard": "おみやげはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.1",
+   "file": "dfa34acb9d3c.mp3",
+   "text": "食堂はどちらですか。",
+   "expected": "しょくどうはどちらですか",
+   "heard": "しょくどうはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.2",
+   "file": "1a71f83a7ec3.mp3",
+   "text": "ホテルはあちらです。",
+   "expected": "ほてるはあちらです",
+   "heard": "ほてるはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.3",
+   "file": "94bb5f60115e.mp3",
+   "text": "会議室はこちらです。",
+   "expected": "かいぎしつはこちらです",
+   "heard": "かいぎしつはこちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.4",
+   "file": "2f6553da20a8.mp3",
+   "text": "階段はそちらです。",
+   "expected": "かいだんはそちらです",
+   "heard": "かいだんはそちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "patterns.5",
+   "file": "8290cde7f718.mp3",
+   "text": "エスカレーターはあちらですか。",
+   "expected": "えすかれーたーはあちらですか",
+   "heard": "えすかれーたーはあちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "reading",
+   "file": "4b6b353f640e.mp3",
+   "text": "「会議室はどちらですか。」\n「会議室はこちらです。」\n「事務所もこちらですか。」\n「いいえ、事務所はあちらです。」",
+   "expected": "かいぎしつはどちらですかかいぎしつはこちらですじむしょもこちらですかいいえじむしょはあちらです",
+   "heard": "かいぎしつはどちらですかかいぎしつはこちらですじむしょもこちらですかいいえじむしょはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening",
+   "file": "94ba1a6884bf.mp3",
+   "text": "「こちらはホテルの受付ですか。」\n「はい、そうです。」\n「階段はどちらですか。」\n「階段はそちらです。エスカレーターはあちらです。」",
+   "expected": "こちらはほてるのうけつけですかはいそうですかいだんはどちらですかかいだんはそちらですえすかれーたーはあちらです",
+   "heard": "こちらはほてるのうけつけですかはいそうですかいだんはどちらですかかいだんはそちらですえすかれーたーはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.0",
+   "file": "abad3a10d7da.mp3",
+   "text": "「こちらはホテルの受付ですか。",
+   "expected": "こちらはほてるのうけつけですか",
+   "heard": "こちらはほてるのうけつけですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.1",
+   "file": "a65104419d94.mp3",
+   "text": "「はい、そうです。",
+   "expected": "はいそうです",
+   "heard": "はいそうです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.2",
+   "file": "f1764c226f69.mp3",
+   "text": "「階段はどちらですか。",
+   "expected": "かいだんはどちらですか",
+   "heard": "かいだんはどちらですか",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.3",
+   "file": "306c86f5acab.mp3",
+   "text": "「階段はそちらです。",
+   "expected": "かいだんはそちらです",
+   "heard": "かいだんはそちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "listening.line.4",
+   "file": "a4eefea7bb5b.mp3",
+   "text": "エスカレーターはあちらです。",
+   "expected": "えすかれーたーはあちらです",
+   "heard": "えすかれーたーはあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  },
+  {
+   "key": "speaking",
+   "file": "5e81a07c9ab0.mp3",
+   "text": "「階段はどちらですか。」「こちらです。」\n「会議室はどちらですか。」「そちらです。」\n「ホテルはどちらですか。」「あちらです。」",
+   "expected": "かいだんはどちらですかこちらですかいぎしつはどちらですかそちらですほてるはどちらですかあちらです",
+   "heard": "かいだんはどちらですかこちらですかいぎしつはどちらですかそちらですほてるはどちらですかあちらです",
+   "sim": 1.0,
+   "name_miss": [],
+   "flag": false
+  }
+ ]
+}

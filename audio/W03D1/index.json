@@ -1,0 +1,296 @@
+{
+ "vocab.v0101": {
+  "file": "de8bd06e2aad.mp3",
+  "text": "今",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0101.ex": {
+  "file": "855b36a41158.mp3",
+  "text": "今、午後三時です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0102": {
+  "file": "85f9d477187f.mp3",
+  "text": "何時",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0102.ex": {
+  "file": "abfbeb3bb08b.mp3",
+  "text": "今、何時ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0103": {
+  "file": "ca0aa9216e1c.mp3",
+  "text": "何分",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0103.ex": {
+  "file": "7204d0cddee3.mp3",
+  "text": "今、四時何分ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0104": {
+  "file": "7ffbcd0106b2.mp3",
+  "text": "午前",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0104.ex": {
+  "file": "69983436509a.mp3",
+  "text": "今、午前九時です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0105": {
+  "file": "0ab74a6008d4.mp3",
+  "text": "午後",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0105.ex": {
+  "file": "a64568b724a4.mp3",
+  "text": "今、午後七時です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0106": {
+  "file": "2d45f9c32af5.mp3",
+  "text": "半",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0106.ex": {
+  "file": "66ecc775b86f.mp3",
+  "text": "今、午後二時半です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0107": {
+  "file": "acd0b334681a.mp3",
+  "text": "切手",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0107.ex": {
+  "file": "5750f2b7e870.mp3",
+  "text": "切手をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0108": {
+  "file": "a9469e1be1f6.mp3",
+  "text": "葉書",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0108.ex": {
+  "file": "119fc4c1c0ff.mp3",
+  "text": "この葉書をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0109": {
+  "file": "15e2370f69e6.mp3",
+  "text": "封筒",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0109.ex": {
+  "file": "58c1f88a1a97.mp3",
+  "text": "封筒をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0110": {
+  "file": "dc81f5c25d9b.mp3",
+  "text": "お願いします",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "vocab.v0110.ex": {
+  "file": "925c15574d6c.mp3",
+  "text": "これ、お願いします。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g019.form.0": {
+  "file": "5750f2b7e870.mp3",
+  "text": "切手をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g019.form.1": {
+  "file": "c8c4aa3354c2.mp3",
+  "text": "切手ではありません。葉書をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g019.ex.0": {
+  "file": "883c91cb7fd9.mp3",
+  "text": "この切手をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g019.ex.1": {
+  "file": "ec70a74ce05b.mp3",
+  "text": "葉書をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g019.ex.2": {
+  "file": "58c1f88a1a97.mp3",
+  "text": "封筒をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.form.0": {
+  "file": "baeca15a3bd5.mp3",
+  "text": "今、午後四時半です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.form.1": {
+  "file": "78335727e771.mp3",
+  "text": "今、午後四時半ではありません。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.form.2": {
+  "file": "3a3c54349e24.mp3",
+  "text": "午前九時でした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.form.3": {
+  "file": "5f3487014c7c.mp3",
+  "text": "午前九時ではありませんでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.ex.0": {
+  "file": "abfbeb3bb08b.mp3",
+  "text": "今、何時ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.ex.1": {
+  "file": "b5c0829ba745.mp3",
+  "text": "今、午前九時十分です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.ex.2": {
+  "file": "36cb9017676a.mp3",
+  "text": "今、午後四時三分です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "grammar.g020.ex.3": {
+  "file": "39aa7f3b27cc.mp3",
+  "text": "今、七時何分ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.0": {
+  "file": "5750f2b7e870.mp3",
+  "text": "切手をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.1": {
+  "file": "119fc4c1c0ff.mp3",
+  "text": "この葉書をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.2": {
+  "file": "925c15574d6c.mp3",
+  "text": "これ、お願いします。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.3": {
+  "file": "abfbeb3bb08b.mp3",
+  "text": "今、何時ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.4": {
+  "file": "7204d0cddee3.mp3",
+  "text": "今、四時何分ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.5": {
+  "file": "66ecc775b86f.mp3",
+  "text": "今、午後二時半です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "patterns.6": {
+  "file": "39a505de5c5c.mp3",
+  "text": "今、午前九時六分です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "reading": {
+  "file": "103b143a33cb.mp3",
+  "text": "「この葉書はいくらですか。」\n「百円です。」\n「この葉書をください。切手もお願いします。」\n「はい。」\n「今、何時ですか。」\n「午後二時半です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening": {
+  "file": "3bab1f60defa.mp3",
+  "text": "「封筒をください。」\n「はい。」\n「今、何時ですか。」\n「午前九時です。」\n「九時何分ですか。」\n「九時六分です。」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.0": {
+  "file": "c80cffb2a7ed.mp3",
+  "text": "「封筒をください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.1": {
+  "file": "b5d13c5dc9e6.mp3",
+  "text": "「はい。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.2": {
+  "file": "fbf297d43ddd.mp3",
+  "text": "「今、何時ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.3": {
+  "file": "d186e3ba547b.mp3",
+  "text": "「午前九時です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.4": {
+  "file": "48a88fbcf917.mp3",
+  "text": "「九時何分ですか。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "listening.line.5": {
+  "file": "2ffc379d0bb0.mp3",
+  "text": "「九時六分です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "speaking": {
+  "file": "49d38e533857.mp3",
+  "text": "切手をください。今、何時ですか。",
+  "profile": 1,
+  "backend": "openai"
+ }
+}
