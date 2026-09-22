@@ -1,0 +1,146 @@
+{
+ "text": {
+  "file": "66ae828800a5.mp3",
+  "text": "先月は毎晩働きました。先週も自転車で教室へ行きました。今月は友達と島へ行きます。今日は旅行です。今日は仕事は休みです。\n「港はどこですか」\n「港はあそこですよ」\n港へ自転車で行きます。島へ船で行きます。\n「これは島の地図です。民宿はこちらです。温泉はあちらです」\n「この海の写真は民宿の葉書ですか」\n「はい、そうです」\n「海の葉書をください」\n「明日の船は何時ですか」\n「午前十時です」\n晩の七時に温泉へ行きます。今晩は休みます。明日、家へ帰ります。\n「来年もこの島へ行きますか」\n「はい。次の旅行もこの民宿ですね」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.0": {
+  "file": "98fd46a8bf45.mp3",
+  "text": "先月は毎晩働きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.1": {
+  "file": "92a23580d3ad.mp3",
+  "text": "先週も自転車で教室へ行きました。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.2": {
+  "file": "04033ec7e84d.mp3",
+  "text": "今月は友達と島へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.3": {
+  "file": "fcf56ddca093.mp3",
+  "text": "今日は旅行です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.4": {
+  "file": "81af9800eab8.mp3",
+  "text": "今日は仕事は休みです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.5": {
+  "file": "708b5cda545f.mp3",
+  "text": "「港はどこですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.6": {
+  "file": "b963a5503486.mp3",
+  "text": "「港はあそこですよ」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.7": {
+  "file": "2003e27c660c.mp3",
+  "text": "港へ自転車で行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.8": {
+  "file": "1be5400e57e8.mp3",
+  "text": "島へ船で行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.9": {
+  "file": "9c4a890b252a.mp3",
+  "text": "「これは島の地図です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.10": {
+  "file": "9060c0468272.mp3",
+  "text": "民宿はこちらです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.11": {
+  "file": "9860639d1cc2.mp3",
+  "text": "温泉はあちらです」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.12": {
+  "file": "da683ec7b97c.mp3",
+  "text": "「この海の写真は民宿の葉書ですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.13": {
+  "file": "6ed51d351611.mp3",
+  "text": "「はい、そうです」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.14": {
+  "file": "03c2d6b028ab.mp3",
+  "text": "「海の葉書をください」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.15": {
+  "file": "82a18af0ec25.mp3",
+  "text": "「明日の船は何時ですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.16": {
+  "file": "183db4deb4fa.mp3",
+  "text": "「午前十時です」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.17": {
+  "file": "d53ca1fa6483.mp3",
+  "text": "晩の七時に温泉へ行きます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.18": {
+  "file": "95934ab29474.mp3",
+  "text": "今晩は休みます。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.19": {
+  "file": "cd0fc54d0076.mp3",
+  "text": "明日、家へ帰ります。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.20": {
+  "file": "c816f50bf086.mp3",
+  "text": "「来年もこの島へ行きますか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.21": {
+  "file": "b5d13c5dc9e6.mp3",
+  "text": "「はい。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.22": {
+  "file": "de6b81a9779a.mp3",
+  "text": "次の旅行もこの民宿ですね」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

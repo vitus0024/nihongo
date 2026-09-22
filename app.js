@@ -112,6 +112,18 @@ async function loadCurriculum() {
   CUR.vocab.forEach((v) => (V[v.id] = v)); CUR.grammar.forEach((g) => (G[g.id] = g)); CUR.lessons.forEach((l) => (L[l.id] = l));
   ORDER = CUR.lessons.slice().sort((a, b) => a.week - b.week || a.day - b.day).map((l) => l.id);
   if (!S.curriculum_version) S.curriculum_version = CUR.version;
+  try { GMAP = await (await fetch("grammar_map.json", { cache: "no-cache" })).json(); } catch { GMAP = null; }
+}
+let GMAP = null;
+function grammarMapHTML() {                              // 文法地圖：助詞／變形總表，已學打勾（參考蓮先生的骨架）
+  if (!GMAP) return "";
+  const learnedG = new Set(ORDER.filter((id) => ["done", "exempt", "remedial"].includes(st(id).status)).flatMap((id) => L[id].new_grammar));
+  const gidsByRe = (re) => CUR.grammar.filter((g) => new RegExp(re).test(g.pattern)).map((g) => g.id);
+  return `<h2>文法地圖</h2><p class="faint">整個日文的骨架：助詞和動詞變形。綠色＝已學，白色＝課表裡有、還沒到，灰色＝之後的階段。</p>` +
+    GMAP.groups.map((grp) => `<div class="card soft"><h3>${esc(grp.title)}</h3><div class="row">${grp.items.map((it) => {
+      const ids = gidsByRe(it.match); const state = !ids.length ? "later" : ids.some((g) => learnedG.has(g)) ? "learned" : "planned";
+      const where = ids.length ? ORDER.find((id) => L[id].new_grammar.some((g) => ids.includes(g))) : null;
+      return `<span class="badge ${state === "learned" ? "green" : state === "planned" ? "" : ""}" style="${state === "later" ? "opacity:.45" : state === "planned" ? "background:var(--surface);border:1px solid var(--border)" : ""}" title="${esc(it.zh)}${where ? " · " + where : ""}">${state === "learned" ? "✓ " : ""}${esc(it.name)}<span class="faint" style="font-weight:400"> ${esc(it.zh)}${where && state !== "learned" ? " · " + where : ""}</span></span>`; }).join("")}</div></div>`).join("");
 }
 const audioIndex = {};                                    // id → {key: {file,...}}；沒有音檔的課是 {}
 async function loadLesson(id) {
@@ -234,6 +246,28 @@ function renderHome() {
     ${chart}`;
 }
 
+const extraCache = {};
+async function loadExtra(wk) {
+  if (wk in extraCache) return extraCache[wk];
+  try { const r = await fetch(`extras/${wk}.json`, { cache: "no-cache" }); extraCache[wk] = r.ok ? await r.json() : null; } catch { extraCache[wk] = null; }
+  if (extraCache[wk]) { try { const a = await fetch(`audio/extras-${wk}/index.json`, { cache: "no-cache" }); audioIndex[`extras-${wk}`] = a.ok ? await a.json() : {}; } catch { audioIndex[`extras-${wk}`] = {}; } }
+  return extraCache[wk];
+}
+async function renderExtra(wk) {
+  const d = await loadExtra(wk);
+  if (!d) { view.innerHTML = `<h1>延伸閱讀</h1><div class="notice">${wk} 還沒有延伸閱讀。</div>`; return; }
+  runner = { id: `extras-${wk}`, answers: {}, graded: {} };
+  const read = (S.extras ??= {})[wk];
+  view.innerHTML = `<h1>${esc(d.title.ja)} <span class="badge indigo">${wk} 延伸閱讀</span></h1><p class="muted">${esc(d.title.zh)}</p>
+    <div class="notice indigo">課外讀物，不考、不算進度。七成是學過的，三成新字有注音和中文——看不懂全部很正常，目的是「再遇到幾次」。</div>
+    <div class="row">${btnPlay(`extras-${wk}`, "text", d.text_ja, "▶ 朗讀")}${rubyToggleHTML()}</div>
+    <div class="script ja" style="font-size:1.1rem">${rubyHTML(d.text_ja, d.text_kana)}</div>
+    <details class="module"><summary><span class="num">中</span>中文翻譯</summary><div class="body"><p>${esc(d.zh)}</p></div></details>
+    <div class="card"><h3>新字（${d.new_words.length}）</h3>${d.new_words.map((w) => `<div class="line"><span class="ja">${rubyHTML(w.kanji, w.kana)}</span> <span>${esc(w.zh)}</span>${w.note ? `<span class="faint">${esc(w.note)}</span>` : ""}</div>`).join("")}</div>
+    <div class="card"><h3>讀懂了嗎（不計分）</h3>${quizHTML(d.questions, "extra")}</div>
+    <button class="btn ${read ? "" : "primary"} block" data-act="extra-done" data-wk="${wk}">${read ? `已讀（${read}）` : "讀完了"}</button>`;
+}
+
 function renderSchedule() {
   const nx = nextLessonId();
   const weeks = [...new Set(ORDER.map((id) => L[id].week))];
@@ -245,11 +279,13 @@ function renderSchedule() {
   }
   html += `</div><div class="legend"><span><i style="background:var(--green)"></i>完成</span><span><i style="background:var(--green-soft);border:1px solid var(--green)"></i>進行中</span><span><i style="background:var(--amber-soft);border:1px solid var(--amber)"></i>待補強</span><span><i style="background:var(--indigo-soft)"></i>豁免</span><span><i style="border:1px dashed var(--accent)"></i>下一課</span></div>
     <h2>階段</h2>${[1, 2, 3, 4, 5].map((s) => { const r = stageRec(s); const name = CUR.stages[s]; return `<div class="card soft row between"><span>第 ${s} 階段 ${name}</span>${r ? (r.passed ? `<span class="badge green">通過 ${r.test.total}</span>` : `<span class="badge amber">補強中</span>`) : `<span class="badge">未測</span>`}</div>${r && !r.passed ? renderStageEntry(s) : ""}`; }).join("")}`;
-  view.innerHTML = html;
+  const weeksWithExtra = weeks;   // 有檔才會開得起來；卡片先列出
+  html += `<h2>延伸閱讀</h2><p class="faint">每週一篇課外短文，回收教過但少見的字＋三成新字。不考。</p><div class="row">${weeksWithExtra.map((w) => { const wk = `W${String(w).padStart(2, "0")}`; const r = S.extras?.[wk]; return `<button class="btn small ${r ? "" : "ghost"}" data-act="open-extra" data-wk="${wk}">${r ? "✓ " : ""}${wk}</button>`; }).join("")}</div>`;
+  view.innerHTML = html + grammarMapHTML();
 }
 
 function renderSettings() {
-  view.innerHTML = `<h1>設定 <span class="badge">app v10</span></h1>
+  view.innerHTML = `<h1>設定 <span class="badge">app v11</span></h1>
     <div class="card"><h3>備份（完整 JSON）</h3><p class="small muted">每週日匯出一次，存到 iCloud 備忘錄或檔案。匯入是<b>整份取代</b>，取代前會先把目前狀態複製到剪貼簿當退路。</p>
       <div class="row"><button class="btn primary" data-act="export">匯出到剪貼簿</button><button class="btn" data-act="share">分享…</button></div>
       <p class="faint">上次匯出：${S.last_export || "從未"}</p>
@@ -296,6 +332,15 @@ function renderDiagnostic() {
     <div class="card soft"><p class="small muted">給 ChatGPT 的診斷指令：</p><pre class="prompt">請依我們的日文學習計畫規格書 §7.1 幫我做 N5 入學診斷，約 20–25 分鐘：假名辨讀 10 題、單字 10 題、文法 10 題、一段閱讀＋3 題、一段聽力（你唸）＋3 題、簡短口說 1 分鐘。做完給我各項百分比，以及「可以跳過的內容」清單。</pre><button class="btn small" data-act="copy" data-text="請依我們的日文學習計畫規格書 §7.1 幫我做 N5 入學診斷，約 20–25 分鐘：假名辨讀 10 題、單字 10 題、文法 10 題、一段閱讀＋3 題、一段聽力（你唸）＋3 題、簡短口說 1 分鐘。做完給我各項百分比，以及「可以跳過的內容」清單。">複製</button></div>`;
 }
 
+// 數拍（モーラ）：假名一拍，小字 ゃゅょ 併前一拍，ー 和 っ 各算一拍
+const moraCount = (kana) => [...kana.replace(/[^\u3041-\u3096\u30A1-\u30FAー]/g, "")].filter((c) => !"ゃゅょャュョぁぃぅぇぉァィゥェォ".includes(c)).length;
+function moraDrillHTML(scriptKana) {
+  const lines = scriptKana.split(/(?<=[。？！」])\s*/).map((s) => s.replace(/[「」\s]/g, "")).filter((s) => /[\u3041-\u30ff]/.test(s)).slice(0, 3);
+  runner.mora ??= {};
+  return `<div class="card soft"><b>磨耳朵：這句幾拍？</b><p class="faint">聽一句，用手指打拍子數假名的拍數（ー、っ 各一拍；きゃ 算一拍），不用聽懂意思。</p>${lines.map((k, i) => {
+    const key = `listening.line.${i}`; const ans = runner.mora[i];
+    return `<div class="row" style="margin:6px 0">${btnPlay(runner.id, key, k)}<span class="faint">第 ${i + 1} 句</span><input type="number" min="1" max="40" style="width:64px" value="${ans ?? ""}" data-mora="${i}" placeholder="拍"> ${ans != null ? (ans === moraCount(k) ? `<span class="badge green">對，${moraCount(k)} 拍</span>` : `<span class="badge amber">是 ${moraCount(k)} 拍</span>`) : ""}</div>`; }).join("")}</div>`;
+}
 function rubyToggleHTML() { return `<label class="sw small"><input type="checkbox" data-act="ruby-toggle" ${SHOW_RUBY ? "checked" : ""}> 顯示注音（熟了就關掉）</label>`; }
 function quizHTML(qs, key, opts = {}) {                    // 一組題目；runner.answers[key] 記作答
   const ans = (runner.answers ??= {})[key] ??= {};
@@ -325,6 +370,7 @@ async function renderLesson(id) {
     ${mods.map(([k, name], i) => `<details class="module ${x.modules[k] ? "done" : ""}" data-mod="${k}" ${k === runner.openMod ? "open" : ""}><summary><span class="num">${x.modules[k] ? "✓" : i + 1}</span>${name}</summary><div class="body">${moduleHTML(k, d, cl, x)}</div></details>`).join("")}
     ${busy ? `<button class="btn primary block" data-act="busy-done">記錄一次忙碌版練習</button>` : ""}`;
   view.querySelectorAll("details.module").forEach((el) => el.addEventListener("toggle", () => { if (el.open) runner.openMod = el.dataset.mod; else if (runner.openMod === el.dataset.mod) runner.openMod = null; }));
+  view.querySelectorAll("[data-mora]").forEach((inp) => inp.addEventListener("change", (e) => { runner.mora[+e.target.dataset.mora] = +e.target.value; renderLesson(runner.id); }));
 }
 function moduleHTML(k, d, cl, x) {
   const doneBtn = (label = "完成這個模組") => `<button class="btn small" data-act="mod-done" data-mod="${k}" ${x.modules[k] ? "disabled" : ""}>${x.modules[k] ? "已完成" : label}</button>`;
@@ -346,8 +392,8 @@ function moduleHTML(k, d, cl, x) {
     case "reading": return `<span class="badge">${esc(d.reading.type)}</span><div class="script ja">${rubyHTML(d.reading.text_ja, d.reading.text_kana)}</div>${rubyToggleHTML()}
       ${btnPlay(runner.id, "reading", d.reading.text_ja, "▶ 朗讀")}${quizHTML(d.reading.questions, "reading")}<p>${doneBtn()}</p>`;
     case "listening": {
-      const src = S.busy ? d.busy_mode : d;  // 忙碌版聽力同上
-      return `<p class="small muted">流程：盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>
+      const moraHTML = cl.week <= 2 ? moraDrillHTML(d.listening.script_kana) : "";   // 第 1–2 週：先「磨耳朵」數拍，再聽內容
+      return `<p class="small muted">流程：${cl.week <= 2 ? "數拍 → " : ""}盲聽 1–2 次 → 作答 → 看逐字稿 → 分句跟讀 → 不看稿重聽</p>${moraHTML}
         <div class="row">${Object.keys(RATES).map((k) => `<button class="btn tts" data-act="play" data-id="${runner.id}" data-key="listening" data-text="${esc(d.listening.script_ja)}" data-rate="${k}">▶ ${RATE_LABEL[k]}</button>`).join("")}</div>
         ${quizHTML(d.listening.questions, "listening")}
         ${runner.reveal ? `<h3>逐字稿（分句跟讀）</h3><div class="script ja">${rubyHTML(d.listening.script_ja, d.listening.script_kana)}</div>${rubyToggleHTML()}${d.listening.script_ja.split(/(?<=[。？！」])\s*/).filter((s) => /[\u3040-\u30ff\u4e00-\u9fff]/.test(s)).map((s, si) => `<div class="line">${btnPlay(runner.id, `listening.line.${si}`, s)}<span class="ja">${esc(s)}</span></div>`).join("")}` : `<button class="btn small" data-act="reveal">作答後看逐字稿</button>`}
@@ -409,19 +455,27 @@ async function renderShortReview(t) {
   runner.sr ??= {};
   view.innerHTML = `<h1>短複習 <span class="badge amber">中斷 ${daysBetween(S.flow.settled_last_activity, today())} 天</span></h1><p class="muted">中斷幾天，先做短複習就好，不用補課。用 ${last} 的暖身題：</p><div class="card">${quizHTML(d.warmup, "sr")}${runner.graded?.sr ? `<button class="btn primary block" data-act="sr-done">完成，進今天的課</button>` : ""}</div>`;
 }
+const altCache = {};
+async function loadAlt(id) {
+  if (id in altCache) return altCache[id];
+  try { const r = await fetch(`lessons/${id}.alt.json`, { cache: "no-cache" }); altCache[id] = r.ok ? await r.json() : null; } catch { altCache[id] = null; }
+  return altCache[id];
+}
 async function renderRemedial(t) {
-  const d = await loadLesson(t.lesson); const x = st(t.lesson);
+  const d = await loadLesson(t.lesson); const x = st(t.lesson); const alt = await loadAlt(t.lesson);
   if (!d) { view.innerHTML = `<div class="notice red">找不到 ${t.lesson} 的教材</div>`; return; }
   const wrong = x.check?.wrong || [];
   view.innerHTML = `<h1>補強 ${t.lesson} <span class="badge amber">小檢核 ${x.check?.score}／${x.check?.total}</span></h1><p class="muted">小檢核未達 70%，先補強 5–10 分鐘再開新課。</p>
     <div class="card"><h3>上次錯的</h3>${wrong.length ? wrong.map((w) => V[w] ? `<div class="line"><button class="btn tts small" data-act="say" data-text="${esc(V[w].kana)}">▶</button><span class="ja">${rubyHTML(V[w].kanji, V[w].kana)}</span> ${esc(V[w].zh)}</div>` : G[w] ? `<div class="line"><span class="ja">${esc(G[w].pattern)}</span> <span class="muted small">${esc(G[w].meaning_zh)}</span></div>` : "").join("") : "<p class='muted'>（沒有記錄到錯題項目）</p>"}</div>
-    <div class="card"><h3>重做小檢核</h3>${quizHTML(d.check, "rem")}${runner.graded?.rem ? `<button class="btn primary block" data-act="rem-done">補強完成</button>` : ""}</div>`;
+    <div class="card"><h3>${alt ? "換一組句子再試" : "重做小檢核"}</h3>${alt ? `<p class="faint">同樣的考點、不同情境——多遇到一次比重抄一次有用。</p>` : ""}${quizHTML(alt?.check || d.check, "rem")}${runner.graded?.rem ? `<button class="btn primary block" data-act="rem-done">補強完成</button>` : ""}</div>`;
 }
 
 // ---------- 動作 ----------
 const ACT = {
   "go-today": () => { tab = "today"; render(); },
-  "open-lesson": async (a) => { const id = a.dataset.id; tab = "today"; document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === "today")); runner = {}; await renderLesson(id); },
+  "open-extra": async (a) => { tab = "today"; document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === "today")); await renderExtra(a.dataset.wk); },
+  "extra-done": (a) => { (S.extras ??= {})[a.dataset.wk] = today(); S.practice.push({ date: today(), kind: "extra", week: a.dataset.wk }); touch(); save(); toast("記錄了"); renderExtra(a.dataset.wk); },
+  "open-lesson": async (a) => { const id = a.dataset.id; tab = "today"; runner = {}; document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b.dataset.tab === "today")); runner = {}; await renderLesson(id); },
   say: (a) => speak(a.dataset.text, a.dataset.rate),
   play: (a) => playKey(a.dataset.id, a.dataset.key, a.dataset.rate, a.dataset.text),
   "tts-test": () => speak("こんにちは。私は台湾人です。日本語を勉強しています。"),
@@ -433,8 +487,8 @@ const ACT = {
   "card-prev": () => { runner.card = Math.max(0, runner.card - 1); renderLesson(runner.id); },
   "card-next": () => { runner.card += 1; renderLesson(runner.id); },
   "card-mark": (a) => { (runner.know ??= {})[runner.card] = a.dataset.v === "1"; if (a.dataset.v === "0") { const d = lessonCache[runner.id]; const list = S.busy ? d.busy_mode.vocab_review_ids : d.vocab.map((v) => v.id); addWeak(list[runner.card], "card"); } runner.card += 1; runner.cards[runner.card] = 0; renderLesson(runner.id); },
-  pick: (a) => { runner.answers[a.dataset.key][a.dataset.q] = +a.dataset.o; tab === "today" && (runner.id ? renderLesson(runner.id) : renderToday()); },
-  grade: (a) => { const key = a.dataset.key; const qs = quizByKey(key); const g = gradeQuiz(qs, key); if (key === "check") { g.wrong.forEach((w) => addWeak(w, "check")); } if (key === "sr" || key === "rem") return renderToday(); renderLesson(runner.id); },
+  pick: (a) => { runner.answers[a.dataset.key][a.dataset.q] = +a.dataset.o; if (a.dataset.key === "extra") return renderExtra(runner.id.replace("extras-", "")); tab === "today" && (runner.id ? renderLesson(runner.id) : renderToday()); },
+  grade: (a) => { const key = a.dataset.key; const qs = quizByKey(key); const g = gradeQuiz(qs, key); if (key === "check") { g.wrong.forEach((w) => addWeak(w, "check")); } if (key === "extra") return renderExtra(runner.id.replace("extras-", "")); if (key === "sr" || key === "rem") return renderToday(); renderLesson(runner.id); },
   reveal: () => { runner.reveal = true; renderLesson(runner.id); },
   "ruby-toggle": (a) => { SHOW_RUBY = a.checked; try { localStorage.setItem("nihongo.ruby", SHOW_RUBY ? "on" : "off"); } catch {} runner.id ? renderLesson(runner.id) : render(); },
   "mod-done": (a) => { const x = lessonState(runner.id); x.modules[a.dataset.mod] = true; if (x.status === "available") x.status = "partial"; runner.openMod = null; touch(); save(); renderLesson(runner.id); },
@@ -503,7 +557,8 @@ const ACT = {
 };
 function quizByKey(key) { const d = lessonCache[runner.id]; const isStage = runner.id && L[runner.id].day_type === "stage_test";
   if (key === "sr") { const last = [...ORDER].reverse().find((id) => ["done", "remedial"].includes(st(id).status)); return lessonCache[last].warmup; }
-  if (key === "rem") { const t = S.todo.find((t) => t.kind === "remedial"); return lessonCache[t.lesson].check; }
+  if (key === "rem") { const t = S.todo.find((t) => t.kind === "remedial"); return altCache[t.lesson]?.check || lessonCache[t.lesson].check; }
+  if (key === "extra") { return extraCache[runner.id.replace("extras-", "")]?.questions; }
   return { warmup: d?.warmup, reading: d?.reading?.questions, listening: d?.listening?.questions, check: d?.check, qv: d?.quiz?.vocab, qg: d?.quiz?.grammar,
     qr: isStage ? d?.quiz?.reading.passages.flatMap((p) => p.questions) : d?.quiz?.reading.questions, ql: isStage ? d?.quiz?.listening.scripts.flatMap((s) => s.questions) : d?.quiz?.listening.questions }[key]; }
 function addWeak(id, source, note) { if (!id) return; const w = S.weak.find((w) => w.id === id); if (w) { w.count = (w.count || 1) + 1; if (note) w.note = note; } else S.weak.push({ id, source, count: 1, first: today(), note }); }

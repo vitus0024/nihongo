@@ -1,0 +1,98 @@
+{
+ "text": {
+  "file": "0ffdb676d18e.mp3",
+  "text": "大学のフリーマーケットです。\n「会場はどこですか」\n「こちらの教室です。あちらは事務所です」\n教室のカメラもコンピューターも中古品です。お茶は百円です。水も百円です。\n「この時計はいくらですか」\n「千円です。これは値札です」\n「そのカメラもプレゼントですか」\n「いいえ、カメラは私のです」\n「このカードもプレゼントですか」\n「はい。時計もカードも母の誕生日のプレゼントです」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.0": {
+  "file": "5da62b8dfd89.mp3",
+  "text": "大学のフリーマーケットです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.1": {
+  "file": "6ec6753a499b.mp3",
+  "text": "「会場はどこですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.2": {
+  "file": "44698ba61d6b.mp3",
+  "text": "「こちらの教室です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.3": {
+  "file": "34c4fe671d63.mp3",
+  "text": "あちらは事務所です」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.4": {
+  "file": "b9824810ac19.mp3",
+  "text": "教室のカメラもコンピューターも中古品です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.5": {
+  "file": "5688f756b8b4.mp3",
+  "text": "お茶は百円です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.6": {
+  "file": "59cc1c6babe7.mp3",
+  "text": "水も百円です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.7": {
+  "file": "d6a915ebf498.mp3",
+  "text": "「この時計はいくらですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.8": {
+  "file": "999814243bc4.mp3",
+  "text": "「千円です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.9": {
+  "file": "880db7bf0979.mp3",
+  "text": "これは値札です」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.10": {
+  "file": "a034ef0362aa.mp3",
+  "text": "「そのカメラもプレゼントですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.11": {
+  "file": "c9ae0473a724.mp3",
+  "text": "「いいえ、カメラは私のです」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.12": {
+  "file": "7c3f55ae8565.mp3",
+  "text": "「このカードもプレゼントですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.13": {
+  "file": "b5d13c5dc9e6.mp3",
+  "text": "「はい。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.14": {
+  "file": "ba73a5b4c7c8.mp3",
+  "text": "時計もカードも母の誕生日のプレゼントです」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

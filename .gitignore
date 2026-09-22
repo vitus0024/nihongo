@@ -5,3 +5,6 @@ audio/_test/
 audio/_compare/
 audio/_preview/
 audio/_gen-*.log
+reference/
+extras/*.codex.log
+lessons/*.alt.codex.log

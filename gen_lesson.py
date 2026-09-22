@@ -43,6 +43,27 @@ def fmt_grammar(ids) -> str:
     return "\n".join(f"  - {i}｜{G[i]['pattern']}｜{G[i]['meaning_zh']}｜情境：{G[i]['scene']}" for i in ids)
 
 
+def low_exposure(before_lid: str, n: int = 8) -> list[str]:
+    """教過但在已生成教材裡曝光最少的 n 個字（exposure.py 同一套算法），給 prompt 當「必用複習字」。"""
+    try:
+        import exposure
+    except Exception:
+        return []
+    idx = ORDER.index(before_lid)
+    taught = [v for x in ORDER[:idx] for v in L[x]["new_vocab"]]
+    if not taught:
+        return []
+    from collections import Counter
+    cnt: Counter = Counter()
+    for x in ORDER[:idx]:
+        pth = ROOT / "lessons" / f"{x}.json"
+        if pth.exists():
+            d = json.loads(pth.read_text(encoding="utf-8")); d.pop("meta", None)
+            for t in exposure.ja_strings(d):
+                cnt.update(exposure.count_ids(t))
+    return sorted(taught, key=lambda v: (cnt.get(v, 0), v))[:n]
+
+
 def build_prompt(lid: str) -> str:
     l = L[lid]
     idx = ORDER.index(lid)
@@ -89,6 +110,9 @@ def build_prompt(lid: str) -> str:
 
 ## 複習字（warmup 只能考這些；busy_mode.vocab_review_ids 從今天的字＋這些裡挑 5–15 個）
 {fmt_vocab(l['review_vocab']) or '  （第一課沒有複習字：warmup 改考假名辨讀，tests 仍須填一個今天的文法 id）'}
+
+## 必用複習字（這些字之前教過但很少再出現——閱讀、聽力、例句裡**至少用到其中 5 個**，讓學習者再遇到它們）
+{fmt_vocab(low_exposure(lid)) or '  （無）'}
 
 ## 之前教過的文法（warmup 可考；例句與閱讀可用）
 {fmt_grammar(prev_g) or '  （無）'}

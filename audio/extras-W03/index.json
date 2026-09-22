@@ -1,0 +1,116 @@
+{
+ "text": {
+  "file": "008bb98f98f5.mp3",
+  "text": "今日は金曜日です。友達と大学の写真展の受付です。\n「写真展の教室は何番ですか」\n「三番です。チケットは三百円です」\n「このチケットをください。パンフレットもお願いします」\n一昨日は美術館の休みでした。今日の写真展は午後五時までです。\n「朝も働きましたか」\n「はい。今日も朝九時から昼の十二時まで働きました」\n「図書館は晩の八時までですね。今晩も働きますか」\n「いいえ、今晩は休みます」\n「この写真はあなたの故郷の海ですか」\n「はい。私の故郷の海です」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.0": {
+  "file": "284353325c1c.mp3",
+  "text": "今日は金曜日です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.1": {
+  "file": "7e45bdd5a01e.mp3",
+  "text": "友達と大学の写真展の受付です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.2": {
+  "file": "90c9b488e387.mp3",
+  "text": "「写真展の教室は何番ですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.3": {
+  "file": "cc35a8a8e4cf.mp3",
+  "text": "「三番です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.4": {
+  "file": "807619b8a10b.mp3",
+  "text": "チケットは三百円です」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.5": {
+  "file": "739906d53013.mp3",
+  "text": "「このチケットをください。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.6": {
+  "file": "13e84eecaf74.mp3",
+  "text": "パンフレットもお願いします」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.7": {
+  "file": "6a1fe2d610c9.mp3",
+  "text": "一昨日は美術館の休みでした。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.8": {
+  "file": "03445ead0451.mp3",
+  "text": "今日の写真展は午後五時までです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.9": {
+  "file": "b1eb03779a05.mp3",
+  "text": "「朝も働きましたか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.10": {
+  "file": "b5d13c5dc9e6.mp3",
+  "text": "「はい。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.11": {
+  "file": "1f3c838f8cea.mp3",
+  "text": "今日も朝九時から昼の十二時まで働きました」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.12": {
+  "file": "c97352edf814.mp3",
+  "text": "「図書館は晩の八時までですね。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.13": {
+  "file": "3359207884c8.mp3",
+  "text": "今晩も働きますか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.14": {
+  "file": "08cb42580ffe.mp3",
+  "text": "「いいえ、今晩は休みます」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.15": {
+  "file": "7c9548709bc2.mp3",
+  "text": "「この写真はあなたの故郷の海ですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.16": {
+  "file": "b5d13c5dc9e6.mp3",
+  "text": "「はい。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.17": {
+  "file": "a714bc4a5c08.mp3",
+  "text": "私の故郷の海です」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "text": {
+  "file": "4fe75f1ed5b4.mp3",
+  "text": "私は七歳です。兄は十歳です。兄も私も学生です。私も兄も日本人です。\n病院の待合室です。父はエンジニアです。父の番号は十一です。これは父の新聞です。\nあの人は受付の人です。\n「これは落とし物です。あなたのボールペンですか」\n「はい、私のボールペンです。このボールペンは父のプレゼントです」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.0": {
+  "file": "260c72e02563.mp3",
+  "text": "私は七歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.1": {
+  "file": "ffc3757dcbd3.mp3",
+  "text": "兄は十歳です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.2": {
+  "file": "2046c268a5b0.mp3",
+  "text": "兄も私も学生です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.3": {
+  "file": "a395a073c594.mp3",
+  "text": "私も兄も日本人です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.4": {
+  "file": "add1a60e2bdf.mp3",
+  "text": "病院の待合室です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.5": {
+  "file": "520c82079ba8.mp3",
+  "text": "父はエンジニアです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.6": {
+  "file": "d3253bd6d4aa.mp3",
+  "text": "父の番号は十一です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.7": {
+  "file": "f0f4425cda23.mp3",
+  "text": "これは父の新聞です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.8": {
+  "file": "682eb82413e4.mp3",
+  "text": "あの人は受付の人です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.9": {
+  "file": "7e7ce028133a.mp3",
+  "text": "「これは落とし物です。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.10": {
+  "file": "fe4cfef6258a.mp3",
+  "text": "あなたのボールペンですか」",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.11": {
+  "file": "80c841af7caf.mp3",
+  "text": "「はい、私のボールペンです。",
+  "profile": 1,
+  "backend": "openai"
+ },
+ "line.12": {
+  "file": "682b7188439a.mp3",
+  "text": "このボールペンは父のプレゼントです」",
+  "profile": 1,
+  "backend": "openai"
+ }
+}

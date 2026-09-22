@@ -1,0 +1,587 @@
+{
+ "min": 3,
+ "low": [
+  {
+   "id": "v0018",
+   "later": 0,
+   "kanji": "銀行員",
+   "intro": "W01D2"
+  },
+  {
+   "id": "v0031",
+   "later": 0,
+   "kanji": "何歳",
+   "intro": "W01D4"
+  },
+  {
+   "id": "v0047",
+   "later": 0,
+   "kanji": "新聞",
+   "intro": "W01D5"
+  },
+  {
+   "id": "v0060",
+   "later": 0,
+   "kanji": "ケーキ",
+   "intro": "W02D1"
+  },
+  {
+   "id": "v0067",
+   "later": 0,
+   "kanji": "カード",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0069",
+   "later": 0,
+   "kanji": "コンピューター",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0072",
+   "later": 0,
+   "kanji": "そこ",
+   "intro": "W02D3"
+  },
+  {
+   "id": "v0078",
+   "later": 0,
+   "kanji": "部屋",
+   "intro": "W02D3"
+  },
+  {
+   "id": "v0082",
+   "later": 0,
+   "kanji": "そちら",
+   "intro": "W02D4"
+  },
+  {
+   "id": "v0088",
+   "later": 0,
+   "kanji": "事務所",
+   "intro": "W02D4"
+  },
+  {
+   "id": "v0089",
+   "later": 0,
+   "kanji": "教室",
+   "intro": "W02D4"
+  },
+  {
+   "id": "v0098",
+   "later": 0,
+   "kanji": "ネクタイ",
+   "intro": "W02D5"
+  },
+  {
+   "id": "v0103",
+   "later": 0,
+   "kanji": "何分",
+   "intro": "W03D1"
+  },
+  {
+   "id": "v0123",
+   "later": 0,
+   "kanji": "図書館",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0124",
+   "later": 0,
+   "kanji": "美術館",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0126",
+   "later": 0,
+   "kanji": "朝",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0128",
+   "later": 0,
+   "kanji": "晩",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0129",
+   "later": 0,
+   "kanji": "試験",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0134",
+   "later": 0,
+   "kanji": "休む",
+   "intro": "W03D4"
+  },
+  {
+   "id": "v0135",
+   "later": 0,
+   "kanji": "勉強する",
+   "intro": "W03D4"
+  },
+  {
+   "id": "v0145",
+   "later": 0,
+   "kanji": "明後日",
+   "intro": "W03D5"
+  },
+  {
+   "id": "v0147",
+   "later": 0,
+   "kanji": "今晩",
+   "intro": "W03D5"
+  },
+  {
+   "id": "v0149",
+   "later": 0,
+   "kanji": "何番",
+   "intro": "W03D5"
+  },
+  {
+   "id": "v0150",
+   "later": 0,
+   "kanji": "ニューヨーク",
+   "intro": "W03D5"
+  },
+  {
+   "id": "v0153",
+   "later": 0,
+   "kanji": "帰る",
+   "intro": "W04D1"
+  },
+  {
+   "id": "v0154",
+   "later": 0,
+   "kanji": "学校",
+   "intro": "W04D1"
+  },
+  {
+   "id": "v0162",
+   "later": 0,
+   "kanji": "地下鉄",
+   "intro": "W04D2"
+  },
+  {
+   "id": "v0165",
+   "later": 0,
+   "kanji": "タクシー",
+   "intro": "W04D2"
+  },
+  {
+   "id": "v0167",
+   "later": 0,
+   "kanji": "自転車",
+   "intro": "W04D2"
+  },
+  {
+   "id": "v0171",
+   "later": 0,
+   "kanji": "いつ",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0172",
+   "later": 0,
+   "kanji": "先週",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0173",
+   "later": 0,
+   "kanji": "今週",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0174",
+   "later": 0,
+   "kanji": "来週",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0175",
+   "later": 0,
+   "kanji": "先月",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0176",
+   "later": 0,
+   "kanji": "今月",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0179",
+   "later": 0,
+   "kanji": "今年",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0180",
+   "later": 0,
+   "kanji": "来年",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0187",
+   "later": 0,
+   "kanji": "二日",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0190",
+   "later": 0,
+   "kanji": "カレンダー",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0191",
+   "later": 0,
+   "kanji": "船",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0192",
+   "later": 0,
+   "kanji": "歩いて",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0193",
+   "later": 0,
+   "kanji": "彼",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0194",
+   "later": 0,
+   "kanji": "彼女",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0196",
+   "later": 0,
+   "kanji": "普通",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0198",
+   "later": 0,
+   "kanji": "特急",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0012",
+   "later": 1,
+   "kanji": "大学",
+   "intro": "W01D2"
+  },
+  {
+   "id": "v0020",
+   "later": 1,
+   "kanji": "エンジニア",
+   "intro": "W01D2"
+  },
+  {
+   "id": "v0021",
+   "later": 1,
+   "kanji": "零",
+   "intro": "W01D3"
+  },
+  {
+   "id": "v0032",
+   "later": 1,
+   "kanji": "おいくつ",
+   "intro": "W01D4"
+  },
+  {
+   "id": "v0050",
+   "later": 1,
+   "kanji": "ボールペン",
+   "intro": "W01D5"
+  },
+  {
+   "id": "v0053",
+   "later": 1,
+   "kanji": "チョコレート",
+   "intro": "W02D1"
+  },
+  {
+   "id": "v0056",
+   "later": 1,
+   "kanji": "水",
+   "intro": "W02D1"
+  },
+  {
+   "id": "v0066",
+   "later": 1,
+   "kanji": "名刺",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0068",
+   "later": 1,
+   "kanji": "カメラ",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0076",
+   "later": 1,
+   "kanji": "ロビー",
+   "intro": "W02D3"
+  },
+  {
+   "id": "v0080",
+   "later": 1,
+   "kanji": "エレベーター",
+   "intro": "W02D3"
+  },
+  {
+   "id": "v0086",
+   "later": 1,
+   "kanji": "エスカレーター",
+   "intro": "W02D4"
+  },
+  {
+   "id": "v0087",
+   "later": 1,
+   "kanji": "会議室",
+   "intro": "W02D4"
+  },
+  {
+   "id": "v0091",
+   "later": 1,
+   "kanji": "百",
+   "intro": "W02D5"
+  },
+  {
+   "id": "v0094",
+   "later": 1,
+   "kanji": "一万",
+   "intro": "W02D5"
+  },
+  {
+   "id": "v0110",
+   "later": 1,
+   "kanji": "お願いします",
+   "intro": "W03D1"
+  },
+  {
+   "id": "v0127",
+   "later": 1,
+   "kanji": "昼",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0130",
+   "later": 1,
+   "kanji": "会議",
+   "intro": "W03D3"
+  },
+  {
+   "id": "v0137",
+   "later": 1,
+   "kanji": "毎日",
+   "intro": "W03D4"
+  },
+  {
+   "id": "v0144",
+   "later": 1,
+   "kanji": "一昨日",
+   "intro": "W03D5"
+  },
+  {
+   "id": "v0164",
+   "later": 1,
+   "kanji": "バス",
+   "intro": "W04D2"
+  },
+  {
+   "id": "v0177",
+   "later": 1,
+   "kanji": "来月",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0178",
+   "later": 1,
+   "kanji": "去年",
+   "intro": "W04D3"
+  },
+  {
+   "id": "v0181",
+   "later": 1,
+   "kanji": "何月",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0183",
+   "later": 1,
+   "kanji": "七月",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0185",
+   "later": 1,
+   "kanji": "何日",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0186",
+   "later": 1,
+   "kanji": "一日",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0195",
+   "later": 1,
+   "kanji": "次",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0197",
+   "later": 1,
+   "kanji": "急行",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0199",
+   "later": 1,
+   "kanji": "往復",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0200",
+   "later": 1,
+   "kanji": "片道",
+   "intro": "W04D5"
+  },
+  {
+   "id": "v0201",
+   "later": 1,
+   "kanji": "日本人",
+   "intro": "W01D1"
+  },
+  {
+   "id": "v0202",
+   "later": 1,
+   "kanji": "台湾人",
+   "intro": "W01D1"
+  },
+  {
+   "id": "v0013",
+   "later": 2,
+   "kanji": "病院",
+   "intro": "W01D2"
+  },
+  {
+   "id": "v0040",
+   "later": 2,
+   "kanji": "二十",
+   "intro": "W01D4"
+  },
+  {
+   "id": "v0049",
+   "later": 2,
+   "kanji": "鉛筆",
+   "intro": "W01D5"
+  },
+  {
+   "id": "v0052",
+   "later": 2,
+   "kanji": "コーヒー",
+   "intro": "W02D1"
+  },
+  {
+   "id": "v0058",
+   "later": 2,
+   "kanji": "紅茶",
+   "intro": "W02D1"
+  },
+  {
+   "id": "v0061",
+   "later": 2,
+   "kanji": "鍵",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0064",
+   "later": 2,
+   "kanji": "時計",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0065",
+   "later": 2,
+   "kanji": "手帳",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0070",
+   "later": 2,
+   "kanji": "そう",
+   "intro": "W02D2"
+  },
+  {
+   "id": "v0077",
+   "later": 2,
+   "kanji": "トイレ",
+   "intro": "W02D3"
+  },
+  {
+   "id": "v0108",
+   "later": 2,
+   "kanji": "葉書",
+   "intro": "W03D1"
+  },
+  {
+   "id": "v0109",
+   "later": 2,
+   "kanji": "封筒",
+   "intro": "W03D1"
+  },
+  {
+   "id": "v0132",
+   "later": 2,
+   "kanji": "寝る",
+   "intro": "W03D4"
+  },
+  {
+   "id": "v0136",
+   "later": 2,
+   "kanji": "終わる",
+   "intro": "W03D4"
+  },
+  {
+   "id": "v0139",
+   "later": 2,
+   "kanji": "毎晩",
+   "intro": "W03D4"
+  },
+  {
+   "id": "v0146",
+   "later": 2,
+   "kanji": "今朝",
+   "intro": "W03D5"
+  },
+  {
+   "id": "v0166",
+   "later": 2,
+   "kanji": "飛行機",
+   "intro": "W04D2"
+  },
+  {
+   "id": "v0184",
+   "later": 2,
+   "kanji": "九月",
+   "intro": "W04D4"
+  },
+  {
+   "id": "v0189",
+   "later": 2,
+   "kanji": "誕生日",
+   "intro": "W04D4"
+  }
+ ]
+}

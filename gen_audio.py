@@ -269,6 +269,7 @@ def generate(items: list[tuple[str, str]], out_dir: Path, prof: dict, by_name: b
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--lesson", nargs="*", help="課次 id")
+    ap.add_argument("--extra", nargs="*", help="延伸閱讀週次（extras/W02.json → audio/extras-W02/）")
     ap.add_argument("--csv", type=Path)
     ap.add_argument("--text")
     ap.add_argument("--out", type=Path, help="--csv／--text 的輸出資料夾（預設 audio/misc）")
@@ -319,6 +320,12 @@ def main() -> None:
     if a.preview:
         generate([(f"probe{i}", t) for i, t in enumerate(PROBES)], AUDIO / "_preview" / f"{prof['backend']}-v{prof['version']}", prof, by_name=True)
         return
+    if a.extra:
+        for wk in a.extra:
+            d = json.loads((ROOT / "extras" / f"{wk}.json").read_text(encoding="utf-8"))
+            items = [("text", d["text_ja"])] + [(f"line.{i}", t) for i, t in enumerate(split_lines(d["text_ja"]))]
+            print(f"▶ 延伸閱讀 {wk}")
+            generate(items, AUDIO / f"extras-{wk}", prof)
     if a.lesson:
         for lid in a.lesson:
             print(f"▶ {lid}")
